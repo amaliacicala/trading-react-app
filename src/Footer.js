@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import 'font-awesome/css/font-awesome.min.css';
-import '../src/footer.css';
+import './footer.css'
 import { Row, Col } from 'antd';
 import { Form, Input, Button } from 'antd';
 
@@ -22,26 +22,28 @@ export default function Footer() {
             <Row 
                 align="top" 
                 justify="center" 
-                style={{backgroundColor:'#002329', color:'white'}}
+                gutter={[48, 36]}
             >
-                <Col xs={24} sm={24} md={8} lg={8} xl={8}>
-                    <section>
-                        <h2 style={{color:'white'}}>Logo</h2>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia.
-                        </p>
-                    </section>
-                    <section className="social-container">
-                        <a href="#"><i className="fa fa-facebook"></i></a>
-                        <a href="#"><i className="fa fa-instagram"></i></a>
-                        <a href="#"><i className="fa fa-twitter"></i></a>
-                        <a href="#"><i className="fa fa-linkedin"></i></a>
+                <Col xs={24} sm={24} md={12} lg={6} xl={6} xxl={8}>
+                    <section className="footer-col1">
+                        <section>
+                            <h2 className="logo">Logo</h2>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia.
+                            </p>
+                        </section>
+                        <section className="social-container">
+                            <a href="#"><i className="fa fa-facebook"></i></a>
+                            <a href="#"><i className="fa fa-instagram"></i></a>
+                            <a href="#"><i className="fa fa-twitter"></i></a>
+                            <a href="#"><i className="fa fa-linkedin"></i></a>
+                        </section>
                     </section>
                 </Col>
 
-                <Col xs={8} sm={8} md={3} lg={3} xl={3}>
-                    <h3>Product</h3>
-                    <ul style={{listStyle:'none', display:'flex', flexFlow:'column wrap', padding:'0'}}>
+                <Col xs={12} sm={8} md={{span: 8, order: 3}} lg={{span: 4, order: 2}} xl={4} xxl={3}>
+                    <h2>Product</h2>
+                    <ul>
                         <li><a href="#">Features</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">API</a></li>
@@ -49,9 +51,9 @@ export default function Footer() {
                     </ul>
                 </Col>
 
-                <Col xs={8} sm={8} md={3} lg={3} xl={3}>
-                    <h3>Markets</h3>
-                    <ul style={{listStyle:'none', display:'flex', flexFlow:'column wrap', padding:'0'}}>
+                <Col xs={12} sm={8} md={{span: 8, order: 4}} lg={{span: 3, order: 3}} xl={3} xxl={3}>
+                    <h2>Markets</h2>
+                    <ul>
                         <li><a href="#">Futures</a></li>
                         <li><a href="#">Indices</a></li>
                         <li><a href="#">Shares</a></li>
@@ -59,20 +61,21 @@ export default function Footer() {
                     </ul>
                 </Col>
 
-                <Col xs={8} sm={8} md={3} lg={3} xl={3}>
-                    <h3>Resources</h3>
-                    <ul style={{listStyle:'none', display:'flex', flexFlow:'column wrap', padding:'0'}}>
+                <Col xs={24} sm={8} md={{span: 8, order: 5}} lg={{span: 4, order: 4}} xl={4} xxl={3}>
+                    <h2>Resources</h2>
+                    <ul>
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Disclaimer</a></li>
                     </ul>
                 </Col>
 
-                <Col xs={24} sm={24} md={7} lg={7} xl={7}>
-                    <h3>Subscribe to our newsletter</h3>
+                <Col xs={24} sm={24} md={{span: 12, order: 2}} lg={{span: 7, order: 5}} xl={7} xxl={7}>
+                    <h2>Subscribe to our newsletter</h2>
                     <Form
                         name="basic"
                         layout="inline"
+                        style={{display: 'flex', alignItems: 'center'}}
                         wrapperCol={{
                             span: 24,
                         }}
@@ -115,7 +118,6 @@ export default function Footer() {
             <Row 
                 align="top" 
                 justify="center" 
-                style={{backgroundColor:'#002329', color:'white'}}
             >
                 <Col span={24}>
                     <p>
@@ -129,7 +131,6 @@ export default function Footer() {
             <Row 
                 align="top" 
                 justify="center" 
-                style={{backgroundColor:'#002329', color:'white'}}
             >
                 <Col span={24}>
                     <p>

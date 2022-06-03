@@ -1,5 +1,158 @@
+// font import (DM Mono for titles; Roboto for paragraphs)
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+// color variables
+$primary: #062929;
+$secondary: #01070b;
+$accent: #c5feaa;
+$accent-darker: #48f992;
+$text: #92A7AA;
+$titles: #ffffff;
+$input: #0e1522;
+$gradient: linear-gradient(90deg, rgba(237,255,125,1), rgba(73,249,146,1));
+
+
+// generic & reset
+* {
+    font-family: Roboto;
+    color: $text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: DM Mono;
+    font-weight: 800;
+    color: $titles;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $text;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0
+}
+
+li {
+    line-height: 2.2rem;
+}
+//
+
+footer {
+    background: rgb(6,41,41); // fallback bg color
+    background-image: 
+        radial-gradient(circle, rgba(6,41,41,0.9) 0%, rgba(1,7,11,0.9) 72%),
+        url('/src/images/trading-vector.svg');
+    padding: 4rem 6rem;
+}
+
+.footer-col1 {
+    display: flex;
+    flex-flow: column wrap;
+    
+        .logo {
+            color: $accent;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+}
+
 .social-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15rem;
+    height: 3.5rem;
+    padding-top: 1%;
+    border: solid 1px $accent;
+    border-radius: 0.5rem;
+
+        i {
+            font-size: 1.4rem;
+            color: $accent;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $titles;
+            }
+        }
+}
+
+input[type="text"], input[type="email"] {
+    background-color: $input;
+    color: $text;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+        color: $text;
+        padding-left: 0.5rem;
+    }
+
+    &:focus {
+        outline: solid 1px $accent;
+        padding-left: 0.5rem;
+        color: $text;
+    }
+}
+
+button[type="submit"] {
+    border: solid 1px $accent;
+    border-radius: 0.5rem;
+    background: transparent;
+    height: 100%;
+    padding: 0.5rem 0.9rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:active, &:visited, &:focus {
+        background: $gradient;
+        border: solid 1px $accent;
+
+        i {
+            color: $input;
+        }
+    }
+
     i {
-        font-size: 1.2rem;
+        color: $accent;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.footer-disclaimer {
+    padding-top: 2rem;
+    font-size: 0.7rem;
+    // font-style: italic;
+
+    p {
+        opacity: 0.6;
+    }
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    border-top: solid 0.5px rgba(197, 254, 170, 0.2);
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 4rem 2rem;
     }
 }
