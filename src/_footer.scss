@@ -62,7 +62,7 @@ input[type="text"], input[type="email"] {
     }
 }
 
-button[type="submit"] {
+.newsletter-submit {
     border: solid 1px $accent;
     border-radius: 0.5rem;
     background: transparent;

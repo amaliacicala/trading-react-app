@@ -61,7 +61,7 @@ input[type=text]:focus, input[type=email]:focus {
   color: #92A7AA;
 }
 
-button[type=submit] {
+.newsletter-submit {
   border: solid 1px #c5feaa;
   border-radius: 0.5rem;
   background: transparent;
@@ -69,14 +69,14 @@ button[type=submit] {
   padding: 0.5rem 0.9rem;
   transition: all 0.2s ease-in-out;
 }
-button[type=submit]:hover, button[type=submit]:active, button[type=submit]:visited, button[type=submit]:focus {
+.newsletter-submit:hover, .newsletter-submit:active, .newsletter-submit:visited, .newsletter-submit:focus {
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
   border: solid 1px #c5feaa;
 }
-button[type=submit]:hover i, button[type=submit]:active i, button[type=submit]:visited i, button[type=submit]:focus i {
+.newsletter-submit:hover i, .newsletter-submit:active i, .newsletter-submit:visited i, .newsletter-submit:focus i {
   color: #0e1522;
 }
-button[type=submit] i {
+.newsletter-submit i {
   color: #c5feaa;
   transition: all 0.2s ease-in-out;
 }
@@ -112,22 +112,22 @@ button[type=submit] i {
   height: 3rem;
   padding: 0.5rem 2rem;
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
-  border: solid 1px #c5feaa;
-  color: #062929;
-  border: solid 1px #c5feaa;
-  border-radius: 0.5rem;
+  border: solid 1px #01070b;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
   transition: all 0.2s ease-in-out;
 }
 .contact-btn:hover, .contact-btn:active, .contact-btn:visited, .contact-btn:focus {
-  background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
+  background: #062929;
   border: solid 1px #c5feaa;
 }
-.contact-btn:hover i, .contact-btn:active i, .contact-btn:visited i, .contact-btn:focus i {
-  color: #0e1522;
-}
-.contact-btn i {
+.contact-btn:hover span, .contact-btn:active span, .contact-btn:visited span, .contact-btn:focus span {
   color: #c5feaa;
-  transition: all 0.2s ease-in-out;
+}
+.contact-btn span {
+  color: #062929;
+  text-shadow: none;
+  font-weight: 500;
 }
 
 * {

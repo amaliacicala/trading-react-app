@@ -9,24 +9,25 @@
 
     padding: 0.5rem 2rem;
     background: $gradient;
-    border: solid 1px $accent;
-    color: $primary;
+    border: solid 1px $secondary;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px #052323,
+             0px 0px 10px #072f2f;
 
-    border: solid 1px $accent;
-    border-radius: 0.5rem;
     transition: all 0.2s ease-in-out;
 
     &:hover, &:active, &:visited, &:focus {
-        background: $gradient;
+        background: $primary;
         border: solid 1px $accent;
 
-        i {
-            color: $input;
+        span {
+            color: $accent;
         }
     }
 
-    i {
-        color: $accent;
-        transition: all 0.2s ease-in-out;
-    }
+        span {
+            color: $primary;
+            text-shadow: none;
+            font-weight: 500;
+        }
 }

@@ -106,7 +106,7 @@ export default function Footer() {
                             span: 16,
                             }}
                         >
-                            <Button type="primary" htmlType="submit">
+                            <Button className="newsletter-submit" htmlType="submit">
                                 <i className="fa fa-paper-plane"></i>
                             </Button>
                         </Form.Item>
