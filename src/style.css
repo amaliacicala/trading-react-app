@@ -104,6 +104,32 @@ button[type=submit] i {
     padding: 4rem 2rem;
   }
 }
+.contact-btn {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  margin: 0;
+  height: 3rem;
+  padding: 0.5rem 2rem;
+  background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
+  border: solid 1px #c5feaa;
+  color: #062929;
+  border: solid 1px #c5feaa;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+.contact-btn:hover, .contact-btn:active, .contact-btn:visited, .contact-btn:focus {
+  background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
+  border: solid 1px #c5feaa;
+}
+.contact-btn:hover i, .contact-btn:active i, .contact-btn:visited i, .contact-btn:focus i {
+  color: #0e1522;
+}
+.contact-btn i {
+  color: #c5feaa;
+  transition: all 0.2s ease-in-out;
+}
+
 * {
   font-family: Roboto;
   color: #92A7AA;
