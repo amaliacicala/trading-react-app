@@ -30,56 +30,51 @@ export default function ContactUs() {
             </Button>
             <Modal title="Contact Us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
             <Form
+                layout="vertical"
                 name="complex-form"
                 onFinish={onFinish}
-                labelCol={{
-                    span: 8,
-                }}
-                wrapperCol={{
-                    span: 16,
-                }}
+                size="large"
                 >
-                <Form.Item label="First Name">
-                    <Space>
-                    <Form.Item
-                        name="firstname"
-                        noStyle
-                        rules={[
-                        {
-                            required: true,
-                            message: 'First name is required',
-                        },
-                        ]}
-                    >
-                        <Input
-                        style={{
-                            width: 160,
-                        }}
-                        placeholder="First name"
-                        />
+                <Form.Item>
+                    {/* <Space size="large"> */}
+                    <Form.Item>
+                        <Form.Item
+                            name="firstname"
+                            noStyle
+                            rules={[
+                            {
+                                required: true,
+                                message: 'First name is required',
+                            },
+                            ]}
+                        >
+                            <Input
+                            style={{
+                                width: '100%',
+                            }}
+                            placeholder="First name"
+                            />
+                        </Form.Item>
                     </Form.Item>
-                    </Space>
-                </Form.Item>
-                <Form.Item label="Last Name">
-                    <Form.Item
-                        name="lastname"
-                        noStyle
-                        rules={[
-                        {
-                            required: true,
-                            message: 'Last name is required',
-                        },
-                        ]}
-                    >
-                        <Input
-                        style={{
-                            width: 160,
-                        }}
-                        placeholder="Last name"
-                        />
+                    <Form.Item>
+                        <Form.Item
+                            name="lastname"
+                            noStyle
+                            rules={[
+                            {
+                                required: true,
+                                message: 'Last name is required',
+                            },
+                            ]}
+                        >
+                            <Input
+                            style={{
+                                width: '100%',
+                            }}
+                            placeholder="Last name"
+                            />
+                        </Form.Item>
                     </Form.Item>
-                </Form.Item>
-                <Form.Item label="Email">
                     <Form.Item
                         name="email"
                         noStyle
@@ -92,15 +87,15 @@ export default function ContactUs() {
                     >
                         <Input
                         style={{
-                            width: 160,
+                            width: '100%',
                         }}
                         placeholder="Email"
                         />
                     </Form.Item>
+                    {/* </Space> */}
                 </Form.Item>
                 <Form.Item
                     name="message"
-                    label="Message"
                     rules={[
                     {
                         required: true,
@@ -108,11 +103,13 @@ export default function ContactUs() {
                     },
                     ]}
                 >
-                    <Input.TextArea showCount maxLength={500} />
+                    <Input.TextArea
+                    showCount
+                    maxLength={500} placeholder="Your message" />
                 </Form.Item>
 
-                <Form.Item label=" " colon={false}>
-                    <Button htmlType="submit">
+                <Form.Item colon={false}>
+                    <Button className="form-button" htmlType="submit">
                     Send Message
                     </Button>
                 </Form.Item>

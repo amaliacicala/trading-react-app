@@ -35,3 +35,22 @@ ul {
 li {
     line-height: 2.2rem;
 }
+
+input[type="text"], input[type="email"], #complex-form textarea {
+    background-color: $input;
+    color: $text;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+        color: $text;
+        padding-left: 0.5rem;
+    }
+
+    &:focus {
+        outline: solid 1px $accent;
+        padding-left: 0.5rem;
+        color: $text;
+    }
+}

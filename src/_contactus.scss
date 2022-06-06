@@ -1,12 +1,6 @@
 @import './variables';
 
-.contact-btn {
-    position: fixed;
-    bottom: 10%;
-    right: 6.5%;
-    margin: 0;
-    height: 3rem;
-
+.button-style {
     padding: 0.5rem 2rem;
     background: $gradient;
     border: solid 1px $secondary;
@@ -30,4 +24,64 @@
             text-shadow: none;
             font-weight: 500;
         }
+}
+
+.contact-btn {
+    @extend .button-style;
+
+    position: fixed;
+    bottom: 10%;
+    right: 6.5%;
+    margin: 0;
+    height: 3rem;
+}
+
+.ant-modal-content, .ant-modal-header {
+    background: $primary; // fallback bg color
+    border-radius: 1rem;
+    border: none;
+    padding: 5%;
+}
+
+.ant-modal-content {
+    background: radial-gradient(circle, rgba(6,41,41,1) 21%, rgba(1,7,11,1) 100%);
+
+    background-clip: padding-box;
+    border: solid 1px $accent;
+    border-radius: 1rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(90deg, rgba(237,255,125,0.8), rgba(73,249,146,0.8));;        
+    }
+}
+
+.ant-modal-header {
+    background-color: transparent;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.ant-modal-title {
+    font-family: DM Sans;
+    color: $titles;
+    font-size: 1.4rem;
+}
+
+.form-button {
+    @extend .button-style;
+    
+    display: flex;
+    align-items: center;
+    
+    span {
+        font-size: 0.8rem;
+    }
 }

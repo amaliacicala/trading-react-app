@@ -36,26 +36,26 @@ footer {
   color: #ffffff;
 }
 
-input[type=text], input[type=email] {
+input[type=text], input[type=email], #complex-form textarea {
   background-color: #0e1522;
   color: #92A7AA;
   border: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, #complex-form textarea::-moz-placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, #complex-form textarea:-ms-input-placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]::placeholder, input[type=email]::placeholder {
+input[type=text]::placeholder, input[type=email]::placeholder, #complex-form textarea::placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]:focus, input[type=email]:focus {
+input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
   outline: solid 1px #c5feaa;
   padding-left: 0.5rem;
   color: #92A7AA;
@@ -104,12 +104,7 @@ input[type=text]:focus, input[type=email]:focus {
     padding: 4rem 2rem;
   }
 }
-.contact-btn {
-  position: fixed;
-  bottom: 10%;
-  right: 6.5%;
-  margin: 0;
-  height: 3rem;
+.button-style, .form-button, .contact-btn {
   padding: 0.5rem 2rem;
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
   border: solid 1px #01070b;
@@ -117,17 +112,73 @@ input[type=text]:focus, input[type=email]:focus {
   box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
   transition: all 0.2s ease-in-out;
 }
-.contact-btn:hover, .contact-btn:active, .contact-btn:visited, .contact-btn:focus {
+.button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:active, .form-button:active, .contact-btn:active, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:focus, .form-button:focus, .contact-btn:focus {
   background: #062929;
   border: solid 1px #c5feaa;
 }
-.contact-btn:hover span, .contact-btn:active span, .contact-btn:visited span, .contact-btn:focus span {
+.button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:focus span, .form-button:focus span, .contact-btn:focus span {
   color: #c5feaa;
 }
-.contact-btn span {
+.button-style span, .form-button span, .contact-btn span {
   color: #062929;
   text-shadow: none;
   font-weight: 500;
+}
+
+.contact-btn {
+  position: fixed;
+  bottom: 10%;
+  right: 6.5%;
+  margin: 0;
+  height: 3rem;
+}
+
+.ant-modal-content, .ant-modal-header {
+  background: #062929;
+  border-radius: 1rem;
+  border: none;
+  padding: 5%;
+}
+
+.ant-modal-content {
+  background: radial-gradient(circle, rgb(6, 41, 41) 21%, rgb(1, 7, 11) 100%);
+  background-clip: padding-box;
+  border: solid 1px #c5feaa;
+  border-radius: 1rem;
+}
+.ant-modal-content:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(237, 255, 125, 0.8), rgba(73, 249, 146, 0.8));
+}
+
+.ant-modal-header {
+  background-color: transparent;
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-modal-title {
+  font-family: DM Sans;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.form-button {
+  display: flex;
+  align-items: center;
+}
+.form-button span {
+  font-size: 0.8rem;
 }
 
 * {
@@ -158,4 +209,29 @@ ul {
 
 li {
   line-height: 2.2rem;
+}
+
+input[type=text], input[type=email], #complex-form textarea {
+  background-color: #0e1522;
+  color: #92A7AA;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, #complex-form textarea::-moz-placeholder {
+  color: #92A7AA;
+  padding-left: 0.5rem;
+}
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, #complex-form textarea:-ms-input-placeholder {
+  color: #92A7AA;
+  padding-left: 0.5rem;
+}
+input[type=text]::placeholder, input[type=email]::placeholder, #complex-form textarea::placeholder {
+  color: #92A7AA;
+  padding-left: 0.5rem;
+}
+input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
+  outline: solid 1px #c5feaa;
+  padding-left: 0.5rem;
+  color: #92A7AA;
 }/*# sourceMappingURL=style.css.map */
