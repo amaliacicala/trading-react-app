@@ -1,0 +1,77 @@
+@import '~antd/dist/antd.css';
+
+.ant-modal-body {
+    padding: 0px;
+}
+
+.ant-modal-footer {
+    border: none;
+    padding: 24px;
+}
+
+.header-modal {
+    display: flex;
+    margin-bottom: 1rem;
+    height: 40px;
+}
+
+.modal-login, 
+.modal-signup {
+    width: 50%;
+    text-align: center;
+}
+
+.link-modal {
+    color: black;
+}
+
+.separation-line {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.line-span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.line {
+    height: 1px;
+    width: 70%;
+    background-color: rgb(210, 206, 206);
+}
+
+.modal-btn-close {
+    width: 100%;
+}
+
+.btn-submit-modal {
+    width: 100%;
+    color: white;
+    background-color: rgb(247, 84, 24);
+    border: none;
+}
+
+.modal-btn-login {
+    width: 100%;
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+}
+
+.modal-btn-login:hover {
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+    border: none
+}
+
+.login-form {
+    padding: 1.5rem;
+}
+
+.link-password {
+    color: rgb(38, 99, 253);
+    margin: 0 11.3rem;
+    font-size: 14px;
+}
