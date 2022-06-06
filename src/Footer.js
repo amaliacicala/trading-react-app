@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import 'font-awesome/css/font-awesome.min.css';
-import './footer.css'
+import './style.css';
 import { Row, Col } from 'antd';
 import { Form, Input, Button } from 'antd';
 

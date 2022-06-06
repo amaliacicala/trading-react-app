@@ -1,34 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
-* {
-  font-family: Roboto;
-  color: #92A7AA;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: DM Mono;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 1rem;
-}
-
-a {
-  color: #92A7AA;
-}
-a:hover {
-  color: #c5feaa;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  flex-flow: column wrap;
-  padding: 0;
-}
-
-li {
-  line-height: 2.2rem;
-}
-
 footer {
   background: rgb(6, 41, 41);
   background-image: radial-gradient(circle, rgba(6, 41, 41, 0.9) 0%, rgba(1, 7, 11, 0.9) 72%), url("/src/images/trading-vector.svg");
@@ -133,4 +103,33 @@ button[type=submit] i {
   footer {
     padding: 4rem 2rem;
   }
-}/*# sourceMappingURL=footer.css.map */
+}
+* {
+  font-family: Roboto;
+  color: #92A7AA;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: DM Mono;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #92A7AA;
+}
+a:hover {
+  color: #c5feaa;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0;
+}
+
+li {
+  line-height: 2.2rem;
+}/*# sourceMappingURL=style.css.map */
