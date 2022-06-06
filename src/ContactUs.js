@@ -110,7 +110,7 @@ export default function ContactUs() {
 
                 <Form.Item colon={false}>
                     <Button className="form-button" htmlType="submit">
-                    Send Message
+                    Send Message <i class="fa fa-paper-plane"></i>
                     </Button>
                 </Form.Item>
                 </Form>

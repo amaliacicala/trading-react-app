@@ -163,22 +163,43 @@ input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
   background-color: transparent;
 }
 
+.ant-modal-title {
+  font-family: DM Sans;
+  color: #ffffff;
+  font-size: 1.8rem;
+}
+
+.ant-modal-body {
+  padding-bottom: 0;
+}
+
 .ant-modal-footer {
   display: none;
 }
 
-.ant-modal-title {
+.ant-input-textarea-show-count.ant-input-textarea-in-form-item::after {
+  color: #92A7AA;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
   font-family: DM Sans;
-  color: #ffffff;
-  font-size: 1.4rem;
 }
 
 .form-button {
   display: flex;
   align-items: center;
+  margin: auto;
+  padding: 1.5rem 3rem;
+}
+.form-button:hover i {
+  color: #c5feaa;
 }
 .form-button span {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+}
+.form-button i {
+  color: #062929;
+  margin-left: 0.5rem;
 }
 
 * {
