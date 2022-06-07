@@ -1,0 +1,56 @@
+@import './footer';
+@import './contactus';
+
+// font import (DM Mono for titles; Roboto for paragraphs)
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+// generic & reset
+* {
+    font-family: Roboto;
+    color: $text;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: DM Mono;
+    font-weight: 800;
+    color: $titles;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: $text;
+
+    &:hover {
+        color: $accent;
+    }
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    padding: 0
+}
+
+li {
+    line-height: 2.2rem;
+}
+
+input[type="text"], input[type="email"], #complex-form textarea {
+    background-color: $input;
+    color: $text;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+        color: $text;
+        padding-left: 0.5rem;
+    }
+
+    &:focus {
+        outline: solid 1px $accent;
+        padding-left: 0.5rem;
+        color: $text;
+    }
+}
