@@ -2,7 +2,7 @@ import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Image } from 'antd';
 import "./hero+pricing.css";
-import {ModaleLogin, ModaleSignUp} from './ModalHero';
+import {ModaleLogin} from './ModalHero';
 
 
 export function Hero() {
@@ -18,7 +18,7 @@ export function Hero() {
             <label><strong>Enter your email to create or restart your membership</strong></label>
             <div className='hero-input'><input type="email" name="email" id="email" placeholder='Email' />
             <ModaleLogin />
-              <ModaleSignUp/></div>
+              </div>
           </div>
         </Col>
         <Col span={14}> <Image alt='IMMAGINE'

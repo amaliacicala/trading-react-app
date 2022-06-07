@@ -2,7 +2,7 @@
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import "./hero+pricing.css";
-import { ModaleLogin, ModaleSignUp } from './ModalPricing';
+import { ModaleLogin } from './ModalPricing';
 import { Typography } from 'antd';
 const { Title } = Typography;
 
@@ -20,8 +20,8 @@ export function Pricing() {
                             <li>Grading system for better options trading</li>
                             <li>Proprietary indicators</li>
                         </ul>
-                        <div><ModaleLogin />
-                            <ModaleSignUp /></div>
+                        <ModaleLogin />
+                          
                     </div>
                 </Col>
                 <Col span={12}>
@@ -35,8 +35,8 @@ export function Pricing() {
                             <li>Grading system for better options trading</li>
                             <li>Proprietary indicators</li>
                         </ul>
-                        <div><ModaleLogin />
-                            <ModaleSignUp /></div>
+                        <ModaleLogin />
+                           
                     </div>
                 </Col>
             </Row>
