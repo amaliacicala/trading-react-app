@@ -1,11 +1,12 @@
-import { Routes, Route } from "react-router-dom";
-// importa qui il tuo componente parent 
+import { Pricing } from "./Pricing";
+import { Hero } from "./Hero";
 
 function App() {
   return (
-    <Routes>
-      {/* <Route path="/" element={INSERISCI IL COMPONENTE PARENT CHE VUOI RENDERIZZARE IN HOMEPAGE}></Route> */}
-    </Routes>
+    <div className="body">
+     <Hero/>
+     <Pricing/>
+     </div>
   );
 }
 
