@@ -1,11 +1,16 @@
 import { Routes, Route } from "react-router-dom";
-// importa qui il tuo componente parent 
+import Footer from "./Footer";
+import ContactUs from "./ContactUs";
 
 function App() {
   return (
-    <Routes>
-      {/* <Route path="/" element={INSERISCI IL COMPONENTE PARENT CHE VUOI RENDERIZZARE IN HOMEPAGE}></Route> */}
-    </Routes>
+    <>
+      <Routes>
+          {/* <Route path="/" element={INSERISCI IL COMPONENTE PARENT CHE VUOI RENDERIZZARE IN HOMEPAGE}> */}
+      </Routes>
+      <Footer />
+      <ContactUs />
+    </>
   );
 }
 
