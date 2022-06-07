@@ -1,11 +1,9 @@
 import React from 'react';
 import 'antd/dist/antd.css';
 import 'font-awesome/css/font-awesome.min.css';
-import './style.css';
+import './footer.css';
 import { Row, Col } from 'antd';
 import { Form, Input, Button } from 'antd';
-import ContactUs from "./ContactUs";
-
 
 export default function Footer() {
     const onFinish = (values) => {
@@ -140,7 +138,6 @@ export default function Footer() {
                 </Col>
             </Row>
             </section>
-            <ContactUs />
         </footer>    
         )
 }
