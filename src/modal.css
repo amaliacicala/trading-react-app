@@ -58,12 +58,15 @@
     width: 100%;
     background-image: linear-gradient(to right, #d1ef36, #49f992);
     color: black;
+    border: none;
+    height: 30px;
 }
 
 .modal-btn-login:hover {
     background-image: linear-gradient(to right, #d1ef36, #49f992);
     color: black;
-    border: none
+    border: none;
+    cursor: pointer;
 }
 
 .login-form {

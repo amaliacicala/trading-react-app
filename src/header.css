@@ -29,31 +29,27 @@ a {
     border: none;
     border-radius: 13px;
     font-size: 16px;
+    padding: 0.15rem 0.5rem;
 }
 
-.btn-setup:hover {
-    background-image: linear-gradient(to right, #d1ef36, #49f992);
-    color: black;
-    font-weight: bolder;
+.btn-setup {
+    cursor: pointer;
 }
 
 .btn-login {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    background-color: transparent;
+    background-color: black;
     color: white;
     border: 1px solid white;
     border-radius: 13px;
     font-size: 16px;
+    padding: 0.15rem 0.5rem;
 }
 
-.btn-login:hover {
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    font-weight: bolder;
+.btn-login {
+    cursor: pointer;
 }
-
 
 @media only screen and (max-width: 1023px) {
     .logo {

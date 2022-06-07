@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form, Input, Button, Checkbox, Select} from 'antd';
+import { useNavigate } from 'react-router';
 const { Option } = Select;
 
 export const LoginForm = () => {
@@ -10,6 +11,11 @@ export const LoginForm = () => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
+  
+  const navigate = useNavigate()
+  function navigateToDashboard() {
+     navigate('/dashboard')
+  }
 
   return (
     <Form
@@ -36,7 +42,7 @@ export const LoginForm = () => {
         name="email"
         rules={[
           {
-            required: true,
+            required: false,
             message: 'Please input your email!',
             type: 'email',
           },
@@ -49,7 +55,7 @@ export const LoginForm = () => {
         name="password"
         rules={[
           {
-            required: true,
+            required: false,
             message: 'Please input your password!',
           },
         ]}
@@ -57,9 +63,9 @@ export const LoginForm = () => {
         <Input.Password placeholder='Password'/>
       </Form.Item>
 
-     <Button htmlType="submit" className='modal-btn-login'>
+     <button htmlType="submit" className='modal-btn-login' onClick={navigateToDashboard}>
         Login
-     </Button>
+     </button>
           
     <a className='link-password'>Forgot Password</a>
       
@@ -202,9 +208,9 @@ export function SignUpForm() {
         </Checkbox>
       </Form.Item>
 
-     <Button htmlType="submit" className='modal-btn-login'>
+     <button htmlType="submit" className='modal-btn-login'>
         Sign Up
-     </Button>
+     </button>
           
       
     </Form>

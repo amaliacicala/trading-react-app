@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {ModaleLogin, ModaleSignUp} from './Modal';
 import './header.css';
 import './modal.css'
@@ -8,7 +9,7 @@ export function Header() {
       <header className='header-header'>
           <span className='logo'>LOGO</span>
           <div className='anchors'>
-              <a href="#">Feature</a>
+              <Link to="/dashboard"><a href="#">Feature</a></Link>
               <a href="#">Pricing</a>
               <ModaleLogin />
               <ModaleSignUp />

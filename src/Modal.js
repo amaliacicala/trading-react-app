@@ -42,9 +42,9 @@ export const ModaleLogin = () => {
     
   return (
     <>
-      <Button className="btn-login" onClick={showModal}>
+      <button className="btn-login" onClick={showModal}>
         Login
-      </Button>
+      </button>
       <Modal
         visible={visible}
         onOk={handleOk}
@@ -109,9 +109,9 @@ export const ModaleSignUp = () => {
 
   return (
     <>
-      <Button className="btn-setup" onClick={showModal}>
+      <button className="btn-setup" onClick={showModal}>
         Sign Up
-      </Button>
+      </button>
       <Modal
         visible={visible}
         closable={false}
