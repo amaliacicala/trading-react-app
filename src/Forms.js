@@ -29,13 +29,13 @@ export const LoginForm = () => {
           className='login-form'
       >
           
-      <Button htmlType="submit" className='modal-btn-login'>
+      <button htmlType="submit" className='modal-btn-login'>
         Log in with Google
-      </Button>
+      </button>
           
       <div className='separation-line'>
               <div className='line'></div> 
-              <span className='line-span'>or</span>
+              <span className='line-span' style={{color: 'white'}}>or</span>
               <div className='line'></div> 
       </div>
       <Form.Item
@@ -67,7 +67,7 @@ export const LoginForm = () => {
         Login
      </button>
           
-    <a className='link-password'>Forgot Password</a>
+    <div className='link-password'><a>Forgot Password</a></div>
       
     </Form>
   );
@@ -109,13 +109,13 @@ export function SignUpForm() {
           className='login-form'
       >
           
-      <Button htmlType="submit" className='modal-btn-login'>
+      <button htmlType="submit" className='modal-btn-login'>
         Sign up with Google
-      </Button>
+      </button>
           
       <div className='separation-line'>
               <div className='line'></div> 
-              <span className='line-span'>or</span>
+              <span className='line-span' style={{color: 'white'}}>or</span>
               <div className='line'></div> 
       </div>
       <Form.Item

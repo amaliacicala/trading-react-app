@@ -28,7 +28,12 @@ export default function ContactUs() {
             <Button type="primary" className="contact-btn" onClick={showModal}>
                 Contact Us
             </Button>
-            <Modal title="Contact Us" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+            <Modal 
+            title="Contact Us" 
+            visible={isModalVisible} 
+            onOk={handleOk} 
+            onCancel={handleCancel}
+            footer = {[]}>
             <Form
                 layout="vertical"
                 name="complex-form"

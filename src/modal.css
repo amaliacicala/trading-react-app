@@ -6,6 +6,7 @@
 
 .ant-modal-footer {
     border: none;
+    border-top: none;
     padding: 24px;
 }
 
@@ -18,7 +19,7 @@
 .btn-signup {
     margin-left: 1rem;
     margin-right: 1rem;
-    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    background-image: linear-gradient(90deg, rgba(237, 255, 125, 0.8), rgba(73, 249, 146, 0.8));
     color: black;
     border: none;
     border-radius: 13px;
@@ -48,7 +49,8 @@
 }
 
 .link-modal {
-    color: black;
+    color: #92A7AA;
+    font-size: 20px;
 }
 
 .separation-line {
@@ -71,6 +73,7 @@
 
 .modal-btn-close {
     width: 100%;
+    color: black !important;
 }
 
 .btn-submit-modal {
@@ -100,7 +103,7 @@
 }
 
 .link-password {
-    color: rgb(38, 99, 253);
-    margin: 0 11.3rem;
+    color: rgba(255, 255, 255, 0.717);
     font-size: 14px;
+    text-align: center;
 }

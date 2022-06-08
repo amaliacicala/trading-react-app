@@ -31,12 +31,12 @@ export const ModaleLogin = () => {
   const changeToLogin = () => {
     setLogin(true)
     signupBtn.style.backgroundColor = 'gainsboro'
-    loginBtn.style.backgroundColor = 'white'
+    loginBtn.style.backgroundColor = 'transparent'
   }
 
   const changeToSignUp = () => {
     setLogin(false)
-    signupBtn.style.backgroundColor = 'white'
+    signupBtn.style.backgroundColor = 'transparent'
     loginBtn.style.backgroundColor = 'gainsboro'
   }
 
@@ -55,10 +55,11 @@ export const ModaleLogin = () => {
           <Button key="back" onClick={handleCancel} className="modal-btn-close">
             Close
           </Button>
-        ]}
+          ]
+        }
       >
         <header className='header-modal'>
-          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'white'}}>
+          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent'}}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
           <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'gainsboro'}}>
@@ -93,7 +94,7 @@ export const ModaleSignUp = () => {
     setVisible(false);
   };
 
-   const loginBtn = document.getElementById('modal-signup-change-login-btn')
+  const loginBtn = document.getElementById('modal-signup-change-login-btn')
   const signupBtn = document.getElementById('modal-signup-change-signup-btn')
   
   const changeToLogin = () => {

@@ -6,7 +6,7 @@ import './header.css'
 export function Header() {
   return (
       <header className='header-header'>
-          <span className='header-logo'>Logo</span>
+          <h2 className='header-logo'>Logo</h2>
           <div>
               <a className="header-anchor" href="#">Feature</a>
               <a className="header-anchor" href="#">Pricing</a>
