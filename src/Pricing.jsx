@@ -1,49 +1,60 @@
 
-import { Row, Col } from 'antd';
+
 import 'antd/dist/antd.css';
 import "./hero+pricing.css";
+import {Typography } from 'antd';
 import { ModaleLogin } from './ModalPricing';
-import { useEffect } from 'react';
-import list from './txt.json';
-import { Typography } from 'antd';
+import txt from './txt.json';
 const { Title } = Typography;
+
 
 export function Pricing() {
     return (
-        <div> {list.map((item) => {
-            return(
-            <Row className="price-section">
-                <Col xs={24} sm={24} md={12} lg={12}>
-                    <div className='pricing-left'>
-                        <Title>Only <strong>$67</strong> / month</Title>
-                        <ul>
-                            <li>{item.l1}</li>
-                            <li>{item.l2}</li>
-                            <li>{item.l3}</li>
-                            <li>{item.l4}</li>
-                            <li>{item.l5}</li>
-                            {console.log(item.l1)}
-                        </ul>
-                        <ModaleLogin />
-
-                    </div>
-                </Col>
-                <Col xs={24} sm={24} md={12} lg={12} xl={4} xxl={3} >
-                    <div className='pricing-right'>
-                       <div> <Title> Only <strong>$670</strong> / year</Title>
-                        <Title className='price-subtitle' underline level={4}>SAVE $134 ANNUALLY</Title></div>
-                        <ul>
-                            <li>{item.l1}</li>
-                            <li>{item.l2}</li>
-                            <li>{item.l3}</li>
-                            <li>{item.l4}</li>
-                            <li>{item.l5}</li>
-                        </ul>
-                        <ModaleLogin />
-
-                    </div>
-                </Col>
-            </Row>
+        <div> {txt.map((item) => {
+            return (
+                
+                    <section className='pricing'>
+                        
+                            <div className='card-l'>
+                                <Title level={2}>
+                                {item.pricing.title.only}
+                                    <strong> {item.pricing.title.priceSin} </strong>
+                                    {item.pricing.title.month}
+                                </Title>
+                                  <div className='card-l-content'>
+                                    <ul>
+                                        <li>{item.pricing.l1}</li>
+                                        <li>{item.pricing.l2}</li>
+                                        <li>{item.pricing.l3}</li>
+                                        <li>{item.pricing.l4}</li>
+                                        <li>{item.pricing.l5}</li>
+                                    </ul>
+                                    <ModaleLogin />
+                                    </div>
+                            </div>
+                       
+                        
+                            <div  className='card-r'>
+                                <div className='pricing-title'> 
+                                <Title level={2}>
+                                    {item.pricing.title.only}
+                                    <strong> {item.pricing.title.priceDx} </strong>
+                                    {item.pricing.title.year}
+                                    </Title>
+                                    <Title level={4} underline="true">{item.pricing.subtitle}</Title>
+                                </div>
+                                <ul>
+                                    <li>{item.pricing.l1}</li>
+                                    <li>{item.pricing.l2}</li>
+                                    <li>{item.pricing.l3}</li>
+                                    <li>{item.pricing.l4}</li>
+                                    <li>{item.pricing.l5}</li>
+                                </ul>
+                                <ModaleLogin />
+                            </div>
+                        
+                    </section>
+               
             )
 
         })}</div>

@@ -8,14 +8,16 @@
 
 
 /*----------------------------- HERO ----------------------------- */
+
+.hero {}
+
 .hero-txt {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 5rem 10rem;
+
 
 }
-
 
 .hero-input {
     display: flex;
@@ -27,7 +29,6 @@ strong {
 }
 
 
-.btn-setup,
 .btn-login {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -37,10 +38,9 @@ strong {
     font-size: 16px;
     padding: 0.15rem 0.5rem;
     border: none;
-    
+
 }
 
-.btn-setup:hover,
 .btn-login:hover {
     background-image: linear-gradient(to right, #d1ef36, #49f992);
     color: black;
@@ -49,48 +49,101 @@ strong {
 
 /*----------------------------- PRICING ----------------------------- */
 
-.price-section{
-    margin-top: 5rem;
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
-.pricing-left,
-.pricing-right {
+
+.card-l,
+.card-r {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20rem;
     background-image: linear-gradient(to bottom, #000609, #042626);
     color: #92a7aa;
+    width: max-content;
+    padding: 3rem;
+    gap: 2rem;
+    border-radius: 4px;
+
+}
+
+.card-l {
+    gap: 3rem;
+}
+
+.card-r {
+    gap: 1.7rem;
+}
+
+.card-l-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.card-l-content button {
     width: fit-content;
-    padding: 2rem 3rem;
+}
 
+.pricing-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 
-.pricing-left {
-    margin-left: 22rem;
-    gap: 2.5rem;
-}
-
-.pricing-right {
-    margin-right: 22rem;
-    gap: 1rem;
-}
-
-.pricing-right ul {
-    margin-bottom: 2rem;
-}
-.price-subtitle{
+h4.ant-typography,
+h2.ant-typography {
+    color: #92a7aa;
+    margin: 0;
     text-align: center;
 }
 
-h1.ant-typography,
-h4.ant-typography {
-    color: #92a7aa;
-    margin-bottom: 0;
+.ant-typography+h4.ant-typography {
+    margin: 0;
 }
 
-.ant-typography+h4.ant-typography {
-    margin-bottom: 0;
-    margin-top: 0;
+
+
+
+/*----------------------------- MOBILE MEDIA QUERY ----------------------------- */
+
+@media only screen and (max-width:430px) {
+
+    .pricing {
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card-l,
+    .card-r {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+
+}
+
+/*----------------------------- TABLET MEDIA QUERY ----------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .pricing {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .card-l,
+    .card-r {
+        width: 85%;
+        padding: 2rem 0.5rem;
+    }
 }
