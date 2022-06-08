@@ -1,58 +1,51 @@
 @import 'antd/dist/antd.css';
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
-* {
-    font-family: 'Roboto', sans-serif;
-}
-
 .header-header {
     background-color: black;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem;;
+    padding: 0.8rem;
 }
 
-a {
+.header-logo {
+    color: #c5feaa;
+    font-size: 2rem;
+    font-family: DM Mono;
+}
+
+.header-anchor {
     margin-left: 1rem;
     margin-right: 1rem;
     color: white;
     font-size: 16px;
-}
-
-.btn-setup {
-    margin-left: 1rem;
-    margin-right: 1rem;
-    background-image: linear-gradient(to right, #d1ef36, #49f992);
-    color: black;
-    border: none;
-    border-radius: 13px;
-    font-size: 16px;
-    padding: 0.15rem 0.5rem;
-}
-
-.btn-setup {
-    cursor: pointer;
-}
-
-.btn-login {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 13px;
-    font-size: 16px;
-    padding: 0.15rem 0.5rem;
-}
-
-.btn-login {
-    cursor: pointer;
+    font-family: Roboto;
 }
 
 @media only screen and (max-width: 1023px) {
-    header .logo {
+    .header-logo {
         visibility: hidden;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    
+}
+
+@media only screen and (max-width: 415px) {
+    .header-header {
+        justify-content: space-evenly;
+    }
+
+    .header-logo {
+        display: none
+    }
+
+    .header-anchor,
+    .btn-login,
+    .btn-signup {
+        font-size: 0.8rem;
     }
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {Modal, Button} from 'antd';
 import { LoginForm, SignUpForm } from './Forms';
+import './modal.css'
 
 export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
@@ -109,7 +110,7 @@ export const ModaleSignUp = () => {
 
   return (
     <>
-      <button className="btn-setup" onClick={showModal}>
+      <button className="btn-signup" onClick={showModal}>
         Sign Up
       </button>
       <Modal
