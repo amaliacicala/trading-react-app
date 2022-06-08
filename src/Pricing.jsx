@@ -13,7 +13,7 @@ export function Pricing() {
         <div> {list.map((item) => {
             return(
             <Row className="price-section">
-                <Col span={12}>
+                <Col xs={24} sm={24} md={12} lg={12}>
                     <div className='pricing-left'>
                         <Title>Only <strong>$67</strong> / month</Title>
                         <ul>
@@ -28,7 +28,7 @@ export function Pricing() {
 
                     </div>
                 </Col>
-                <Col span={12}>
+                <Col xs={24} sm={24} md={12} lg={12} >
                     <div className='pricing-right'>
                        <div> <Title> Only <strong>$670</strong> / year</Title>
                         <Title className='price-subtitle' underline level={4}>SAVE $134 ANNUALLY</Title></div>

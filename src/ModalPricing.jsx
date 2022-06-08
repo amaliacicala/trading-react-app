@@ -42,18 +42,18 @@ export const ModaleLogin = () => {
     
   return (
     <>
-      <Button className="btn-login" onClick={showModal}>
+      <button className="btn-login" onClick={showModal}>
         Subscribe
-      </Button>
+      </button>
       <Modal
         visible={visible}
         onOk={handleOk}
         onCancel={handleCancel}
         closable={false}
         footer={[
-          <Button key="back" onClick={handleCancel} className="modal-btn-close">
+          <button key="back" onClick={handleCancel} className="modal-btn-close">
             Close
-          </Button>
+          </button>
         ]}
       >
         <header className='header-modal'>
