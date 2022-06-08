@@ -28,7 +28,7 @@ export function Pricing() {
 
                     </div>
                 </Col>
-                <Col xs={24} sm={24} md={12} lg={12} >
+                <Col xs={24} sm={24} md={12} lg={12} xl={4} xxl={3} >
                     <div className='pricing-right'>
                        <div> <Title> Only <strong>$670</strong> / year</Title>
                         <Title className='price-subtitle' underline level={4}>SAVE $134 ANNUALLY</Title></div>

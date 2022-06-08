@@ -12,7 +12,7 @@ export function Hero() {
     <>{text.map((item) => {
       return(
       <Row justify='center' align='middle'>
-        <Col span={10}>
+        <Col xs={{span: 24, order: 2}} sm={{span: 24, order: 2}} md={{span: 24, order: 2}} lg={{span: 10, order: 1} } xl={{span: 10, order: 1} } xxl={{span: 10, order: 1} } >
           <div className='hero'>
             <h1>
               <strong>{item.title.title1}</strong>
@@ -25,7 +25,7 @@ export function Hero() {
             </div>
           </div>
         </Col>
-        <Col span={14}> <Image alt='IMMAGINE'
+        <Col xs={{span: 24, order: 1}} sm={{span: 24, order: 1}} md={{span: 24, order: 1}} lg={{span: 14, order: 2}} xl={{span: 14, order: 2}} xxl={{span: 14, order: 2}} > <Image alt='IMMAGINE'
           width={200}
           src=""
         /></Col>
