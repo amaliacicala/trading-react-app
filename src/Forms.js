@@ -204,7 +204,7 @@ export function SignUpForm() {
         ]}
       >
         <Checkbox >
-          I agree the Terms of Service 
+          <span style={{color: '#92A7AA'}}>I agree the Terms of Service</span> 
         </Checkbox>
       </Form.Item>
 

@@ -100,13 +100,13 @@ export const ModaleSignUp = () => {
   const changeToLogin = () => {
     setSignUp(false)
     signupBtn.style.backgroundColor = 'gainsboro'
-    loginBtn.style.backgroundColor = 'white'
+    loginBtn.style.backgroundColor = 'transparent'
   }
 
   const changeToSignUp = () => {
     setSignUp(true)
     signupBtn.style.backgroundColor = 'white'
-    loginBtn.style.backgroundColor = 'gainsboro'
+    loginBtn.style.backgroundColor = 'transparent'
   }
 
   return (
@@ -129,7 +129,7 @@ export const ModaleSignUp = () => {
           <div className='modal-login' id="modal-signup-change-login-btn" style={{backgroundColor: 'gainsboro'}}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-signup-change-signup-btn" style={{backgroundColor: 'white'}}>
+          <div className='modal-signup' id="modal-signup-change-signup-btn" style={{backgroundColor: 'transparent'}}>
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>

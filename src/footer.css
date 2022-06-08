@@ -69,6 +69,13 @@ input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
   color: #92A7AA;
 }
 
+.ant-input-group-addon:first-child {
+  background-color: #0e1522;
+  color: #92A7AA;
+  border: none;
+  border-right: 1px solid white;
+}
+
 .newsletter-submit {
   border: solid 1px #c5feaa;
   border-radius: 0.5rem;
