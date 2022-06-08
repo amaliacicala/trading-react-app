@@ -33,12 +33,13 @@ export default function ContactUs() {
             visible={isModalVisible} 
             onOk={handleOk} 
             onCancel={handleCancel}
-            footer = {[]}>
+            >
             <Form
                 layout="vertical"
                 name="complex-form"
                 onFinish={onFinish}
                 size="large"
+                footer = {[]}
                 >
                 <Form.Item>
                     {/* <Space size="large"> */}

@@ -72,7 +72,14 @@
 
 .modal-btn-close {
     width: 100%;
-    color: black !important;
+    color: black;
+    background-color: #062929;
+    border: solid 2px #c5feaa
+}
+
+.modal-btn-close:hover {
+    color: #c5feaa;
+    background-color: #062929;
 }
 
 .btn-submit-modal {
