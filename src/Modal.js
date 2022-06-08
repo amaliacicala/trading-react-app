@@ -59,7 +59,7 @@ export const ModaleLogin = () => {
         }
       >
         <header className='header-modal'>
-          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent'}}>
+          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent', color: 'rgba(73, 249, 146, 0.8)'}}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
           <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'gainsboro'}}>
@@ -105,8 +105,9 @@ export const ModaleSignUp = () => {
 
   const changeToSignUp = () => {
     setSignUp(true)
-    signupBtn.style.backgroundColor = 'white'
-    loginBtn.style.backgroundColor = 'transparent'
+    signupBtn.style.backgroundColor = 'transparent'
+    loginBtn.style.backgroundColor = 'gainsboro'
+    
   }
 
   return (
