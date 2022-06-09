@@ -23,7 +23,7 @@ export default function Footer() {
                 justify="center" 
                 gutter={[48, 36]}
             >
-                <Col xs={24} sm={24} md={12} lg={6} xl={7} xxl={8}>
+                <Col xs={24} sm={24} md={14} lg={7} xl={7} xxl={8}>
                     <section className="footer-col1">
                         <section>
                             <h2 className="logo">Logo</h2>
@@ -69,7 +69,7 @@ export default function Footer() {
                     </ul>
                 </Col>
 
-                <Col xs={24} sm={24} md={{span: 12, order: 2}} lg={{span: 7, order: 5}} xl={7} xxl={7}>
+                <Col xs={24} sm={24} md={{span: 10, order: 2}} lg={{span: 6, order: 5}} xl={7} xxl={7}>
                     <h2>Subscribe to our newsletter</h2>
                     <Form
                         name="basic"

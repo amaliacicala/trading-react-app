@@ -56,3 +56,9 @@
         font-size: 0.8rem;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1299px) {
+    .header-header {
+        width: 80%;
+    }
+}
