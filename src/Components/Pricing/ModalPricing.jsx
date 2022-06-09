@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Modal, Button} from 'antd';
+import {Modal} from 'antd';
 import { LoginForm, SignUpForm } from '../Modal/Forms';
 
 export const ModaleLogin = () => {

@@ -1,11 +1,11 @@
 
 import { Routes, Route } from "react-router-dom";
 
-import {Header} from './components/Header/Header'
+import {Header} from './Components/Header/Header'
 import { Dashboard } from "./Dashboard";
-import Footer from './components/Footer/Footer'
-import ContactUs from './components/ContactUs/ContactUs'
-import {Homepage} from './components/Homepage/Homepage';
+import Footer from './Components/Footer/Footer'
+import ContactUs from './Components/ContactUs/ContactUs'
+import {Homepage} from './Components/Homepage/Homepage';
 
 
 
