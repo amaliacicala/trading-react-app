@@ -1,0 +1,112 @@
+@import './variables';
+
+.button-style {
+    padding: 0.5rem 2rem;
+    background: $gradient;
+    border: solid 1px $secondary;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 10px #052323,
+             0px 0px 10px #072f2f;
+
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:active, &:visited, &:focus {
+        background: $primary;
+        border: solid 1px $accent;
+
+        span {
+            color: $accent;
+        }
+    }
+
+        span {
+            color: $primary;
+            text-shadow: none;
+            font-weight: 500;
+        }
+}
+
+.contact-btn {
+    @extend .button-style;
+
+    position: fixed;
+    bottom: 10%;
+    right: 6.5%;
+    margin: 0;
+    height: 3rem;
+}
+
+.ant-modal-content, .ant-modal-header {
+    background: $primary; // fallback bg color
+    border-radius: 1rem;
+    border: none;
+    padding: 5%;
+}
+
+.ant-modal-content {
+    background: radial-gradient(circle, rgba(6,41,41,1) 21%, rgba(1,7,11,1) 100%);
+
+    background-clip: padding-box;
+    border: solid 1px $accent;
+    border-radius: 1rem;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        z-index: -1;
+        margin: -1px;
+        border-radius: inherit;
+        background: linear-gradient(90deg, rgba(237,255,125,0.8), rgba(73,249,146,0.8));;        
+    }
+}
+
+.ant-modal-header {
+    background-color: transparent;
+}
+
+.ant-modal-title {
+    font-family: DM Sans;
+    color: $titles;
+    font-size: 1.8rem;
+}
+
+.ant-modal-body {
+    padding-bottom: 0;
+}
+
+.ant-modal-footer {
+    display: none;
+}
+
+.ant-input-textarea-show-count.ant-input-textarea-in-form-item::after {
+    color: $text;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-family: DM Sans;
+}
+
+.form-button {
+    @extend .button-style;
+    
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 1.5rem 3rem;
+
+    &:hover {
+        i {
+            color: $accent;
+        }
+    }
+
+    span {
+        font-size: 0.9rem;
+    }
+
+    i {
+        color: $primary;
+        margin-left: 0.5rem;
+    }
+}

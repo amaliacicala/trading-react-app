@@ -1,0 +1,115 @@
+@import '~antd/dist/antd.css';
+
+.ant-modal-body {
+    padding: 0px;
+}
+
+.ant-modal-footer {
+    border: none;
+    border-top: none;
+    padding: 24px;
+}
+
+.header-modal {
+    display: flex;
+    margin-bottom: 1rem;
+    height: 40px;
+}
+
+.btn-signup {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background-image: linear-gradient(90deg, rgba(237, 255, 125, 0.8), rgba(73, 249, 146, 0.8));
+    color: black;
+    border: none;
+    border-radius: 13px;
+    font-size: 16px;
+    padding: 0.15rem 0.5rem;
+    cursor: pointer;
+    font-family: Roboto;
+}
+
+.btn-login {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 13px;
+    font-size: 16px;
+    padding: 0.15rem 0.5rem;
+    cursor: pointer;
+    font-family: Roboto;
+}
+
+.modal-login, 
+.modal-signup {
+    width: 50%;
+    text-align: center;
+}
+
+.link-modal {
+    font-size: 20px;
+}
+
+.separation-line {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.line-span {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.line {
+    height: 1px;
+    width: 70%;
+    background-color: rgb(210, 206, 206);
+}
+
+.modal-btn-close {
+    width: 100%;
+    color: black;
+    background-color: #062929;
+    border: solid 2px #c5feaa
+}
+
+.modal-btn-close:hover {
+    color: #c5feaa;
+    background-color: #062929;
+}
+
+.btn-submit-modal {
+    width: 100%;
+    color: white;
+    background-color: rgb(247, 84, 24);
+    border: none;
+}
+
+.modal-btn-login {
+    width: 100%;
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+    border: none;
+    height: 30px;
+}
+
+.modal-btn-login:hover {
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.login-form {
+    padding: 1.5rem;
+}
+
+.link-password {
+    color: rgba(255, 255, 255, 0.717);
+    font-size: 14px;
+    text-align: center;
+}
