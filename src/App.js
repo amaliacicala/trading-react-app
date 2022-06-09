@@ -5,6 +5,8 @@ import { Dashboard } from "./Dashboard";
 import Footer from "./Footer";
 import ContactUs from "./ContactUs";
 import Content from "./Features";
+import { Pricing } from "./Pricing";
+import { Hero } from "./Hero";
 
 function App() {
   return (

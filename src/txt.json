@@ -1,0 +1,29 @@
+[{
+    "hero": {
+        "title": {
+            "title1": "THE ONLY DONE",
+            "title2": "FOR YOU OPTION",
+            "title3": "PICKER"
+        },
+
+        "subtitle": "Get trade alerts. Cancel anytime.",
+        "label": "Enter your email to create or restart your membership",
+        "pic": ""
+    },
+    "pricing": {
+
+        "title": {
+            "only": "Only",
+            "priceSin": "$67",
+            "priceDx": "$670",
+            "month": "/month",
+            "year": "/year"
+        },
+        "subtitle": "SAVE $134 ANNUALLY",
+        "l1": "Daily options recommendations",
+        "l2": "Suggested strike prices for each symbol",
+        "l3": "8 recommended options strategies",
+        "l4": "Grading system for better options trading",
+        "l5": "Proprietary indicators"
+    }
+}]

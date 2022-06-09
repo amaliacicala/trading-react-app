@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+
+}
+
+body {
+    background: rgb(6, 41, 41);
+    background-image: linear-gradient(to bottom, #000609, #042626);
+}
+
+
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card-l,
+.card-r {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #000609, #042626);
+    color: #92a7aa;
+    width: max-content;
+    padding: 3rem;
+    gap: 2rem;
+    border-radius: 4px;
+
+}
+
+.card-l:hover,
+.card-r:hover {
+    filter: brightness(150%);
+    filter: drop-shadow(0 0 5rem 2rem);
+    background-color: #042626;
+
+}
+
+.card-l {
+    gap: 3rem;
+}
+
+.card-r {
+    gap: 1.7rem;
+}
+
+.card-l-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.card-l-content button {
+    width: fit-content;
+}
+
+.pricing-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+
+h4.ant-typography,
+h2.ant-typography {
+    color: #92a7aa;
+    margin: 0;
+    text-align: center;
+}
+
+.ant-typography+h4.ant-typography {
+    margin: 0;
+}
+
+
+
+
+/*----------------------------- MOBILE MEDIA QUERY ----------------------------- */
+
+@media only screen and (max-width:430px) {
+
+    .pricing {
+        flex-direction: column;
+        padding: 0.5rem;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card-l,
+    .card-r {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+
+}
+
+/*----------------------------- TABLET MEDIA QUERY ----------------------------- */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .pricing {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
+    .card-l,
+    .card-r {
+        width: 85%;
+        padding: 2rem 0.5rem;
+    }
+}
