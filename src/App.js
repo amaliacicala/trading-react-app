@@ -1,19 +1,20 @@
 
 import { Routes, Route } from "react-router-dom";
-import {Header} from './Header'
+
+import {Header} from './Components/Header/Header'
 import { Dashboard } from "./Dashboard";
-import Footer from "./Footer";
-import ContactUs from "./ContactUs";
-import Content from "./Features";
-import { Pricing } from "./Pricing";
-import { Hero } from "./Hero";
+import Footer from './Components/Footer/Footer'
+import ContactUs from './Components/ContactUs/ContactUs'
+import {Homepage} from './Components/Homepage/Homepage';
+
+
 
 function App() {
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Content/>} >
+        <Route path="/" element={<Homepage/>} >
         </Route>
         <Route path="/dashboard" element={<Dashboard />} >
         </Route>

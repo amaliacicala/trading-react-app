@@ -1,8 +1,8 @@
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Image } from 'antd';
-import text from './txt.json';
-import "./pricing.css";
+import text from '../../locales/pricing+hero/txt.json';
+import "../Pricing/pricing.css";
 import "./hero.css";
 import { ModaleLogin } from './ModalHero';
 

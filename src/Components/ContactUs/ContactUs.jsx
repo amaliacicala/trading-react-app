@@ -33,6 +33,7 @@ export default function ContactUs() {
             visible={isModalVisible} 
             onOk={handleOk} 
             onCancel={handleCancel}
+            footer={[]}
             >
             <Form
                 layout="vertical"

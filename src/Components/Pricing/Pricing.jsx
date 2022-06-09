@@ -1,11 +1,9 @@
-
-
 import 'antd/dist/antd.css';
 import "./pricing.css";
-import "./hero.css";
+import '../Hero/hero.css';
 import {Typography } from 'antd';
 import { ModaleLogin } from './ModalPricing';
-import txt from './txt.json';
+import txt from '../../locales/pricing+hero/txt.json';
 const { Title } = Typography;
 
 

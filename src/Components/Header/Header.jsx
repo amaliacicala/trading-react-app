@@ -1,5 +1,6 @@
 import React from 'react';
-import {ModaleLogin, ModaleSignUp} from './Modal';
+import { ModaleLogin} from '../Modal/Modal';
+import { ModaleSignUp } from '../Modal/Modal';
 import './header.css'
 
 

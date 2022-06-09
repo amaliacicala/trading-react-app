@@ -1,9 +1,9 @@
 import React from "react";
 import "./FeaturesCss.css";
-import data from "./Text.js"
+import data from "../../locales/features/Text"
 
 
-export default function Features() {
+export function Features() {
   return (
     <>
       {data.map((item) => (

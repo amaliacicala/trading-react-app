@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import {Modal} from 'antd';
-import { LoginForm, SignUpForm } from './Forms';
+import { LoginForm, SignUpForm } from '../Modal/Forms';
 
 export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
