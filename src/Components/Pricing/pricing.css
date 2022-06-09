@@ -10,6 +10,7 @@
 body {
     background: rgb(6, 41, 41);
     background-image: linear-gradient(to bottom, #000609, #042626);
+   
 }
 
 
@@ -45,6 +46,9 @@ body {
 
 .card-l {
     gap: 3rem;
+}
+.card-l strong, .card-r strong{
+    color: #48f992;
 }
 
 .card-r {

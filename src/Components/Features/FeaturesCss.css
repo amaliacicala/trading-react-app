@@ -68,6 +68,9 @@ body {
     font-family: DM Mono;
     line-height: 2rem;
 }
+.FeaturesStyle h1:hover{
+    color:#48f992;
+}
 
  @media only screen and (max-width: 768px) {         
 
