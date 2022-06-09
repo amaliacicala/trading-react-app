@@ -2,7 +2,6 @@ import React from "react";
 import "./FeaturesCss.css";
 import data from "./Text.js"
 
-import content from "./Text";
 
 export default function Features() {
   return (
