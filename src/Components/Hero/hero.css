@@ -61,4 +61,5 @@ strong {
     background-image: linear-gradient(to right, #d1ef36, #49f992);
     color: black;
     font-weight: bolder;
+    cursor: pointer;
 }
