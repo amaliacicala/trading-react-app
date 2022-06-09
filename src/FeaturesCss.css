@@ -1,0 +1,42 @@
+.DivFeaturesContenitor {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.DivSubClass {
+    display: flex;
+    flex-direction: row;
+}
+
+.DivSubClassReverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+img {
+    width: 50%;
+    
+}
+
+body {
+    background-color: #062929;
+    color: #92A7AA
+}
+
+h1 {
+    color: #ffffff
+}
+
+/* .divprova1 {
+    border: solid 10px red;
+}
+
+.divprova2 {
+    border: solid 10px green 
+}
+ */
+
+ div {
+     align-items: center;
+ }

@@ -1,13 +1,21 @@
-import { Routes, Route } from "react-router-dom";
-// importa qui il tuo componente parent 
 
-function App() {
-  return (
-    <Routes>
-      {/* <Route path="/" element={INSERISCI IL COMPONENTE PARENT CHE VUOI RENDERIZZARE IN HOMEPAGE}></Route> */}
-    </Routes>
-  );
+import React from "react";
+import Content from "./Features";
+
+class App extends React.Component {
+
+  render() {
+
+      return (
+          <div>
+              <Content/>
+          </div>
+      )
+  }
 }
 
-export default App;
+
+
+export default App
+
 
