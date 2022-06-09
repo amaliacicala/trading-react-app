@@ -1,8 +1,8 @@
-import pic1 from "../../assets/1.svg";
-import pic2 from "../../assets/2.svg";
-import pic3 from "../../assets/3.svg";
-import pic4 from "../../assets/4.svg";
-import pic5 from "../../assets/5.svg";
+import pic1 from "../../assets/features1.svg";
+import pic2 from "../../assets/features2.svg";
+import pic3 from "../../assets/features3.svg";
+import pic4 from "../../assets/features4.svg";
+import pic5 from "../../assets/features5.svg";
 
 const data = [
     {

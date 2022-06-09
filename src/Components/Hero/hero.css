@@ -7,9 +7,10 @@ body {
 }
 
 .hero{
-    padding: 3rem 0;
+    padding: 2rem 0;
     width: 70%;
     margin: auto;
+    align-items: center;
 }
 
 .hero-txt {
@@ -20,7 +21,10 @@ body {
 
 .hero-input {
     display: flex;
+}
 
+.hero-img {
+    width: 120%;
 }
 
 .hero-email:hover {

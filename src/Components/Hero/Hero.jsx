@@ -5,6 +5,7 @@ import text from '../../locales/pricing+hero/txt.json';
 import "../Pricing/pricing.css";
 import "./hero.css";
 import { ModaleLogin } from './ModalHero';
+import img from '../../assets/hero-section.svg'
 
 
 export function Hero() {
@@ -29,10 +30,9 @@ export function Hero() {
               </div></div>
             </div>
           </Col>
-          <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} > <Image alt='IMMAGINE'
-            width={200}
-            src=""
-          /></Col>
+          <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} >
+              <img className="hero-img" src={img}/>
+          </Col>
         </Row>
       )
     })} </>
