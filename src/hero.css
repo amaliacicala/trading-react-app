@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.hero-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+
+
+}
+
+.hero-input {
+    display: flex;
+
+}
+
+.hero-email {
+    background-image: linear-gradient(to bottom, #000609, #042626);
+    border: 1px solid #49f992;
+}
+
+.hero-email:hover {
+    filter: brightness(170%);
+    filter: drop-shadow(2rem 2rem 5rem 5rem);
+    background-color: #042626;
+}
+
+.hero-email::placeholder {
+    color: #49f992;
+    padding-left: 5px;
+
+
+}
+
+label strong,
+.hero-sub {
+    color: #92a7aa;
+    font-family: 'Roboto';
+}
+
+strong {
+    color: #49f992;
+    font-family: 'DM mono';
+}
+
+
+.btn-login-s {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+    border-radius: 13px;
+    font-size: 16px;
+    padding: 0.15rem 0.5rem;
+    border: none;
+
+}
+
+.btn-login-s:hover {
+    background-image: linear-gradient(to right, #d1ef36, #49f992);
+    color: black;
+    font-weight: bolder;
+}

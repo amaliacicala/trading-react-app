@@ -1,7 +1,8 @@
 
 
 import 'antd/dist/antd.css';
-import "./hero+pricing.css";
+import "./pricing.css";
+import "./hero.css";
 import {Typography } from 'antd';
 import { ModaleLogin } from './ModalPricing';
 import txt from './txt.json';

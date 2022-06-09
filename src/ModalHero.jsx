@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Modal, Button} from 'antd';
+import {Modal} from 'antd';
 import { LoginForm, SignUpForm } from './Forms';
 
 export const ModaleLogin = () => {
@@ -42,7 +42,7 @@ export const ModaleLogin = () => {
     
   return (
     <>
-      <button className="btn-login" onClick={showModal}>
+      <button className="btn-login-s" onClick={showModal}>
         Get Started
       </button>
       <Modal

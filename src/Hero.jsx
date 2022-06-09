@@ -2,7 +2,8 @@ import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
 import { Image } from 'antd';
 import text from './txt.json';
-import "./hero+pricing.css";
+import "./pricing.css";
+import "./hero.css";
 import { ModaleLogin } from './ModalHero';
 
 
@@ -20,11 +21,11 @@ export function Hero() {
                   {item.hero.title.title2} <br />
                   {item.hero.title.title3} <br />
                   </strong></h1>
-              <strong>{item.hero.subtitle} <br /></strong>
-              <label><strong>{item.hero.label}</strong></label>
-              <div className='hero-input'><input type="email" name="email" id="email" placeholder='Email' />
+              <strong className='hero-sub'>{item.hero.subtitle} <br /></strong>
+              <div><label><strong>{item.hero.label}</strong></label>
+              <div className='hero-input'><input className='hero-email' type="email" name="email" id="email" placeholder='Email' />
                 <ModaleLogin />
-              </div>
+              </div></div>
             </div>
           </Col>
           <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} > <Image alt='IMMAGINE'
