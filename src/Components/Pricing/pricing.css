@@ -7,18 +7,19 @@
 
 }
 
-body {
+/* body {
     background: rgb(6, 41, 41);
     background-image: linear-gradient(to bottom, #000609, #042626);
    
-}
+} */
 
 
 
 .pricing {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 10rem;
+    padding: 8rem 0;
 }
 
 .card-l,

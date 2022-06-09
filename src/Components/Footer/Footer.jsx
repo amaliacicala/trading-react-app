@@ -23,7 +23,7 @@ export default function Footer() {
                 justify="center" 
                 gutter={[48, 36]}
             >
-                <Col xs={24} sm={24} md={12} lg={6} xl={6} xxl={8}>
+                <Col xs={24} sm={24} md={12} lg={6} xl={7} xxl={8}>
                     <section className="footer-col1">
                         <section>
                             <h2 className="logo">Logo</h2>
@@ -40,7 +40,7 @@ export default function Footer() {
                     </section>
                 </Col>
 
-                <Col xs={12} sm={8} md={{span: 8, order: 3}} lg={{span: 4, order: 2}} xl={4} xxl={3}>
+                <Col xs={12} sm={8} md={{span: 8, order: 3}} lg={{span: 4, order: 2}} xl={3} xxl={3}>
                     <h2>Product</h2>
                     <ul>
                         <li><a href="#">Features</a></li>
@@ -74,7 +74,8 @@ export default function Footer() {
                     <Form
                         name="basic"
                         layout="inline"
-                        style={{display: 'flex', alignItems: 'center'}}
+                        className="newsletter"
+                        // style={{display: 'flex', alignItems: 'center'}}
                         wrapperCol={{
                             span: 24,
                         }}

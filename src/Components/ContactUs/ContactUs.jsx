@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Modal, Button, Form, Input, Space } from 'antd';
 import 'antd/dist/antd.css';
 import 'font-awesome/css/font-awesome.min.css';
-import './footer.css';
+import './contactus.css';
 
 export default function ContactUs() {
     const [isModalVisible, setIsModalVisible] = useState(false);

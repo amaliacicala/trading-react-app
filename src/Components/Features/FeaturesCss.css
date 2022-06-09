@@ -4,35 +4,30 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    
 }
 
 .DivSubClass {
     display: flex;
     flex-direction: row;
-    padding: 10px;
-    margin: 5px;
+    width: 70%;
+    margin: auto;
     align-items: center;
-    margin-left: 20%;
-    margin-right: 20%;
+    padding: 2rem 0;
+    background-image: radial-gradient(18% 45% at 84%, #052122, transparent);
 }
 
 .DivSubClassReverse {
     display: flex;
     flex-direction: row-reverse;
-    padding: 10px;
-    margin-left: 20%;
-    margin-right: 20%;
+    width: 70%;
+    margin: auto;
     align-items: center;
+    padding: 2rem 0;
+    background-image: radial-gradient(18% 50% at 17%, #052122, transparent);
 }
 
 img {
-    width: 15rem;
-    height: 15rem;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10%;
-    
+    width: 30%;
 }
 
 body {
@@ -53,51 +48,57 @@ body {
 
  #contenitor {
      align-items: center;
-     gap: 2rem;
+     gap: 5rem;
  }
 
  .FeaturesStyle {
      text-align: left;
-     font-family: roboto;
+     font-family: Roboto;
+     font-size: 1rem;
      line-height: 1.5rem;
      
  }
 
  h1 {
-    color: #ffffff;
+    color: #c5feaa;
     font-family: DM Mono;
-    line-height: 2rem;
-}
-.FeaturesStyle h1:hover{
-    color:#48f992;
+    line-height: 3.2rem;
+    font-size: 2.4rem;
 }
 
  @media only screen and (max-width: 768px) {         
 
     section { 
-      flex-wrap: wrap;
-     width: 100%;
-     padding: 0rem;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        line-height: 2.6rem;
     }
 
     img {
-        width: 50%;
-        padding: 10px;
-        margin: 10px;
-        border-radius: 10%;
+        width: 70%;
+    }
+
+    #contenitor {
+        gap: 3rem;
     }
 
     .DivSubClass {
         display: flex;
         flex-direction: column;
-        padding: 10px;
-        margin: 10px
+        width: 80%;
+        background-image: radial-gradient(48% 15% at 50% 78%, #052122, transparent);
     }
     
     .DivSubClassReverse {
         display: flex;
         flex-direction: column;
-        padding: 10px;
-        margin: 10px;
+        width: 80%;
+        background-image: radial-gradient(48% 25% at 50% 78%, #052122, transparent);
+
     }
 }
