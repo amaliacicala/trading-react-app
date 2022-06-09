@@ -23,11 +23,11 @@ export function Pricing() {
                         </Title>
                         <div className='card-l-content'>
                             <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l1}</li>
-                                <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l2}</li>
-                                <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l3}</li>
-                                <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l4}</li>
-                                <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l5}</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
+                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
                             </ul>
                             <ModaleLogin />
                         </div>
@@ -44,11 +44,11 @@ export function Pricing() {
                             <Title level={4} underline="true">{item.pricing.subtitle}</Title>
                         </div>
                         <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l1}</li>
-                            <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l2}</li>
-                            <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l3}</li>
-                            <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l4}</li>
-                            <li><span class="fa-li"><i class="fa-solid fa-check"></i></span>{item.pricing.l5}</li>
+                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
+                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
+                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
+                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
+                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
                         </ul>
                         <ModaleLogin />
                     </div>
