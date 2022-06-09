@@ -2,7 +2,7 @@
 
 body {
     background: rgb(6, 41, 41);
-    background-image: radial-gradient(circle, #021718, #010409);
+    background-image: radial-gradient(circle, #021112, #010409);
     background-attachment: fixed;
 }
 
@@ -25,6 +25,7 @@ body {
 
 .hero-img {
     width: 120%;
+    background-image: radial-gradient(48% 50% at 47%, #062324, transparent);
 }
 
 .hero-email:hover {

@@ -13,7 +13,7 @@
     margin: auto;
     align-items: center;
     padding: 2rem 0;
-    background-image: radial-gradient(18% 45% at 84%, #052122, transparent);
+    background-image: radial-gradient(18% 45% at 82%, #062324, transparent);
 }
 
 .DivSubClassReverse {
@@ -23,7 +23,7 @@
     margin: auto;
     align-items: center;
     padding: 2rem 0;
-    background-image: radial-gradient(18% 50% at 17%, #052122, transparent);
+    background-image: radial-gradient(18% 50% at 17%, #062324, transparent);
 }
 
 img {
