@@ -1,21 +1,26 @@
 
-import React from "react";
+import { Routes, Route } from "react-router-dom";
+import {Header} from './Header'
+import { Dashboard } from "./Dashboard";
+import Footer from "./Footer";
+import ContactUs from "./ContactUs";
 import Content from "./Features";
 
-class App extends React.Component {
-
-  render() {
-
-      return (
-          <div>
-              <Content/>
-          </div>
-      )
-  }
+function App() {
+  return (
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Content/>} >
+        </Route>
+        <Route path="/dashboard" element={<Dashboard />} >
+        </Route>
+      </Routes>
+      <Footer />
+      <ContactUs />
+    </>
+  );
 }
 
-
-
-export default App
-
+export default App;
 

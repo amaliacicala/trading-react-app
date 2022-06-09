@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import App from './App'
 
-export function Root() {
+export default function Root() {
     return (
         <BrowserRouter>
            <App />

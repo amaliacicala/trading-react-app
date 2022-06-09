@@ -1,0 +1,112 @@
+@import './variables';
+
+footer {
+    background: rgb(6,41,41); // fallback bg color
+    background-image: 
+        radial-gradient(circle, rgba(6,41,41,0.9) 0%, rgba(1,7,11,0.9) 72%),
+        url('/src/images/trading-vector.svg');
+    padding: 4rem 6rem;
+}
+
+.footer-col1 {
+    display: flex;
+    flex-flow: column wrap;
+    
+        .logo {
+            color: $accent;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+}
+
+.social-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15rem;
+    height: 3.5rem;
+    padding-top: 1%;
+    border: solid 1px $accent;
+    border-radius: 0.5rem;
+
+        i {
+            font-size: 1.4rem;
+            color: $accent;
+            transition: color 0.2s ease-in-out;
+
+            &:hover {
+                color: $titles;
+            }
+        }
+}
+
+input[type="text"], input[type="email"], #complex-form textarea {
+    background-color: $input;
+    color: $text;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+
+    &::placeholder {
+        color: $text;
+        padding-left: 0.5rem;
+    }
+
+    &:focus {
+        outline: solid 1px $accent;
+        padding-left: 0.5rem;
+        color: $text;
+    }
+}
+
+.newsletter-submit {
+    border: solid 1px $accent;
+    border-radius: 0.5rem;
+    background: transparent;
+    height: 100%;
+    padding: 0.5rem 0.9rem;
+    transition: all 0.2s ease-in-out;
+
+    &:hover, &:active, &:visited, &:focus {
+        background: $gradient;
+        border: solid 1px $accent;
+
+        i {
+            color: $input;
+        }
+    }
+
+    i {
+        color: $accent;
+        transition: all 0.2s ease-in-out;
+    }
+}
+
+.footer-disclaimer {
+    padding-top: 2rem;
+    font-size: 0.7rem;
+
+    p {
+        opacity: 0.6;
+    }
+}
+
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 2rem;
+    padding-top: 2rem;
+    font-size: 0.8rem;
+    border-top: solid 0.5px rgba(197, 254, 170, 0.2);
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 4rem 2rem;
+    }
+}
