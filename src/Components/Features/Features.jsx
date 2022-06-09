@@ -1,7 +1,6 @@
 import React from "react";
 import "./FeaturesCss.css";
-import data from "../../locales/features/Text"
-
+import data from "../../locales/features/Text";
 
 export function Features() {
   return (
