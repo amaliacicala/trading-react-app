@@ -7,9 +7,9 @@ export function Features() {
   return (
     <>
       {data.map((item) => (
-        <div className={item.id % 2 == 0 ? "DivSubClass" : "DivSubClassReverse"}>
+        <div className={item.id % 2 == 0 ? "DivSubClass" : "DivSubClassReverse"} id="contenitor">
           
-          <section> <h1> {item.title}</h1>{item.text}</section>
+          <section className="FeaturesStyle"> <h1> {item.title}</h1>{item.text}</section>
           <img src={item.img}></img>
         </div>
       ))}

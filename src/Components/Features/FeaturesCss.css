@@ -51,12 +51,12 @@ body {
 }
  */
 
- div {
+ #contenitor {
      align-items: center;
      gap: 2rem;
  }
 
- section {
+ .FeaturesStyle {
      text-align: left;
      font-family: roboto;
      line-height: 1.5rem;
