@@ -27,6 +27,7 @@
     padding: 0.15rem 0.5rem;
     cursor: pointer;
     font-family: Roboto;
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-login {
@@ -39,14 +40,15 @@
     padding: 0.5rem 2rem;
     cursor: pointer;
     font-family: Roboto;
-    
+    transition: all 0.2s ease-in-out;
 }
 
 .btn-login:hover {
     background: #062929;
   border: solid 1px #c5feaa;
   cursor: pointer;
-  color: #c5feaa
+  color: #c5feaa;
+  box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
 }
 
 .modal-login, 
