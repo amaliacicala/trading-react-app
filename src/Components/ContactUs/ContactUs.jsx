@@ -25,9 +25,9 @@ export default function ContactUs() {
   
     return (
         <section>
-            <Button type="primary" className="contact-btn" onClick={showModal}>
+            <button  className="contact-btn" onClick={showModal}>
                 Contact Us
-            </Button>
+            </button>
             <Modal 
             title="Contact Us" 
             visible={isModalVisible} 

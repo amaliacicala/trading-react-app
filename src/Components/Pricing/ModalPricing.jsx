@@ -42,7 +42,7 @@ export const ModaleLogin = () => {
     
   return (
     <>
-      <button className="btn-login-s" onClick={showModal}>
+      <button className="button-style" onClick={showModal}>
         Subscribe
       </button>
       <Modal

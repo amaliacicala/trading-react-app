@@ -112,7 +112,7 @@ export const ModaleSignUp = () => {
 
   return (
     <>
-      <button className="btn-signup" onClick={showModal}>
+      <button className="button-style" onClick={showModal}>
         Sign Up
       </button>
       <Modal
