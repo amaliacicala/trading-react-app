@@ -42,7 +42,7 @@ export const ModaleLogin = () => {
     
   return (
     <>
-      <button className="button-style" onClick={showModal}>
+      <button className="button-style btn-hero" onClick={showModal}>
         Get Started
       </button>
       <Modal

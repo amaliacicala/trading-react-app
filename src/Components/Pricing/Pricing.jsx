@@ -16,7 +16,7 @@ export function Pricing() {
                 <section className='pricing'>
 
                     <div className='card-l'>
-                        <Title level={2}>
+                        <Title>
                             {item.pricing.title.only}
                             <strong> {item.pricing.title.priceSin} </strong>
                             {item.pricing.title.month}
@@ -36,7 +36,7 @@ export function Pricing() {
 
                     <div className='card-r'>
                         <div className='pricing-title'>
-                            <Title level={2}>
+                            <Title>
                                 {item.pricing.title.only}
                                 <strong> {item.pricing.title.priceDx} </strong>
                                 {item.pricing.title.year}
