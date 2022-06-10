@@ -32,21 +32,21 @@
 .btn-login {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
-    background-color: black;
+    background-color: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1px solid #92a7aa;
     border-radius: 1rem;
     padding: 0.5rem 2rem;
     cursor: pointer;
     font-family: Roboto;
-    font-weight: 500;
+    
 }
 
 .btn-login:hover {
-    color: black;
-    background-color: white;
-    border: solid 1px #062929;
-
+    background: #062929;
+  border: solid 1px #c5feaa;
+  cursor: pointer;
+  color: #c5feaa
 }
 
 .modal-login, 
