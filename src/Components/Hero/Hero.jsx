@@ -14,13 +14,11 @@ export function Hero() {
     <>{text.map((item) => {
       return (
         <Row className='hero' justify='center'>
-          <Col xs={{ span: 24, order: 2 }} sm={{ span: 24, order: 2 }} md={{ span: 12, order: 2 }} lg={{ span: 12, order: 1 }} xl={{ span: 12, order: 1 }} xxl={{ span: 12, order: 1 }} >
+          <Col xs={{ span: 24, order: 2 }} sm={{ span: 24, order: 2 }} md={{ span: 24, order: 2 }} lg={{ span: 12, order: 1 }} xl={{ span: 12, order: 1 }} xxl={{ span: 12, order: 1 }} >
             <div className='hero-txt'>
               <h1>
                 <strong className='hero-title'>
-                  {item.hero.title.title1} <br />
-                  {item.hero.title.title2} <br />
-                  {item.hero.title.title3} <br />
+                  {item.hero.title.title1}     
                   </strong></h1>
               <strong className='hero-sub'>{item.hero.subtitle} <br /></strong>
               <div className='hero-l-content'>
@@ -30,7 +28,7 @@ export function Hero() {
               </div></div>
             </div>
           </Col>
-          <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 12, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} >
+          <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} >
               <img className="hero-img" src={img}/>
           </Col>
         </Row>

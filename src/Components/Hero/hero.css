@@ -17,6 +17,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 0.5rem;
 }
 
 .hero-input {
@@ -47,7 +48,7 @@ body {
 } 
 
 .hero-sub{
-    font-size: large;
+    font-size: 1.5rem;
 }
 label strong,
 .hero-sub {
@@ -59,10 +60,8 @@ label strong,
 .hero-title {
     color: #c5feaa;
     font-family: 'DM mono';
-    font-size: 2rem;
-}
-.hero-title:hover{
-    filter: brightness(130%);
+    font-size: 3rem;
+    line-height: 4rem;
 }
 
 .hero-l-content{

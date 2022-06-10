@@ -5,7 +5,7 @@ import { LoginForm, SignUpForm } from '../Modal/Forms';
 export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [login, setLogin] = useState(true)
+  const [login, setLogin] = useState(false)
 
   const showModal = () => {
     setVisible(true);
@@ -30,12 +30,12 @@ export const ModaleLogin = () => {
   const changeToLogin = () => {
     setLogin(true)
     signupBtn.style.backgroundColor = 'gainsboro'
-    loginBtn.style.backgroundColor = 'white'
+    loginBtn.style.backgroundColor = 'transparent'
   }
 
   const changeToSignUp = () => {
     setLogin(false)
-    signupBtn.style.backgroundColor = 'white'
+    signupBtn.style.backgroundColor = 'transparent'
     loginBtn.style.backgroundColor = 'gainsboro'
   }
 
@@ -57,10 +57,10 @@ export const ModaleLogin = () => {
         ]}
       >
         <header className='header-modal'>
-          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'white'}}>
+          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'gainsboro'}}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'gainsboro'}}>
+          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'transparent'}}>
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>

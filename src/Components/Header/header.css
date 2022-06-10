@@ -34,11 +34,7 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
-    
-}
-
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 570px) {
     .header-header {
         width: 100%;
         margin: auto;
