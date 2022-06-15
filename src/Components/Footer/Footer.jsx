@@ -43,8 +43,8 @@ export default function Footer() {
                 <Col xs={12} sm={8} md={{span: 8, order: 3}} lg={{span: 4, order: 2}} xl={3} xxl={3}>
                     <h2>Product</h2>
                     <ul className="footer-ul">
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#">API</a></li>
                         <li><a href="#">Interest</a></li>
                     </ul>
