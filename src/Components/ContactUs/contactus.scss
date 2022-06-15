@@ -71,9 +71,9 @@
     font-size: 1.8rem;
 }
 
-.ant-modal-body {
-    padding-bottom: 0;
-}
+// .ant-modal-body {
+//     padding-bottom: 0;
+// }
 
 .ant-modal-footer {
     display: none;
@@ -103,6 +103,7 @@
 
     span {
         font-size: 0.9rem;
+        color: $primary;
     }
 
     i {

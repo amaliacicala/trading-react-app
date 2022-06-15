@@ -29,7 +29,7 @@ export const LoginForm = () => {
           className='login-form'
       >
           
-      <button className='modal-btn-login'>
+      <button className='modal-btn-login button-style'>
         Log in with Google
       </button>
           
@@ -63,7 +63,7 @@ export const LoginForm = () => {
         <Input.Password placeholder='Password'/>
       </Form.Item>
 
-     <button className='modal-btn-login' onClick={navigateToDashboard}>
+     <button className='modal-btn-login button-style' onClick={navigateToDashboard}>
         Login
      </button>
           
@@ -109,7 +109,7 @@ export function SignUpForm() {
           className='login-form'
       >
           
-      <button className='modal-btn-login'>
+      <button className='modal-btn-login button-style'>
         Sign up with Google
       </button>
           
@@ -208,7 +208,7 @@ export function SignUpForm() {
         </Checkbox>
       </Form.Item>
 
-     <button htmlType="submit" className='modal-btn-login'>
+     <button htmlType="submit" className='modal-btn-login button-style'>
         Sign Up
      </button>
           

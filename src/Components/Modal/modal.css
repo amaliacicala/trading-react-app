@@ -12,8 +12,7 @@
 
 .header-modal {
     display: flex;
-    margin-bottom: 1rem;
-    height: 40px;
+    margin-bottom: 2rem;
 }
 
 .btn-signup {
@@ -53,12 +52,17 @@
 
 .modal-login, 
 .modal-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50%;
-    text-align: center;
 }
 
 .link-modal {
     font-size: 20px;
+    font-family: 'DM Mono';
+    color: white;
+    font-weight: 500;
 }
 
 .separation-line {
@@ -100,10 +104,7 @@
 
 .modal-btn-login {
     width: 100%;
-    background-image: linear-gradient(to right, #d1ef36, #49f992);
     color: black;
-    border: none;
-    height: 30px;
 }
 
 .modal-btn-login:hover {
@@ -121,4 +122,5 @@
     color: rgba(255, 255, 255, 0.717);
     font-size: 14px;
     text-align: center;
+    margin-top: 1rem;
 }

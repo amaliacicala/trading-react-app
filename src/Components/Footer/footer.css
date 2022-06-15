@@ -182,27 +182,42 @@ li {
   line-height: 2.2rem;
 }
 
-input[type=text], input[type=email], #complex-form textarea {
+input[type=text], input[type=email], input[type=password], #complex-form textarea {
   background-color: #0e1522;
   color: #92A7AA;
   border: none;
   padding: 0.5rem;
   border-radius: 0.5rem;
 }
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, #complex-form textarea::-moz-placeholder {
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder, #complex-form textarea::-moz-placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, #complex-form textarea:-ms-input-placeholder {
+input[type=text]:-ms-input-placeholder, input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder, #complex-form textarea:-ms-input-placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]::placeholder, input[type=email]::placeholder, #complex-form textarea::placeholder {
+input[type=text]::placeholder, input[type=email]::placeholder, input[type=password]::placeholder, #complex-form textarea::placeholder {
   color: #92A7AA;
   padding-left: 0.5rem;
 }
-input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, #complex-form textarea:focus {
   outline: solid 1px #c5feaa;
   padding-left: 0.5rem;
   color: #92A7AA;
+}
+
+.ant-input-affix-wrapper {
+  background-color: #0e1522;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0 1rem 0 0;
+}
+.ant-input-affix-wrapper input.ant-input {
+  padding: 0.5rem;
+}
+
+.ant-input-group-addon {
+  background-color: #0e1522;
+  border: none;
 }/*# sourceMappingURL=footer.css.map */

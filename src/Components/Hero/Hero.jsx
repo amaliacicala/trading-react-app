@@ -20,9 +20,9 @@ export function Hero() {
                 <strong className='hero-title'>
                   {item.hero.title.title1}     
                   </strong></h1>
-              <strong className='hero-sub'>{item.hero.subtitle} <br /></strong>
+              <p className='hero-sub'>{item.hero.subtitle}</p>
               <div className='hero-l-content'>
-                <label><strong>{item.hero.label}</strong></label>
+                <label><p>{item.hero.label}</p></label>
               <div className='hero-input'><input className='hero-email' type="email" name="email" id="email" placeholder='Email' />
                 <ModaleLogin />
               </div></div>
