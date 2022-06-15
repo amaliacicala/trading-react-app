@@ -53,19 +53,7 @@ footer {
   width: 10rem;
 }
 
-.ant-input-affix-wrapper {
-  background-color: #0e1522;
-}
-
-.ant-input-group-addon {
-  border: none
-}
-
-.ant-input-group-addon {
-  background-color: #0e1522;
-}
-
-input[type=text], input[type=email], input[type=password], #complex-form textarea {
+input[type=text], input[type=email], #complex-form textarea {
   background-color: #0e1522;
   color: #92A7AA;
   border: none;
