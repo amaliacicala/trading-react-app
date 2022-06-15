@@ -3,20 +3,19 @@
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
   border: solid 1px #01070b;
   border-radius: 1rem;
+  cursor: pointer;
+  color: #062929;
+  font-weight: 500;
   box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
   transition: all 0.2s ease-in-out;
 }
 .button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:active, .form-button:active, .contact-btn:active, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:focus, .form-button:focus, .contact-btn:focus {
   background: #062929;
   border: solid 1px #c5feaa;
+  color: #c5feaa;
 }
 .button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:focus span, .form-button:focus span, .contact-btn:focus span {
   color: #c5feaa;
-}
-.button-style span, .form-button span, .contact-btn span {
-  color: #062929;
-  text-shadow: none;
-  font-weight: 500;
 }
 
 .contact-btn {
@@ -25,6 +24,7 @@
   right: 4%;
   margin: 0;
   height: 3rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .ant-modal-content, .ant-modal-header {

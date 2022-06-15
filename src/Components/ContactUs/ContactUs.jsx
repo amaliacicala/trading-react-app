@@ -43,7 +43,6 @@ export default function ContactUs() {
                 footer = {[]}
                 >
                 <Form.Item>
-                    {/* <Space size="large"> */}
                     <Form.Item>
                         <Form.Item
                             name="firstname"
@@ -99,7 +98,6 @@ export default function ContactUs() {
                         placeholder="Email"
                         />
                     </Form.Item>
-                    {/* </Space> */}
                 </Form.Item>
                 <Form.Item
                     name="message"

@@ -147,6 +147,11 @@ input[type=text]:focus, input[type=email]:focus, #complex-form textarea:focus {
     width: 80% !important;
   }
 }
+@media (min-width: 1599px) {
+  .footer-grid, .footer-disclaimer, .footer-copyright {
+    width: 60% !important;
+  }
+}
 * {
   font-family: Roboto;
   color: #92A7AA;

@@ -58,3 +58,9 @@
         width: 80%;
     }
 }
+
+@media (min-width: 1599px) {
+    .header-header {
+        width: 60%;
+    }
+}

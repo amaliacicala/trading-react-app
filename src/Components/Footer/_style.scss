@@ -158,3 +158,9 @@ input[type="text"], input[type="email"], #complex-form textarea {
         width: 80% !important;
     }
 }
+
+@media (min-width: 1599px) {
+    .footer-grid, .footer-disclaimer, .footer-copyright {
+        width: 60% !important;
+    }
+}
