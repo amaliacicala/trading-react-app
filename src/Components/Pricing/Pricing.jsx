@@ -41,7 +41,7 @@ export function Pricing() {
                                 <strong> {item.pricing.title.priceDx} </strong>
                                 {item.pricing.title.year}
                             </Title>
-                            <Title level={4} underline="true">{item.pricing.subtitle}</Title>
+                            <Title level={4} underline="true" style={{marginTop: '1rem'}}>{item.pricing.subtitle}</Title>
                         </div>
                         <ul class="fa-ul">
                             <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>

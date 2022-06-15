@@ -29,7 +29,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom, #000609, #042626);
+    background-image: radial-gradient(circle, #042626, #000609 190%);
     color: #92a7aa;
     width: max-content;
     padding: 3.5rem 5rem;
@@ -79,6 +79,7 @@ h1.ant-typography {
 }
 h1.ant-typography{
     font-size: 2rem;
+    color: white;
 }
 
 .ant-typography+h4.ant-typography {
@@ -86,8 +87,12 @@ h1.ant-typography{
 }
 
 .fa-check{
-    color: #48f992;
-   
+    color: rgb(237,255,125);
+}
+
+li {
+    font-size: 1rem;
+    line-height: 2.8rem;
 }
 .btn-price {
     padding: 1rem 3rem;

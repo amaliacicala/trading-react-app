@@ -23,7 +23,7 @@ export default function Footer() {
                 justify="center" 
                 gutter={[48, 36]}
             >
-                <Col xs={24} sm={24} md={14} lg={7} xl={7} xxl={8}>
+                <Col xs={24} sm={24} md={14} lg={7} xl={7} xxl={7}>
                     <section className="footer-col1">
                         <section>
                             <h2 className="logo">Logo</h2>
@@ -42,7 +42,7 @@ export default function Footer() {
 
                 <Col xs={12} sm={8} md={{span: 8, order: 3}} lg={{span: 4, order: 2}} xl={3} xxl={3}>
                     <h2>Product</h2>
-                    <ul>
+                    <ul className="footer-ul">
                         <li><a href="#">Features</a></li>
                         <li><a href="#">Pricing</a></li>
                         <li><a href="#">API</a></li>
@@ -52,7 +52,7 @@ export default function Footer() {
 
                 <Col xs={12} sm={8} md={{span: 8, order: 4}} lg={{span: 3, order: 3}} xl={3} xxl={3}>
                     <h2>Markets</h2>
-                    <ul>
+                    <ul className="footer-ul">
                         <li><a href="#">Futures</a></li>
                         <li><a href="#">Indices</a></li>
                         <li><a href="#">Shares</a></li>
@@ -60,9 +60,9 @@ export default function Footer() {
                     </ul>
                 </Col>
 
-                <Col xs={24} sm={8} md={{span: 8, order: 5}} lg={{span: 4, order: 4}} xl={4} xxl={3}>
+                <Col xs={24} sm={8} md={{span: 8, order: 5}} lg={{span: 4, order: 4}} xl={4} xxl={4}>
                     <h2>Resources</h2>
-                    <ul>
+                    <ul className="footer-ul">
                         <li><a href="#">Terms of Service</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                         <li><a href="#">Disclaimer</a></li>

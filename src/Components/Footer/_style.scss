@@ -39,6 +39,7 @@ footer {
     width: 15rem;
     height: 3.5rem;
     padding-top: 1%;
+    margin-top: 5%;
     border: solid 1px $accent;
     border-radius: 0.5rem;
 
@@ -79,6 +80,11 @@ input[type="text"], input[type="email"], #complex-form textarea {
         padding-left: 0.5rem;
         color: $text;
     }
+}
+
+.footer-ul li {
+    line-height: 1.3rem;
+    margin: 0.8rem 0;
 }
 
 .newsletter-submit {
