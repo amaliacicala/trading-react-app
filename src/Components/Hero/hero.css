@@ -115,6 +115,10 @@ padding-top:2rem;
     .hero {
         width: 80%;
     }
+
+    .hero-img {
+        width: 100%;
+    }
 }
 
 @media (min-width: 1599px) {
