@@ -208,7 +208,7 @@ export function SignUpForm() {
         </Checkbox>
       </Form.Item>
 
-     <button htmlType="submit" className='modal-btn-login button-style'>
+     <button type="submit" className='modal-btn-login button-style'>
         Sign Up
      </button>
           
