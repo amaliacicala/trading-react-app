@@ -1,6 +1,5 @@
 import { Row, Col } from 'antd';
 import 'antd/dist/antd.css';
-import { Image } from 'antd';
 import text from '../../locales/pricing+hero/txt.json';
 import "../Pricing/pricing.css";
 import "./hero.css";

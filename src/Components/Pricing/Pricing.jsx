@@ -22,13 +22,13 @@ export function Pricing() {
                             {item.pricing.title.month}
                         </Title>
                         <div className='card-l-content'>
-                            <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
-                            </ul>
+                            <ul className="fa-ul">
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l1}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l2}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l3}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
+                            </ul>Name
                             <ModaleLogin />
                         </div>
                     </div>
@@ -43,12 +43,12 @@ export function Pricing() {
                             </Title>
                             <Title level={4} underline="true" style={{marginTop: '1rem'}}>{item.pricing.subtitle}</Title>
                         </div>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
+                        <ul className="fa-ul">
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l1}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l2}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l3}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                         </ul>
                         <ModaleLogin />
                     </div>
