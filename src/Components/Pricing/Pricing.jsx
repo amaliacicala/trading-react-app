@@ -13,7 +13,7 @@ export function Pricing() {
         <div> {txt.map((item) => {
             return (
 
-                <section className='pricing' id='pricing'>
+                <section key={item.id} className='pricing' id='pricing'>
 
                     <div className='card-l'>
                         <Title>

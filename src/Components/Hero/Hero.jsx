@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <>{text.map((item) => {
       return (
-        <Row className='hero' justify='center'>
+        <Row key={item.id} className='hero' justify='center'>
           <Col xs={{ span: 24, order: 2 }} sm={{ span: 24, order: 2 }} md={{ span: 24, order: 2 }} lg={{ span: 12, order: 1 }} xl={{ span: 12, order: 1 }} xxl={{ span: 12, order: 1 }} >
             <div className='hero-txt'>
               <h1>
