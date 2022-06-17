@@ -28,7 +28,7 @@ export function Hero() {
             </div>
           </Col>
           <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} >
-              <img className="hero-img" src={img}/>
+              <img className="hero-img" alt='' src={img}/>
           </Col>
         </Row>
       )
