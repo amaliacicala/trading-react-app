@@ -3,7 +3,7 @@ import {Modal, Button} from 'antd';
 import { LoginForm, SignUpForm } from './Forms';
 import './modal.css'
 
-export const ModaleLogin = () => {
+export const ModaleLogin = ({handleLogin}) => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const [login, setLogin] = useState(true)
@@ -39,11 +39,10 @@ export const ModaleLogin = () => {
     signupBtn.style.borderBottom = 'solid 2px #c5feaa'
     loginBtn.style.borderBottom = 'solid 2px transparent'
   }
-
-    
+   
   return (
     <>
-      <button className="btn-login" onClick={showModal}>
+     <button className="btn-login" onClick={showModal}>
         Login
       </button>
       <Modal
@@ -66,7 +65,7 @@ export const ModaleLogin = () => {
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm /> : <SignUpForm />}   
+        {login ? <LoginForm handleLogin={handleLogin}/> : <SignUpForm />}   
       </Modal>
     </>
   );
