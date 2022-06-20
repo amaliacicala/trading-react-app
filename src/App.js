@@ -10,18 +10,27 @@ import Protected from "./services/Protected";
 
 
 function App() {
+  const [log, setLog] = useState(false)
   const [user, setUser] = useState(null);
-  function handleLogin(event){
-    setUser(event.target.value)
+  function handleLogin(data){
+    //setUser(data)
+
+    const database = Object.keys(localStorage)
+    if (database.indexOf(data) >= 0) {
+      setLog(true)
+    }
+  
+    setUser(Object.values(localStorage)[database.indexOf(data)])
   }
+
   return (
     <>
       <Header handleLogin={handleLogin}/>
       <Routes>
         <Route path="/" element={<Homepage/>} >
         </Route>
-        <Route element={<Protected user={user}/>}>
-        <Route path="/dashboard" element={<Dashboard />}/>
+        <Route element={<Protected log={log}/>}>
+        <Route path="/dashboard" element={<Dashboard user={user} />}/>
         </Route>
       </Routes>
       <Footer />

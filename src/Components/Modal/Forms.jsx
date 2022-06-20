@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Form, Input, Checkbox, Select} from 'antd';
 import { useNavigate } from 'react-router';
 const { Option } = Select;
 
-export const LoginForm = ({handleLogin}) => {
+
+// LOG IN FORM
+export const LoginForm = ({handleLogin, handleCancel}) => {
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -11,10 +13,26 @@ export const LoginForm = ({handleLogin}) => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-  
+
+  //collect the input value from the Form
+  const [input, setInput] = useState('')
+  //set the value on change of the input content
+  function handleInput(e) {
+    setInput(e.target.value)
+  }
+  //set navigation path to dashboard 
   const navigate = useNavigate()
   function navigateToDashboard() {
      navigate('/dashboard')
+  }
+  //when login button is clicked: 
+  function loginAndNavigate() {
+    // 1) send input value up to the App component;
+    handleLogin(input);
+    // 2) follow the navigation path;
+    navigateToDashboard();
+    // 3) hide the modal
+    handleCancel();
   }
 
   return (
@@ -48,7 +66,10 @@ export const LoginForm = ({handleLogin}) => {
           },
         ]}
       >
-        <Input placeholder='Email'/>
+        <Input 
+        placeholder='Email'
+        value={input}
+        onChange={handleInput}/>
       </Form.Item>
 
       <Form.Item
@@ -63,7 +84,7 @@ export const LoginForm = ({handleLogin}) => {
         <Input.Password placeholder='Password'/>
       </Form.Item>
 
-     <button className='modal-btn-login button-style' onClick={navigateToDashboard}>
+     <button className='modal-btn-login button-style' onClick={loginAndNavigate}>
         Login
      </button>
           
@@ -74,10 +95,13 @@ export const LoginForm = ({handleLogin}) => {
 };
 
 
-
+// SIGN UP FORM
 export function SignUpForm() {
+
     const onFinish = (values) => {
     console.log('Success:', values);
+    console.log(values.user)
+    localStorage.setItem(values.email, values.user.name)
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -142,7 +166,7 @@ export function SignUpForm() {
         <Input placeholder='First Name'/>
       </Form.Item>
       <Form.Item
-        name={['user', 'name']}
+        name={['user', 'last name']}
         rules={[
           {
             required: true,

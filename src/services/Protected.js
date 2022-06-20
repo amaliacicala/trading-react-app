@@ -1,7 +1,7 @@
 import {Navigate, Outlet} from 'react-router-dom';
 
-const Protected = ({user, children}) => {
-    if (!user) {
+const Protected = ({log, children}) => {
+    if (!log) {
         return <Navigate to='/' replace />;
     }
     return children ? children : <Outlet/>;

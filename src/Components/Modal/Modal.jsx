@@ -19,7 +19,8 @@ export const ModaleLogin = ({handleLogin}) => {
       setVisible(false);
     }, 3000);
   };
-
+  
+  //closes the modal
   const handleCancel = () => {
     setVisible(false);
   };
@@ -65,7 +66,7 @@ export const ModaleLogin = ({handleLogin}) => {
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm handleLogin={handleLogin}/> : <SignUpForm />}   
+        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm />}   
       </Modal>
     </>
   );
