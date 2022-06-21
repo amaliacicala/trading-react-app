@@ -2,12 +2,12 @@ import {Features} from '../Features/Features';
 import { Hero } from "../Hero/Hero"
 import {Pricing} from '../Pricing/Pricing';
 
-export function Homepage() {
+export function Homepage({handleLogin}) {
     return (
         <>
-          <Hero />
+          <Hero handleLogin={handleLogin} />
           <Features />
-          <Pricing />
+          <Pricing handleLogin={handleLogin} />
         </>     
     )
 }

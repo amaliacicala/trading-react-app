@@ -8,7 +8,7 @@ import txt from '../../locales/pricing+hero/txt.json';
 const { Title } = Typography;
 
 
-export function Pricing() {
+export function Pricing({handleLogin}) {
     return (
         <div> {txt.map((item) => {
             return (
@@ -29,7 +29,7 @@ export function Pricing() {
                                 <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
                                 <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                             </ul>
-                            <ModaleLogin />
+                            <ModaleLogin handleLogin={handleLogin} />
                         </div>
                     </div>
 
@@ -50,7 +50,7 @@ export function Pricing() {
                             <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
                             <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                         </ul>
-                        <ModaleLogin />
+                        <ModaleLogin handleLogin={handleLogin}  />
                     </div>
 
                 </section>

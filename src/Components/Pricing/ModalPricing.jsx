@@ -1,11 +1,81 @@
 import React, { useState } from 'react';
-import {Modal} from 'antd';
+import { Modal } from 'antd';
 import { LoginForm, SignUpForm } from '../Modal/Forms';
 
-export const ModaleLogin = () => {
+export const ModaleLogin = ({ handleLogin }) => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [login, setLogin] = useState(false)
+  const [login, setLogin] = useState(true)
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setVisible(false);
+    }, 3000);
+  };
+
+  //closes the modal
+  const handleCancel = () => {
+    setVisible(false);
+  };
+
+  const loginBtn = document.getElementById('modal-login-change-login-btn')
+  const signupBtn = document.getElementById('modal-login-change-setup-btn')
+
+
+  const changeToLogin = () => {
+    setLogin(true)
+    signupBtn.style.borderBottom = 'solid 2px transparent'
+    loginBtn.style.borderBottom = 'solid 2px #c5feaa'
+  }
+
+  const changeToSignUp = () => {
+    setLogin(false)
+    signupBtn.style.borderBottom = 'solid 2px #c5feaa'
+    loginBtn.style.borderBottom = 'solid 2px transparent'
+  }
+
+  return (
+    <>
+      <button className="btn-login" onClick={showModal}>
+        Login
+      </button>
+      <Modal
+        visible={visible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        closable={false}
+        footer={[
+          <button key="back" onClick={handleCancel} className="modal-btn-close">
+            Close
+          </button>
+        ]
+        }
+      >
+        <header className='header-modal'>
+          <div className='modal-login' id="modal-login-change-login-btn" style={{ backgroundColor: 'transparent', color: '#fffff', width: '30%', margin: 'auto', padding: '0.5rem 0', borderBottom: 'solid 2px #c5feaa' }}>
+            <a className='link-modal' onClick={changeToLogin}>Login</a>
+          </div>
+          <div className='modal-signup' id="modal-login-change-setup-btn" style={{ backgroundColor: 'transparent', color: '#fffff', width: '30%', margin: 'auto', padding: '0.5rem 0', borderBottom: 'solid 2px transparent' }}>
+            <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
+          </div>
+        </header>
+        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel} /> : <SignUpForm />}
+      </Modal>
+    </>
+  );
+};
+
+
+export const ModaleSignUp = () => {
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [signUp, setSignUp] = useState(true)
 
   const showModal = () => {
     setVisible(true);
@@ -23,33 +93,31 @@ export const ModaleLogin = () => {
     setVisible(false);
   };
 
-  const loginBtn = document.getElementById('modal-login-change-login-btn')
-  const signupBtn = document.getElementById('modal-login-change-setup-btn')
-  
-  
+  const loginBtn = document.getElementById('modal-signup-change-login-btn')
+  const signupBtn = document.getElementById('modal-signup-change-signup-btn')
+
   const changeToLogin = () => {
-    setLogin(true)
+    setSignUp(false)
     signupBtn.style.borderBottom = 'solid 2px transparent'
     loginBtn.style.borderBottom = 'solid 2px #c5feaa'
   }
 
   const changeToSignUp = () => {
-    setLogin(false)
+    setSignUp(true)
     signupBtn.style.borderBottom = 'solid 2px #c5feaa'
     loginBtn.style.borderBottom = 'solid 2px transparent'
   }
 
-    
   return (
     <>
-      <button className="button-style btn-price" onClick={showModal}>
-        Subscribe
+      <button className="button-style" onClick={showModal}>
+        Sign Up
       </button>
       <Modal
         visible={visible}
+        closable={false}
         onOk={handleOk}
         onCancel={handleCancel}
-        closable={false}
         footer={[
           <button key="back" onClick={handleCancel} className="modal-btn-close">
             Close
@@ -57,15 +125,17 @@ export const ModaleLogin = () => {
         ]}
       >
         <header className='header-modal'>
-        <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
+          <div className='modal-login' id="modal-signup-change-login-btn" style={{ backgroundColor: 'transparent', color: '#fffff', width: '30%', margin: 'auto', padding: '0.5rem 0', borderBottom: 'solid 2px transparent' }}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
+          <div className='modal-signup' id="modal-signup-change-signup-btn" style={{ backgroundColor: 'transparent', color: '#fffff', width: '30%', margin: 'auto', padding: '0.5rem 0', borderBottom: 'solid 2px #c5feaa' }}>
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm /> : <SignUpForm />}   
+        {signUp ? <SignUpForm /> : <LoginForm />}
       </Modal>
     </>
   );
 };
+
+

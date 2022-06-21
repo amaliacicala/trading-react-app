@@ -34,7 +34,7 @@ function App() {
     <>
       <Header handleLogin={handleLogin}/>
       <Routes>
-        <Route path="/" element={<Homepage/>} >
+        <Route path="/" element={<Homepage handleLogin={handleLogin}/>} >
         </Route>
         <Route element={<Protected log={log}/>}>
         <Route path="/dashboard" element={<Dashboard user={user} />}/>
