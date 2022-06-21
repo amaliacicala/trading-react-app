@@ -25,25 +25,6 @@ export const ModaleLogin = ({handleLogin}) => {
     setVisible(false);
   };
 
-  
-  // const loginBtn = document.getElementById('modal-login-change-login-btn')
-  // console.log(loginBtn)
-  // const signupBtn = document.getElementById('modal-login-change-setup-btn')
-  // console.log(signupBtn)
-  
-  
-  // const changeToLogin = () => {
-  //   setLogin(true)
-  //   signupBtn.style.borderBottom = 'solid 2px transparent'
-  //   loginBtn.style.borderBottom = 'solid 2px #c5feaa'
-  // }
-
-  // const changeToSignUp = () => {
-  //   setLogin(false)
-  //   signupBtn.style.borderBottom = 'solid 2px #c5feaa'
-  //   loginBtn.style.borderBottom = 'solid 2px transparent'
-  // }
-   
   return (
     <>
      <button className="btn-login" onClick={showModal}>
