@@ -11,10 +11,10 @@ export function Header({handleLogin, handleLogout}) {
         <header className='header-header'>
             <h2 className='header-logo'>Logo</h2>
             <div>
-                <a className="header-anchor" href="#features">Features</a>
-                <a className="header-anchor" href="#pricing">Pricing</a>
                 {pathname === '/' ?
                     <>
+                        <a className="header-anchor" href="#features">Features</a>
+                        <a className="header-anchor" href="#pricing">Pricing</a>
                         <ModaleLogin handleLogin={handleLogin}/>
                         <ModaleSignUp />
                     </> 

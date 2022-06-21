@@ -42,21 +42,21 @@ export const ModaleLogin = ({handleLogin}) => {
         }
       >
         <header className='header-modal'>
-          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
+          <div className='modal-login' id="modal-pricing-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
             <a className='link-modal' onClick={() => {
                 setLogin(true);
-                const loginBtn = document.getElementById('modal-login-change-login-btn');
+                const loginBtn = document.getElementById('modal-pricing-change-login-btn');
                 loginBtn.style.borderBottom = 'solid 2px #c5feaa';
-                const signupBtn = document.getElementById('modal-login-change-setup-btn');
+                const signupBtn = document.getElementById('modal-pricing-change-setup-btn');
                 signupBtn.style.borderBottom = 'solid 2px transparent';
             }}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
+          <div className='modal-signup' id="modal-pricing-change-setup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
             <a className='link-modal' onClick={() => {
               setLogin(false)
-              const signupBtn = document.getElementById('modal-login-change-setup-btn');
+              const signupBtn = document.getElementById('modal-pricing-change-setup-btn');
               signupBtn.style.borderBottom = 'solid 2px #c5feaa';
-              const loginBtn = document.getElementById('modal-login-change-login-btn');
+              const loginBtn = document.getElementById('modal-pricing-change-login-btn');
               loginBtn.style.borderBottom = 'solid 2px transparent';
             }}>Sign Up</a>
           </div>
@@ -107,22 +107,22 @@ export const ModaleSignUp = () => {
         ]}
       >
          <header className='header-modal'>
-          <div className='modal-login' id="modal-signup-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
+          <div className='modal-login' id="modal-pricing-login-signup" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
             <a className='link-modal' onClick={() => {
                setSignUp(false);
-              const loginBtn = document.getElementById('modal-signup-change-login-btn');
+              const loginBtn = document.getElementById('modal-pricing-login-signup');
               loginBtn.style.borderBottom = 'solid 2px #c5feaa';
-              const signupBtn = document.getElementById('modal-signup-change-signup-btn');
+              const signupBtn = document.getElementById('modal-pricing-signup-login');
               signupBtn.style.borderBottom = 'solid 2px transparent';
               
             }}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-signup-change-signup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
+          <div className='modal-signup' id="modal-pricing-signup-login" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
             <a className='link-modal' onClick={() => {
               setSignUp(true)
-              const signupBtn = document.getElementById('modal-signup-change-signup-btn');
+              const signupBtn = document.getElementById('modal-pricing-signup-login');
               signupBtn.style.borderBottom = 'solid 2px #c5feaa'
-              const loginBtn = document.getElementById('modal-signup-change-login-btn');
+              const loginBtn = document.getElementById('modal-pricing-login-signup');
               loginBtn.style.borderBottom = 'solid 2px transparent'
             }}>Sign Up</a>
           </div>
