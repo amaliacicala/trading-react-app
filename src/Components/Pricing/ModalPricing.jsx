@@ -29,14 +29,14 @@ export const ModaleLogin = () => {
   
   const changeToLogin = () => {
     setLogin(true)
-    signupBtn.style.backgroundColor = 'gainsboro'
-    loginBtn.style.backgroundColor = 'transparent'
+    signupBtn.style.borderBottom = 'solid 2px transparent'
+    loginBtn.style.borderBottom = 'solid 2px #c5feaa'
   }
 
   const changeToSignUp = () => {
     setLogin(false)
-    signupBtn.style.backgroundColor = 'transparent'
-    loginBtn.style.backgroundColor = 'gainsboro'
+    signupBtn.style.borderBottom = 'solid 2px #c5feaa'
+    loginBtn.style.borderBottom = 'solid 2px transparent'
   }
 
     
@@ -57,10 +57,10 @@ export const ModaleLogin = () => {
         ]}
       >
         <header className='header-modal'>
-          <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'gainsboro'}}>
+        <div className='modal-login' id="modal-login-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
             <a className='link-modal' onClick={changeToLogin}>Login</a>
           </div>
-          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'transparent'}}>
+          <div className='modal-signup' id="modal-login-change-setup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
             <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
           </div>
         </header>

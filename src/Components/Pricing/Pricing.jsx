@@ -28,7 +28,7 @@ export function Pricing() {
                                 <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l3}</li>
                                 <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
                                 <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
-                            </ul>Name
+                            </ul>
                             <ModaleLogin />
                         </div>
                     </div>
