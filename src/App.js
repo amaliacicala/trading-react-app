@@ -23,7 +23,7 @@ function App() {
         setLog(true)
       }  
       else {
-        alert('Wrong Password!!!')
+        alert('The password you entered is incorrect. Please try again.')
       } 
     }
   
