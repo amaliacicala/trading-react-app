@@ -12,8 +12,9 @@ import Protected from "./services/Protected";
 function App() {
   const [log, setLog] = useState(false)
   const [user, setUser] = useState(null);
-
-  function handleLogin(dataInput, dataPassword){
+  
+  function handleLogin(dataInput, dataPassword, event){
+    console.log('email: ' + dataInput + ', password: ' + dataPassword )
 
     const database = Object.keys(localStorage)
     const retrievedPerson = JSON.parse(localStorage.getItem(dataInput));
@@ -24,9 +25,10 @@ function App() {
     if (database.indexOf(dataInput) >= 0) {
       if (retrievedPerson.password === dataPassword) {
         setLog(true)
-      }  
-      else {
-        alert('Wrong Password!!!')
+      } else {
+        alert('The password you entered is incorrect. Please try again.');
+        event.preventDefault();
+        return false
       } 
     }
      
