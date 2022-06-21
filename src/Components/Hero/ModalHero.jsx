@@ -42,8 +42,8 @@ export const ModaleLogin = ({ handleLogin }) => {
 
   return (
     <>
-      <button className="btn-login" onClick={showModal}>
-        Login
+      <button className="button-style btn-hero" onClick={showModal}>
+        Get started
       </button>
       <Modal
         visible={visible}
