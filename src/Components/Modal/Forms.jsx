@@ -105,11 +105,12 @@ export const LoginForm = ({handleLogin, handleCancel}) => {
 
 
 // SIGN UP FORM
-export function SignUpForm() {
+export function SignUpForm({handleCancel}) {
 
     const onFinish = (values) => {
     console.log('Success:', values);
     localStorage.setItem(values.email, JSON.stringify(values))
+    handleCancel()
   };
 
 

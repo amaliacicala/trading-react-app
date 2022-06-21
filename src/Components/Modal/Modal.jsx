@@ -109,20 +109,6 @@ export const ModaleSignUp = () => {
     setVisible(false);
   };
 
-  const loginBtn = document.getElementById('modal-signup-change-login-btn')
-  const signupBtn = document.getElementById('modal-signup-change-signup-btn')
-  
-  const changeToLogin = () => {
-    setSignUp(false)
-    signupBtn.style.borderBottom = 'solid 2px transparent'
-    loginBtn.style.borderBottom = 'solid 2px #c5feaa'
-  }
-
-  const changeToSignUp = () => {
-    setSignUp(true)
-    signupBtn.style.borderBottom = 'solid 2px #c5feaa'
-    loginBtn.style.borderBottom = 'solid 2px transparent'
-  }
 
   return (
     <>
@@ -142,13 +128,26 @@ export const ModaleSignUp = () => {
       >
          <header className='header-modal'>
           <div className='modal-login' id="modal-signup-change-login-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px transparent'}}>
-            <a className='link-modal' onClick={changeToLogin}>Login</a>
+            <a className='link-modal' onClick={() => {
+               setSignUp(false);
+              const loginBtn = document.getElementById('modal-signup-change-login-btn');
+              loginBtn.style.borderBottom = 'solid 2px #c5feaa';
+              const signupBtn = document.getElementById('modal-signup-change-signup-btn');
+              signupBtn.style.borderBottom = 'solid 2px transparent';
+              
+            }}>Login</a>
           </div>
           <div className='modal-signup' id="modal-signup-change-signup-btn" style={{backgroundColor: 'transparent', color: '#fffff', width:'30%', margin:'auto', padding:'0.5rem 0', borderBottom: 'solid 2px #c5feaa'}}>
-            <a className='link-modal' onClick={changeToSignUp}>Sign Up</a>
+            <a className='link-modal' onClick={() => {
+              setSignUp(true)
+              const signupBtn = document.getElementById('modal-signup-change-signup-btn');
+              signupBtn.style.borderBottom = 'solid 2px #c5feaa'
+              const loginBtn = document.getElementById('modal-signup-change-login-btn');
+              loginBtn.style.borderBottom = 'solid 2px transparent'
+            }}>Sign Up</a>
           </div>
         </header>
-        {signUp ? <SignUpForm /> : <LoginForm />}
+        {signUp ? <SignUpForm handleCancel={handleCancel}/> : <LoginForm />}
       </Modal>
     </>
   );
