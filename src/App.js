@@ -12,11 +12,14 @@ import Protected from "./services/Protected";
 function App() {
   const [log, setLog] = useState(false)
   const [user, setUser] = useState(null);
+
   function handleLogin(dataInput, dataPassword){
-    console.log('email: ' + dataInput + ', password: ' + dataPassword )
 
     const database = Object.keys(localStorage)
     const retrievedPerson = JSON.parse(localStorage.getItem(dataInput));
+
+    const value = Object.values(localStorage)[database.indexOf(dataInput)]
+    const retrivedValue = JSON.parse(value)
   
     if (database.indexOf(dataInput) >= 0) {
       if (retrievedPerson.password === dataPassword) {
@@ -26,8 +29,8 @@ function App() {
         alert('Wrong Password!!!')
       } 
     }
-  
-    setUser(Object.values(localStorage)[database.indexOf(dataInput)])
+     
+    setUser(retrivedValue.user.name)
   }
 
   function handleLogout() {
