@@ -1,4 +1,4 @@
-.button-style, .form-button, .contact-btn {
+.button-style, .form-button, .contact-btn, .button-style:focus {
   padding: 0.5rem 2rem;
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
   border: solid 1px #01070b;
@@ -9,12 +9,12 @@
   box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
   transition: all 0.2s ease-in-out;
 }
-.button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:active, .form-button:active, .contact-btn:active, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:focus, .form-button:focus, .contact-btn:focus {
+.button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:active, .form-button:active, .contact-btn:active, .button-style:focus:hover, .button-style:focus:visited, .button-style:focus:active {
   background: #062929;
   border: solid 1px #c5feaa;
   color: #c5feaa;
 }
-.button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:focus span, .form-button:focus span, .contact-btn:focus span {
+.button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:focus:hover span, .button-style:focus:visited span, .button-style:focus:active span {
   color: #c5feaa;
 }
 

@@ -1,6 +1,6 @@
 @import './variables';
 
-.button-style {
+.button-style, .button-style:focus {
     padding: 0.5rem 2rem;
     background: $gradient;
     border: solid 1px $secondary;
@@ -13,7 +13,7 @@
 
     transition: all 0.2s ease-in-out;
 
-    &:hover, &:active, &:visited, &:focus {
+    &:hover, &:visited, &:active {
         background: $primary;
         border: solid 1px $accent;
         color: $accent;
