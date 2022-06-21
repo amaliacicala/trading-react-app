@@ -18,7 +18,13 @@ export function Header({handleLogin, handleLogout}) {
                         <ModaleLogin handleLogin={handleLogin}/>
                         <ModaleSignUp />
                     </> 
-                : <Logout handleLogout={handleLogout}/>}
+                : 
+                    <>
+                        <a className="header-anchor" href="#">Profile</a>
+                        <a className="header-anchor" href="#">Account Settings</a>
+                        <Logout handleLogout={handleLogout}/>
+                    </>
+                }
             </div>
         </header>
     )         
