@@ -30,9 +30,14 @@ function App() {
     setUser(Object.values(localStorage)[database.indexOf(dataInput)])
   }
 
+  function handleLogout() {
+    setLog(false)
+    window.location.pathname = '/'
+  }
+
   return (
     <>
-      <Header handleLogin={handleLogin}/>
+      <Header handleLogin={handleLogin} handleLogout={handleLogout}/>
       <Routes>
         <Route path="/" element={<Homepage handleLogin={handleLogin}/>} >
         </Route>
