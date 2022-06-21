@@ -94,7 +94,8 @@ li {
     font-size: 1rem;
     line-height: 2.8rem;
 }
-.btn-price {
+
+.btn-price, .btn-price:hover, .btn-price:visited, .btn-price:focus, .btn-price:active {
     padding: 1rem 3rem;
     font-size: 1rem;
   }
