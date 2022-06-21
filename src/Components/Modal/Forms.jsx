@@ -20,6 +20,12 @@ export const LoginForm = ({handleLogin, handleCancel}) => {
   function handleInput(e) {
     setInput(e.target.value)
   }
+
+  const [password, setPassword] = useState('')
+
+  function handlePassword(e) {
+    setPassword(e.target.value)
+  }
   //set navigation path to dashboard 
   const navigate = useNavigate()
   function navigateToDashboard() {
@@ -28,7 +34,7 @@ export const LoginForm = ({handleLogin, handleCancel}) => {
   //when login button is clicked: 
   function loginAndNavigate() {
     // 1) send input value up to the App component;
-    handleLogin(input);
+    handleLogin(input, password);
     // 2) follow the navigation path;
     navigateToDashboard();
     // 3) hide the modal
@@ -81,7 +87,10 @@ export const LoginForm = ({handleLogin, handleCancel}) => {
           },
         ]}
       >
-        <Input.Password placeholder='Password'/>
+        <Input.Password 
+        placeholder='Password'
+        value={password}
+        onChange={handlePassword}/>
       </Form.Item>
 
      <button className='modal-btn-login button-style' onClick={loginAndNavigate}>
@@ -100,9 +109,9 @@ export function SignUpForm() {
 
     const onFinish = (values) => {
     console.log('Success:', values);
-    console.log(values.user)
-    localStorage.setItem(values.email, values.user.name)
+    localStorage.setItem(values.email, JSON.stringify(values))
   };
+
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
