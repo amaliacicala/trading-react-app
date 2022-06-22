@@ -11,21 +11,21 @@ export function Header({handleLogin, handleLogout}) {
     return (
         <header className='header-header'>
             <h2 className='header-logo'>Logo</h2>
-            <div className='header-login-nav'>
+            <div>
                 {pathname === '/dashboard' ?
-                    <>
+                    <div className='header-login-nav'>
                         <Link to="/dashboard" className="header-anchor">Dashboard</Link>
                         <a className="header-anchor" href="#">Profile</a>
                         <a className="header-anchor" href="#">Account Settings</a>
                         <Logout handleLogout={handleLogout}/>
-                    </>
+                    </div>
                 :
                     <>
-                    <a className="header-anchor" href="#features">Features</a>
-                    <a className="header-anchor" href="#pricing">Pricing</a>
-                    <ModaleLogin handleLogin={handleLogin}/>
-                    <ModaleSignUp handleLogin={handleLogin}/>
-                </> 
+                        <a className="header-anchor" href="#features">Features</a>
+                        <a className="header-anchor" href="#pricing">Pricing</a>
+                        <ModaleLogin handleLogin={handleLogin}/>
+                        <ModaleSignUp handleLogin={handleLogin}/>
+                    </> 
                 }
             </div>
         </header>
