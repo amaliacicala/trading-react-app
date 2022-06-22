@@ -3,6 +3,7 @@ import {Modal, Button} from 'antd';
 import { LoginForm, SignUpForm } from './Forms';
 import './modal.css'
 
+//MODAL LOG IN
 export const ModaleLogin = ({handleLogin}) => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
@@ -62,14 +63,14 @@ export const ModaleLogin = ({handleLogin}) => {
             }}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm />}   
+        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}   
       </Modal>
     </>
   );
 };
 
-
-export const ModaleSignUp = () => {
+//MODAL SIGN UP
+export const ModaleSignUp = ({handleLogin}) => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const [signUp, setSignUp] = useState(true)
@@ -128,7 +129,7 @@ export const ModaleSignUp = () => {
             }}>Sign Up</a>
           </div>
         </header>
-        {signUp ? <SignUpForm handleCancel={handleCancel}/> : <LoginForm />}
+        {!signUp ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}
       </Modal>
     </>
   );

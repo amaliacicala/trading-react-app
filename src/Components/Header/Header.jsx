@@ -16,7 +16,7 @@ export function Header({handleLogin, handleLogout}) {
                         <a className="header-anchor" href="#features">Features</a>
                         <a className="header-anchor" href="#pricing">Pricing</a>
                         <ModaleLogin handleLogin={handleLogin}/>
-                        <ModaleSignUp />
+                        <ModaleSignUp handleLogin={handleLogin}/>
                     </> 
                 : 
                     <>
