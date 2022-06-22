@@ -35,31 +35,19 @@ body {
     color: #92A7AA;
 }
 
-
-
-/* .divprova1 {
-    border: solid 10px red;
-}
-
-.divprova2 {
-    border: solid 10px green 
-}
- */
-
  #contenitor {
      align-items: center;
      gap: 5rem;
  }
 
  .FeaturesStyle {
-     text-align: left;
-     font-family: Roboto;
-     font-size: 1rem;
-     line-height: 1.5rem;
-     
+    text-align: left;
+    font-family: Roboto;
+    font-size: 1rem;
+    line-height: 1.5rem;
  }
 
- h1 {
+ .FeaturesStyle h1 {
     color: #c5feaa;
     font-family: DM Mono;
     line-height: 3.2rem;

@@ -10,7 +10,7 @@ export function Header({handleLogin, handleLogout}) {
 
     return (
         <header className='header-header'>
-            <h2 className='header-logo'>Logo</h2>
+            <Link to="/" className='header-logo'>Logo</Link>
             <div>
                 {pathname === '/dashboard' ?
                     <div className='header-login-nav'>
