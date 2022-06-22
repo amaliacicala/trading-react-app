@@ -1,12 +1,13 @@
 
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
-import {Header} from './Components/Header/Header'
+import { Header } from './Components/Header/Header'
+import { Homepage } from './Components/Homepage/Homepage';
+import NotFound from './Components/NotFound/NotFound'
+import Protected from "./services/Protected";
+import { Dashboard } from './Components/Dashboard/Dashboard'
 import Footer from './Components/Footer/Footer'
 import ContactUs from './Components/ContactUs/ContactUs'
-import {Homepage} from './Components/Homepage/Homepage';
-import {Dashboard} from './Components/Dashboard/Dashboard'
-import Protected from "./services/Protected";
 
 
 function App() {
@@ -44,8 +45,8 @@ function App() {
     <>
       <Header handleLogin={handleLogin} handleLogout={handleLogout}/>
       <Routes>
-        <Route path="/" element={<Homepage handleLogin={handleLogin}/>} >
-        </Route>
+        <Route path="/" element={<Homepage handleLogin={handleLogin}/>} />
+        <Route path="*" element={<NotFound />} />
         <Route element={<Protected log={log}/>}>
         <Route path="/dashboard" element={<Dashboard user={user} />}/>
         </Route>
