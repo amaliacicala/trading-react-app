@@ -11,7 +11,7 @@ export function Dashboard({user}) {
 
     return (
     <main className="dashboard-main">
-        <h1 className="dashboard-welcome-message">WELCOME, <span class="user-name">{name}</span></h1>
+        <h1 className="dashboard-welcome-message">WELCOME, <span className="user-name">{name}</span></h1>
         <button className="button-style" onClick={handleNavigate}>Back to Homepage</button>
     </main>
     )

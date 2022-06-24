@@ -13,7 +13,7 @@ import ContactUs from './Components/ContactUs/ContactUs'
 function App() {
   const [log, setLog] = useState(false)
   const [user, setUser] = useState(null);
-  
+
   function handleLogin(dataInput, dataPassword, event){
     console.log('email: ' + dataInput + ', password: ' + dataPassword )
 
@@ -22,7 +22,7 @@ function App() {
 
     const value = Object.values(localStorage)[database.indexOf(dataInput)]
     const retrivedValue = JSON.parse(value)
-  
+
     if (database.indexOf(dataInput) >= 0) {
       if (retrievedPerson.password === dataPassword) {
         setLog(true)
@@ -32,7 +32,7 @@ function App() {
         return false
       } 
     }
-     
+
     setUser(retrivedValue.user.name)
   }
 
@@ -58,4 +58,3 @@ function App() {
 }
 
 export default App;
-
