@@ -96,7 +96,7 @@ li {
 }
 
 .btn-price, .btn-price:hover, .btn-price:visited, .btn-price:focus, .btn-price:active {
-    padding: 1rem 3rem;
+    padding: 1rem 3rem !important;
     font-size: 1rem;
   }
 
