@@ -43,7 +43,7 @@ function App() {
 
   return (
     <>
-      <Header handleLogin={handleLogin} handleLogout={handleLogout}/>
+      <Header handleLogin={handleLogin} handleLogout={handleLogout} log={log}/>
       <Routes>
         <Route path="/" element={<Homepage handleLogin={handleLogin}/>} />
         <Route path="*" element={<NotFound />} />
