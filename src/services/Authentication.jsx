@@ -5,25 +5,26 @@ function Authentication() {
     const [user, setUser] = useState(null);
   
     function handleLogin(dataInput, dataPassword, event){
-      console.log('email: ' + dataInput + ', password: ' + dataPassword )
   
       const database = Object.keys(localStorage)
-      const retrievedPerson = JSON.parse(localStorage.getItem(dataInput));
-  
-      const value = Object.values(localStorage)[database.indexOf(dataInput)]
-      const retrivedValue = JSON.parse(value)
-  
+
       if (database.indexOf(dataInput) >= 0) {
+        const retrievedPerson = JSON.parse(localStorage.getItem(dataInput));
         if (retrievedPerson.password === dataPassword) {
+          const value = Object.values(localStorage)[database.indexOf(dataInput)]
+          const retrivedValue = JSON.parse(value)
           setLog(true)
+          setUser(retrivedValue.user.name)
         } else {
           alert('The password you entered is incorrect. Please try again.');
           event.preventDefault();
           return false
         } 
+      } else {
+        alert('The email you entered is incorrect. Please try again.')
       }
   
-      setUser(retrivedValue.user.name)
+     
     }
   
     function handleLogout() {
