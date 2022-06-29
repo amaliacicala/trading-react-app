@@ -4,7 +4,7 @@ import { LoginForm, SignUpForm } from './Forms';
 import './modal.css'
 
 //MODAL LOG IN
-export const ModaleLogin = ({handleLogin}) => {
+export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const [login, setLogin] = useState(true)
@@ -63,14 +63,14 @@ export const ModaleLogin = ({handleLogin}) => {
             }}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}   
+        {login ? <LoginForm handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}   
       </Modal>
     </>
   );
 };
 
 //MODAL SIGN UP
-export const ModaleSignUp = ({handleLogin}) => {
+export const ModaleSignUp = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const [signUp, setSignUp] = useState(true)
@@ -129,7 +129,7 @@ export const ModaleSignUp = ({handleLogin}) => {
             }}>Sign Up</a>
           </div>
         </header>
-        {!signUp ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}
+        {!signUp ? <LoginForm handleCancel={handleCancel}/> : <SignUpForm handleCancel={handleCancel}/>}
       </Modal>
     </>
   );

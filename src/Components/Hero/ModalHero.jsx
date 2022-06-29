@@ -3,7 +3,7 @@ import {Modal, Button} from 'antd';
 import { LoginForm, SignUpForm } from '../Modal/Forms';
 import './hero.css'
 
-export const ModaleLogin = ({handleLogin}) => {
+export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
   const [login, setLogin] = useState(true)
@@ -62,7 +62,7 @@ export const ModaleLogin = ({handleLogin}) => {
             }}>Sign Up</a>
           </div>
         </header>
-        {login ? <LoginForm handleLogin={handleLogin} handleCancel={handleCancel}/> : <SignUpForm />}   
+        {login ? <LoginForm handleCancel={handleCancel}/> : <SignUpForm />}   
       </Modal>
     </>
   );

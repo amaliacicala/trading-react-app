@@ -7,7 +7,7 @@ import { ModaleLogin } from './ModalHero';
 import img from '../../assets/hero-section.svg'
 
 
-export function Hero({handleLogin}) {
+export function Hero() {
 
   return (
     <>{text.map((item) => {
@@ -23,7 +23,7 @@ export function Hero({handleLogin}) {
               <div className='hero-l-content'>
                 <label><p>{item.hero.label}</p></label>
               <div className='hero-input'><input className='hero-email' type="email" name="email" id="email" placeholder='Email' />
-                <ModaleLogin handleLogin={handleLogin}/>
+                <ModaleLogin/>
               </div></div>
             </div>
           </Col>

@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
 import {Form, Input, Checkbox, Select} from 'antd';
 import { useNavigate } from 'react-router';
+import { useUserContext } from '../../services/Authentication';
 const { Option } = Select;
 
 
 // LOG IN FORM
-export const LoginForm = ({handleLogin, handleCancel}) => {
+export const LoginForm = ({handleCancel}) => {
+  //import handleLogin function using useContext from Authentication.jsx
+  const {handleLogin} = useUserContext()
+
   const onFinish = (values) => {
     console.log('Success:', values);
   };

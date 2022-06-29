@@ -1,6 +1,12 @@
-import { useState } from "react";
+import React, { useState, useContext } from "react";
 
-function Authentication() {
+const UserContext = React.createContext();
+
+export function useUserContext() {
+  return useContext(UserContext)
+}
+
+export function Authentication({children}) {
     const [log, setLog] = useState(false)
     const [user, setUser] = useState(null);
   
@@ -22,22 +28,17 @@ function Authentication() {
         } 
       } else {
         alert('The email you entered is incorrect. Please try again.')
-      }
-  
-     
+      }   
     }
   
     function handleLogout() {
       setLog(false)
       window.location.pathname = '/'
     }
-    return {
-        log : log,
-        user : user,
-        handleLogin : handleLogin,
-        handleLogout : handleLogout
 
-    }
+    return (
+      <UserContext.Provider value={{user, setUser, log, setLog, handleLogin, handleLogout}}>
+        {children}
+      </UserContext.Provider>
+    )
 }
-
-export default Authentication

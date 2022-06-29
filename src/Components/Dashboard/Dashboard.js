@@ -1,8 +1,10 @@
 import './dashboard.css'
 import { useNavigate } from 'react-router-dom'
+import { useUserContext } from '../../services/Authentication';
 
-export function Dashboard({user}) {
-    const name = user.toUpperCase() 
+export function Dashboard() {
+   const {user} = useUserContext()
+   const name = user.toUpperCase() 
     const navigate = useNavigate();
 
     function handleNavigate() {

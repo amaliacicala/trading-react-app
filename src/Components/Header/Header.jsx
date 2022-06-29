@@ -4,8 +4,10 @@ import { ModaleSignUp } from '../Modal/Modal';
 import { Logout } from './Logout';
 import { Link } from 'react-router-dom';
 import './header.css'
+import { useUserContext } from '../../services/Authentication';
 
-export function Header({handleLogin, handleLogout,log}) {
+export function Header() {
+    const {log} = useUserContext()
     const pathname = window.location.pathname
 
     return (
@@ -17,14 +19,14 @@ export function Header({handleLogin, handleLogout,log}) {
                         <Link to="/dashboard" className="header-anchor">Dashboard</Link>
                         <a className="header-anchor" href="#">Profile</a>
                         <a className="header-anchor" href="#">Account Settings</a>
-                        <Logout handleLogout={handleLogout}/>
+                        <Logout />
                     </div>
                 :
                     <>
                         <a className="header-anchor" href="#features">Features</a>
                         <a className="header-anchor" href="#pricing">Pricing</a>
-                        <ModaleLogin handleLogin={handleLogin}/>
-                        <ModaleSignUp handleLogin={handleLogin}/>
+                        <ModaleLogin/>
+                        <ModaleSignUp/>
                     </> 
                 }
             </div>
