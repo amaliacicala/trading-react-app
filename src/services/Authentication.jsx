@@ -1,4 +1,5 @@
 import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 
 const UserContext = React.createContext();
 
@@ -30,10 +31,12 @@ export function Authentication({children}) {
         alert('The email you entered is incorrect. Please try again.')
       }   
     }
-  
+    
+    const navigate = useNavigate()
+
     function handleLogout() {
       setLog(false)
-      window.location.pathname = '/'
+      navigate('/')
     }
 
     return (
