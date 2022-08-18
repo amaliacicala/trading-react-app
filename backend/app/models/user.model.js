@@ -7,6 +7,6 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING,
     },
     prefix: { type: Sequelize.NUMBER },
-    mobile: { type: Sequelize.NUMBER },
+    phone: { type: Sequelize.NUMBER },
   });
 };

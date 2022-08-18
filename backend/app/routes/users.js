@@ -16,4 +16,17 @@ router.post("/signup", (req, res) => {
     console.log(newUser)
 })
 
+// router.post("/signin", async(req, res) => {
+//     const loggedUser = await User.findOne({where: {email: req.body.email}})
+
+//     if(loggedUser === null) {
+//         console.log('Not found')
+//     } else {
+//         console.log(loggedUser)
+//     }
+
+//     res.send(loggedUser)
+    
+// })
+
 module.exports = router

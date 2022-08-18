@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Modal, Button } from "antd";
+import { Modal} from "antd";
 import { LoginForm, SignUpForm } from "./Forms";
 import {SignupBtnActivate, SignupBtnDeactivate} from "./SignUpBtn";
 import { LoginBtnActivate, LoginBtnDeactivate } from "./LoginBtn";
@@ -38,11 +38,6 @@ export const ModaleLogin = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         closable={false}
-        // footer={[
-        //   <Button key="back" onClick={handleCancel} className="modal-btn-close">
-        //     Close
-        //   </Button>,
-        // ]}
       >
         {login ? (
           <header className="header-modal">
