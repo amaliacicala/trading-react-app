@@ -20,6 +20,16 @@ app.get("/", (req, res) => {
     res.json({msg: 'Everything ok'})
 })
 
+//DATABASE
+//Init mySql
+const db = require("../../app/models")
+
+
+db.sequelize.sync().then(() => {
+  console.log("database up");
+});
+
+
 //Set port and listen
 const port = process.env.PORT
 app.listen(port, () => console.log(`Server up and running on port ${port}`))
