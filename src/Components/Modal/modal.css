@@ -51,14 +51,12 @@
   box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
 }
 
-.modal-login, 
-.modal-signup {
+.modal-button {
     width: 50%;
     text-align: center;
-}
-
-.link-modal {
     font-size: 20px;
+    border: none;
+    cursor: pointer;
 }
 
 .separation-line {
