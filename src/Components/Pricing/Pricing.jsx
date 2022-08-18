@@ -13,7 +13,7 @@ export function Pricing() {
         <div> {txt.map((item) => {
             return (
 
-                <section className='pricing'>
+                <section key={item.id} className='pricing' id='pricing'>
 
                     <div className='card-l'>
                         <Title>
@@ -22,12 +22,12 @@ export function Pricing() {
                             {item.pricing.title.month}
                         </Title>
                         <div className='card-l-content'>
-                            <ul class="fa-ul">
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
-                                <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
+                            <ul className="fa-ul">
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l1}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l2}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l3}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
+                                <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                             </ul>
                             <ModaleLogin />
                         </div>
@@ -41,16 +41,16 @@ export function Pricing() {
                                 <strong> {item.pricing.title.priceDx} </strong>
                                 {item.pricing.title.year}
                             </Title>
-                            <Title level={4} underline="true">{item.pricing.subtitle}</Title>
+                            <Title level={4} underline="true" style={{marginTop: '1rem'}}>{item.pricing.subtitle}</Title>
                         </div>
-                        <ul class="fa-ul">
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l1}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l2}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l3}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l4}</li>
-                            <li><span class="fa-li"><i class="fa fa-check"></i></span>{item.pricing.l5}</li>
+                        <ul className="fa-ul">
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l1}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l2}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l3}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
+                            <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                         </ul>
-                        <ModaleLogin />
+                        <ModaleLogin  />
                     </div>
 
                 </section>

@@ -1,13 +1,69 @@
 import React, { useState } from 'react';
-import {Modal} from 'antd';
 import {LoginForm, SignUpForm} from '../Modal/Forms';
 import { SignupBtnActivate, SignupBtnDeactivate } from "../Modal/SignUpBtn";
 import { LoginBtnActivate, LoginBtnDeactivate } from "../Modal/LoginBtn";
+import { Modal, Button } from 'antd';
 
 export const ModaleLogin = () => {
   const [loading, setLoading] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [login, setLogin] = useState(false)
+  const [login, setLogin] = useState(true)
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setVisible(false);
+    }, 3000);
+  };
+  
+  //closes the modal
+  const handleCancel = () => {
+    setVisible(false);
+  };
+  
+  return (
+    <>
+      <button className="button-style btn-price" onClick={showModal}>
+        Subscribe
+      </button>
+      <Modal
+        visible={visible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        closable={false}
+        footer={[
+          <Button key="back" onClick={handleCancel} className="modal-btn-close">
+            Close
+          </Button>,
+        ]}
+      >
+        {login ? (
+          <header className="header-modal">
+            <LoginBtnActivate setLogin={setLogin} login={login} />
+            <SignupBtnDeactivate setLogin={setLogin} login={login} />
+          </header>
+        ) : (
+          <header className="header-modal">
+            <LoginBtnDeactivate setLogin={setLogin} login={login} />
+            <SignupBtnActivate setLogin={setLogin} login={login} />
+          </header>
+        )}
+        {login ? <LoginForm handleCancel={handleCancel} /> : <SignUpForm />}
+      </Modal>
+    </>
+  );
+};
+
+
+export const ModaleSignUp = () => {
+  const [loading, setLoading] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [login, setLogin] = useState(true)
 
   const showModal = () => {
     setVisible(true);
@@ -24,21 +80,22 @@ export const ModaleLogin = () => {
   const handleCancel = () => {
     setVisible(false);
   };
-    
+
+
   return (
     <>
-      <button className="button-style btn-price" onClick={showModal}>
-        Subscribe
+      <button className="button-style" onClick={showModal}>
+        Sign Up
       </button>
       <Modal
         visible={visible}
+        closable={false}
         onOk={handleOk}
         onCancel={handleCancel}
-        closable={false}
         footer={[
-          <button key="back" onClick={handleCancel} className="modal-btn-close">
+          <Button key="back" onClick={handleCancel} className="modal-btn-close">
             Close
-          </button>,
+          </Button>,
         ]}
       >
         {login ? (
@@ -52,8 +109,11 @@ export const ModaleLogin = () => {
             <SignupBtnActivate setLogin={setLogin} login={login} />
           </header>
         )}
-        {login ? <LoginForm /> : <SignUpForm />}
+        {login ? <LoginForm handleCancel={handleCancel} /> : <SignUpForm />}
       </Modal>
     </>
   );
 };
+
+
+

@@ -1,12 +1,12 @@
 [{
     "hero": {
         "title": {
-            "title1": "The only done for your option picker"
+            "title1": "The only done for you option picker"
         },
 
         "subtitle": "Get trade alerts. Cancel anytime.",
         "label": "Enter your email to create or restart your membership",
-        "pic": ""
+        "id": 0
     },
     "pricing": {
 
@@ -23,5 +23,6 @@
         "l3": "8 recommended options strategies",
         "l4": "Grading system for better options trading",
         "l5": "Proprietary indicators"
-    }
+    },
+    "id": 1
 }]

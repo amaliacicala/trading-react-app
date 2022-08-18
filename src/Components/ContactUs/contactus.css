@@ -1,26 +1,21 @@
-.button-style, .form-button, .contact-btn {
+.button-style, .form-button, .contact-btn, .button-style:focus {
   padding: 0.5rem 2rem;
   background: linear-gradient(90deg, rgb(237, 255, 125), rgb(73, 249, 146));
   border: solid 1px #01070b;
   border-radius: 1rem;
+  cursor: pointer;
+  color: #062929;
+  font-weight: 500;
   box-shadow: 0px 0px 10px #052323, 0px 0px 10px #072f2f;
   transition: all 0.2s ease-in-out;
-  color: #062929;
-  font-weight: 500;
 }
-.button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:active, .form-button:active, .contact-btn:active, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:focus, .form-button:focus, .contact-btn:focus {
+.button-style:hover, .form-button:hover, .contact-btn:hover, .button-style:visited, .form-button:visited, .contact-btn:visited, .button-style:active, .form-button:active, .contact-btn:active, .button-style:focus:hover, .button-style:focus:visited, .button-style:focus:active {
   background: #062929;
   border: solid 1px #c5feaa;
-  cursor: pointer;
-  color: #c5feaa
-}
-.button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:focus span, .form-button:focus span, .contact-btn:focus span {
   color: #c5feaa;
 }
-.button-style span, .form-button span, .contact-btn span {
-  color: #062929;
-  text-shadow: none;
-  font-weight: 500;
+.button-style:hover span, .form-button:hover span, .contact-btn:hover span, .button-style:visited span, .form-button:visited span, .contact-btn:visited span, .button-style:active span, .form-button:active span, .contact-btn:active span, .button-style:focus:hover span, .button-style:focus:visited span, .button-style:focus:active span {
+  color: #c5feaa;
 }
 
 .contact-btn {
@@ -29,6 +24,7 @@
   right: 4%;
   margin: 0;
   height: 3rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .ant-modal-content, .ant-modal-header {
@@ -62,13 +58,9 @@
 }
 
 .ant-modal-title {
-  font-family: DM Sans;
+  font-family: DM Mono;
   color: #ffffff;
   font-size: 1.8rem;
-}
-
-.ant-modal-body {
-  padding-bottom: 0;
 }
 
 .ant-modal-footer {
@@ -80,7 +72,7 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-size: 0.8rem;
-  font-family: DM Sans;
+  font-family: DM Mono;
 }
 
 .form-button {
@@ -94,6 +86,7 @@
 }
 .form-button span {
   font-size: 0.9rem;
+  color: #062929;
 }
 .form-button i {
   color: #062929;

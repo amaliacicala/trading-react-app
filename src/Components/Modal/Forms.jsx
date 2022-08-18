@@ -1,9 +1,15 @@
-import React from 'react';
-import {Form, Input, Button, Checkbox, Select} from 'antd';
+import React, {useState} from 'react';
+import {Form, Input, Checkbox, Select} from 'antd';
 import { useNavigate } from 'react-router';
+import { useUserContext } from '../../services/Authentication';
 const { Option } = Select;
 
-export const LoginForm = () => {
+
+// LOG IN FORM
+export const LoginForm = ({handleCancel}) => {
+  //import handleLogin function using useContext from Authentication.jsx
+  const {handleLogin} = useUserContext()
+
   const onFinish = (values) => {
     console.log('Success:', values);
   };
@@ -11,10 +17,32 @@ export const LoginForm = () => {
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
   };
-  
+
+  //collect the input value from the Form
+  const [input, setInput] = useState('')
+  //set the value on change of the input content
+  function handleInput(e) {
+    setInput(e.target.value)
+  }
+
+  const [password, setPassword] = useState('')
+
+  function handlePassword(e) {
+    setPassword(e.target.value)
+  }
+  //set navigation path to dashboard 
   const navigate = useNavigate()
   function navigateToDashboard() {
      navigate('/dashboard')
+  }
+  //when login button is clicked: 
+  function loginAndNavigate() {
+    // 1) send input value up to the App component;
+    handleLogin(input, password);
+    // 2) follow the navigation path;
+    navigateToDashboard();
+    // 3) hide the modal
+    handleCancel();
   }
 
   return (
@@ -29,7 +57,7 @@ export const LoginForm = () => {
           className='login-form'
       >
           
-      <button className='modal-btn-login'>
+      <button className='modal-btn-login button-style'>
         Log in with Google
       </button>
           
@@ -48,7 +76,10 @@ export const LoginForm = () => {
           },
         ]}
       >
-        <Input placeholder='Email'/>
+        <Input 
+        placeholder='Email'
+        value={input}
+        onChange={handleInput}/>
       </Form.Item>
 
       <Form.Item
@@ -60,10 +91,13 @@ export const LoginForm = () => {
           },
         ]}
       >
-        <Input.Password placeholder='Password'/>
+        <Input.Password 
+        placeholder='Password'
+        value={password}
+        onChange={handlePassword}/>
       </Form.Item>
 
-     <button className='modal-btn-login' onClick={navigateToDashboard}>
+     <button className='modal-btn-login button-style' onClick={loginAndNavigate}>
         Login
      </button>
           
@@ -74,11 +108,15 @@ export const LoginForm = () => {
 };
 
 
+// SIGN UP FORM
+export function SignUpForm({handleCancel}) {
 
-export function SignUpForm() {
     const onFinish = (values) => {
     console.log('Success:', values);
+    localStorage.setItem(values.email, JSON.stringify(values))
+    handleCancel()
   };
+
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
@@ -109,7 +147,7 @@ export function SignUpForm() {
           className='login-form'
       >
           
-      <button className='modal-btn-login'>
+      <button className='modal-btn-login button-style'>
         Sign up with Google
       </button>
           
@@ -142,7 +180,7 @@ export function SignUpForm() {
         <Input placeholder='First Name'/>
       </Form.Item>
       <Form.Item
-        name={['user', 'name']}
+        name={['user', 'last name']}
         rules={[
           {
             required: true,
@@ -208,7 +246,7 @@ export function SignUpForm() {
         </Checkbox>
       </Form.Item>
 
-     <button htmlType="submit" className='modal-btn-login'>
+     <button type="submit" className='modal-btn-login button-style'>
         Sign Up
      </button>
           
