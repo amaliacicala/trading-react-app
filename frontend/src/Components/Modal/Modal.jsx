@@ -30,7 +30,7 @@ export const ModaleLogin = () => {
 
   return (
     <>
-     <button className="btn-login" onClick={showModal}>
+      <button className="btn-login" onClick={showModal}>
         Login
       </button>
       <Modal
@@ -38,11 +38,11 @@ export const ModaleLogin = () => {
         onOk={handleOk}
         onCancel={handleCancel}
         closable={false}
-        footer={[
-          <Button key="back" onClick={handleCancel} className="modal-btn-close">
-            Close
-          </Button>,
-        ]}
+        // footer={[
+        //   <Button key="back" onClick={handleCancel} className="modal-btn-close">
+        //     Close
+        //   </Button>,
+        // ]}
       >
         {login ? (
           <header className="header-modal">
@@ -55,7 +55,11 @@ export const ModaleLogin = () => {
             <SignupBtnActivate setLogin={setLogin} login={login} />
           </header>
         )}
-        {login ? <LoginForm /> : <SignUpForm />}
+        {login ? (
+          <LoginForm handleCancel={handleCancel} />
+        ) : (
+          <SignUpForm handleCancel={handleCancel} />
+        )}
       </Modal>
     </>
   );
@@ -94,11 +98,6 @@ export const ModaleSignUp = () => {
         closable={false}
         onOk={handleOk}
         onCancel={handleCancel}
-        footer={[
-          <Button key="back" onClick={handleCancel} className="modal-btn-close">
-            Close
-          </Button>,
-        ]}
       >
         {login ? (
           <header className="header-modal">
@@ -111,7 +110,11 @@ export const ModaleSignUp = () => {
             <SignupBtnActivate setLogin={setLogin} login={login} />
           </header>
         )}
-        {!login ? <SignUpForm /> : <LoginForm />}
+        {!login ? (
+          <SignUpForm handleCancel={handleCancel} />
+        ) : (
+          <LoginForm handleCancel={handleCancel} />
+        )}
       </Modal>
     </>
   );

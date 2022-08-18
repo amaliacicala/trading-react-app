@@ -111,9 +111,18 @@ export const LoginForm = ({handleCancel}) => {
 // SIGN UP FORM
 export function SignUpForm({handleCancel}) {
 
-    const onFinish = (values) => {
-    console.log('Success:', values);
-    localStorage.setItem(values.email, JSON.stringify(values))
+  const onFinish = (values) => {
+    const JsonValues = JSON.stringify(values);
+    // localStorage.setItem(values.email, JSON.stringify(values))
+
+    fetch("http://localhost:4000/users/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JsonValues
+    }) ;
+    //Close the form 
     handleCancel()
   };
 
