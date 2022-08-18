@@ -11,7 +11,15 @@ export const LoginForm = ({handleCancel}) => {
   const {handleLogin} = useUserContext()
 
   const onFinish = (values) => {
-    console.log('Success:', values);
+    const JsonValues = JSON.stringify(values);
+    //Check if the inserted values are in the DB
+    fetch("http://localhost:4000/users/signin", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JsonValues,
+    });
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -97,7 +105,7 @@ export const LoginForm = ({handleCancel}) => {
         onChange={handlePassword}/>
       </Form.Item>
 
-     <button className='modal-btn-login button-style' onClick={loginAndNavigate}>
+     <button className='modal-btn-login button-style'>
         Login
      </button>
           

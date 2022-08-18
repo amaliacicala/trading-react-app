@@ -16,17 +16,21 @@ router.post("/signup", (req, res) => {
     console.log(newUser)
 })
 
-// router.post("/signin", async(req, res) => {
-//     const loggedUser = await User.findOne({where: {email: req.body.email}})
+router.post("/signin", async (req, res) => {
+    const loggedUser = await User.findOne({where: {email: req.body.email}})
 
-//     if(loggedUser === null) {
-//         console.log('Not found')
-//     } else {
-//         console.log(loggedUser)
-//     }
+    if(loggedUser === null) {
+        console.log('Not found')
+    } else {
+        if(loggedUser.password === req.body.password) {
+            console.log('Access allowed')
+        } else {
+            console.log('Password doesnt match')
+        }
+    }
 
-//     res.send(loggedUser)
+    res.send(loggedUser)
     
-// })
+})
 
 module.exports = router
