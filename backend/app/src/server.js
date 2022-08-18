@@ -14,16 +14,21 @@ app.use(cors())
 //Parsing all the request of content-type app/json
 app.use(express.json())
 
+
 //ROUTES
 //Home route
 app.get("/", (req, res) => {
     res.json({msg: 'Everything ok'})
 })
 
+//Import user routes
+const userRoutes = require("../routes/users")
+
+app.use("/users", userRoutes);
+
 //DATABASE
 //Init mySql
 const db = require("../../app/models")
-
 
 db.sequelize.sync().then(() => {
   console.log("database up");
