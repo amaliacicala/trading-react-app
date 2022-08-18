@@ -111,7 +111,7 @@ export const ModaleSignUp = () => {
           </header>
         )}
         {!login ? (
-          <SignUpForm handleCancel={handleCancel} />
+          <SignUpForm handleCancel={handleCancel} setLogin={setLogin} />
         ) : (
           <LoginForm handleCancel={handleCancel} />
         )}

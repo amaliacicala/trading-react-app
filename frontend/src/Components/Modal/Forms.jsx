@@ -109,12 +109,11 @@ export const LoginForm = ({handleCancel}) => {
 
 
 // SIGN UP FORM
-export function SignUpForm({handleCancel}) {
+export function SignUpForm({handleCancel, setLogin}) {
 
   const onFinish = (values) => {
     const JsonValues = JSON.stringify(values);
-    // localStorage.setItem(values.email, JSON.stringify(values))
-
+    //Save the inserted values into the database
     fetch("http://localhost:4000/users/signup", {
       method: "POST",
       headers: {
@@ -122,8 +121,8 @@ export function SignUpForm({handleCancel}) {
       },
       body: JsonValues
     }) ;
-    //Close the form 
-    handleCancel()
+    //Switch to login form
+    setLogin(true)
   };
 
 
@@ -179,7 +178,7 @@ export function SignUpForm({handleCancel}) {
       </Form.Item>
       
       <Form.Item
-        name={['user', 'name']}
+        name='name'
         rules={[
           {
             required: true,
@@ -189,7 +188,7 @@ export function SignUpForm({handleCancel}) {
         <Input placeholder='First Name'/>
       </Form.Item>
       <Form.Item
-        name={['user', 'last name']}
+        name='surname'
         rules={[
           {
             required: true,
