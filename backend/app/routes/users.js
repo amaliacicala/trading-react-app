@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 //Import Router
 const { Router } = require("express");
 const router = Router();
@@ -9,16 +11,19 @@ const User = db.user;
 //Import Bcrypt
 const bcrypt = require("bcryptjs");
 
+//Import JWT
+const jwt = require("jsonwebtoken");
+const {user} = require("../../app/models");
+
+//Import middleware
+const {authenticateToken} = require("../middleware/authJwt")
+
 //ROUTES
 
 //Post Sign up
 router.post("/signup", async (req, res) => {
   const newUser = {
-    name: req.body.name,
-    surname: req.body.surname,
-    email: req.body.email,
-    prefix: req.body.prefix,
-    phone: req.body.phone,
+    ...req.body,
     password: bcrypt.hashSync(req.body.password, 8),
   };
 
@@ -34,19 +39,28 @@ router.post("/signup", async (req, res) => {
 
 //Post Sign in
 router.post("/signin", async (req, res) => {
+  //Search for user in the DB
   const loggedUser = await User.findOne({ where: { email: req.body.email } });
 
   if (loggedUser) {
+    //Decrypt password
     const passwordIsValid = bcrypt.compareSync(
       req.body.password,
       loggedUser.password
     );
-    console.log(loggedUser.password);
-    console.log(req.body.password);
-    if (passwordIsValid) {
-      res.send({ message: "Access granted", email: loggedUser.email });
+      if(passwordIsValid) {
+        //Create a new access token
+      const accessToken = jwt.sign(
+        { id: loggedUser.id },
+        process.env.ACCESS_TOKEN_SECRET
+      );
+      res.send({
+        message: "Access granted",
+        email: loggedUser.email,
+        accessToken: accessToken,
+      });
     } else {
-      res.send({ message: "Invalid password" });
+      res.status(401).send({ message: "Invalid password" });
     }
   } else {
     res.status(400).send({ message: "User not found" });

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Form, Input, Checkbox, Select } from "antd";
 import { useNavigate } from "react-router";
 import { useUserContext } from "../../services/Authentication";
@@ -7,8 +7,16 @@ const { Option } = Select;
 // LOG IN FORM
 export const LoginForm = ({ handleCancel, setLogin }) => {
   //import handleLogin function using useContext from Authentication.jsx
-  const { handleLogin } = useUserContext();
+  // const { handleLogin } = useUserContext();
+  const { setLog, setUser } = useUserContext();
 
+  //set navigation path to dashboard
+  const navigate = useNavigate();
+  function navigateToDashboard() {
+    navigate("/dashboard");
+  }
+
+  //Make a POST request to backend with the login values
   const onFinish = (values) => {
     //Check if the inserted values are in the DB
     fetch("http://localhost:4000/users/signin", {
@@ -25,10 +33,15 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
         console.log("Success:", data);
         if (data.message === "Access granted") {
           alert(data.message);
+          handleCancel()
+          setLog(true)
+          setUser('Marco')
+          navigateToDashboard()
         } else if (data.message === "Invalid password") {
           alert(data.message);
         } else {
           alert(data.message);
+          //Open sign up form if the user does not exist
           // setLogin(false)
         }
       })
@@ -41,32 +54,17 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
     console.log("Failed:", errorInfo);
   };
 
-  //collect the input value from the Form
-  const [input, setInput] = useState("");
-  //set the value on change of the input content
-  function handleInput(e) {
-    setInput(e.target.value);
-  }
 
-  const [password, setPassword] = useState("");
 
-  function handlePassword(e) {
-    setPassword(e.target.value);
-  }
-  //set navigation path to dashboard
-  const navigate = useNavigate();
-  function navigateToDashboard() {
-    navigate("/dashboard");
-  }
   //when login button is clicked:
-  function loginAndNavigate() {
-    // 1) send input value up to the App component;
-    handleLogin(input, password);
-    // 2) follow the navigation path;
-    navigateToDashboard();
-    // 3) hide the modal
-    handleCancel();
-  }
+  // function loginAndNavigate() {
+  //   // 1) send input value up to the App component;
+  //   handleLogin(input, password);
+  //   // 2) follow the navigation path;
+  //   navigateToDashboard();
+  //   // 3) hide the modal
+  //   handleCancel();
+  // }
 
   return (
     <Form
@@ -100,7 +98,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
           },
         ]}
       >
-        <Input placeholder="Email" value={input} onChange={handleInput} />
+        <Input placeholder="Email" />
       </Form.Item>
 
       <Form.Item
@@ -114,8 +112,6 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
       >
         <Input.Password
           placeholder="Password"
-          value={password}
-          onChange={handlePassword}
         />
       </Form.Item>
 
@@ -143,7 +139,6 @@ export function SignUpForm({ setLogin }) {
         return response.json();
       })
       .then((data) => {
-        console.log("Success:", data.email);
         if (data.email === values.email) {
           alert(
             `New user ${data.email} created. You can go ahead and login now`
@@ -151,6 +146,8 @@ export function SignUpForm({ setLogin }) {
         } else {
           alert(`User ${values.email} already exists. Please login.`);
         }
+        //Open login form
+        //setLogin(true)
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -168,8 +165,7 @@ export function SignUpForm({ setLogin }) {
           width: 70,
         }}
       >
-        <Option value="86">+86</Option>
-        <Option value="87">+87</Option>
+        <Option value="39">+39</Option>
       </Select>
     </Form.Item>
   );
