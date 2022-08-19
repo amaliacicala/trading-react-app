@@ -9,11 +9,18 @@ const User = db.user
 //ROUTES
 
 //POST
-router.post("/signup", (req, res) => {
+router.post("/signup", async (req, res) => {
     const newUser = req.body;
-    User.create(newUser);
-    res.status(201).send(newUser);
-    console.log(newUser)
+    
+    const searchUser = await User.findOne({where: {email: req.body.email}})
+    if(searchUser === null) {
+        User.create(newUser);
+        //Send the response back to the frontend to display a message
+        res.status(201).send(newUser);
+    } else {
+        console.log('User with this email already exists')
+    }
+      
 })
 
 router.post("/signin", async (req, res) => {
