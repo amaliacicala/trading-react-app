@@ -25,10 +25,11 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
         console.log("Success:", data);
         if (data.message === "Access granted") {
           alert(data.message);
-        } else if (data.message === "Wrong password") {
+        } else if (data.message === "Invalid password") {
           alert(data.message);
         } else {
-          alert(`User ${values.email} does not exist. Please sign up.`);
+          alert(data.message);
+          // setLogin(false)
         }
       })
       .catch((error) => {
