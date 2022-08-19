@@ -13,10 +13,10 @@ const bcrypt = require("bcryptjs");
 
 //Import JWT
 const jwt = require("jsonwebtoken");
-const {user} = require("../../app/models");
+const { user } = require("../../app/models");
 
 //Import middleware
-const {authenticateToken} = require("../middleware/authJwt")
+const { authenticateToken } = require("../middleware/authJwt");
 
 //ROUTES
 
@@ -48,15 +48,15 @@ router.post("/signin", async (req, res) => {
       req.body.password,
       loggedUser.password
     );
-      if(passwordIsValid) {
-        //Create a new access token
+    if (passwordIsValid) {
+      //Create a new access token
       const accessToken = jwt.sign(
         { id: loggedUser.id },
         process.env.ACCESS_TOKEN_SECRET
       );
       res.send({
+        ...loggedUser,
         message: "Access granted",
-        email: loggedUser.email,
         accessToken: accessToken,
       });
     } else {

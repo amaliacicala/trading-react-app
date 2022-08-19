@@ -6,8 +6,7 @@ const { Option } = Select;
 
 // LOG IN FORM
 export const LoginForm = ({ handleCancel, setLogin }) => {
-  //import handleLogin function using useContext from Authentication.jsx
-  // const { handleLogin } = useUserContext();
+  //import from Authentication.jsx
   const { setLog, setUser } = useUserContext();
 
   //set navigation path to dashboard
@@ -31,18 +30,17 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
       })
       .then((data) => {
         console.log("Success:", data);
-        if (data.message === "Access granted") {
-          alert(data.message);
+        if(data.message === "Access granted") {
           handleCancel()
           setLog(true)
-          setUser('Marco')
+          setUser(data.dataValues.name)
           navigateToDashboard()
         } else if (data.message === "Invalid password") {
           alert(data.message);
         } else {
           alert(data.message);
           //Open sign up form if the user does not exist
-          // setLogin(false)
+          setLogin(false)
         }
       })
       .catch((error) => {
@@ -53,18 +51,6 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-
-
-
-  //when login button is clicked:
-  // function loginAndNavigate() {
-  //   // 1) send input value up to the App component;
-  //   handleLogin(input, password);
-  //   // 2) follow the navigation path;
-  //   navigateToDashboard();
-  //   // 3) hide the modal
-  //   handleCancel();
-  // }
 
   return (
     <Form
