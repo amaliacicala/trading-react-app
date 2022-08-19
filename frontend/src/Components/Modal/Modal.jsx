@@ -51,9 +51,9 @@ export const ModaleLogin = () => {
           </header>
         )}
         {login ? (
-          <LoginForm handleCancel={handleCancel} />
+          <LoginForm handleCancel={handleCancel} setLogin={setLogin} />
         ) : (
-          <SignUpForm handleCancel={handleCancel} />
+          <SignUpForm />
         )}
       </Modal>
     </>
@@ -106,9 +106,9 @@ export const ModaleSignUp = () => {
           </header>
         )}
         {!login ? (
-          <SignUpForm handleCancel={handleCancel} setLogin={setLogin} />
+          <SignUpForm setLogin={setLogin} />
         ) : (
-          <LoginForm handleCancel={handleCancel} />
+          <LoginForm handleCancel={handleCancel} setLogin={setLogin} />
         )}
       </Modal>
     </>

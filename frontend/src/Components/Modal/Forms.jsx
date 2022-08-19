@@ -5,20 +5,35 @@ import { useUserContext } from "../../services/Authentication";
 const { Option } = Select;
 
 // LOG IN FORM
-export const LoginForm = ({ handleCancel }) => {
+export const LoginForm = ({ handleCancel, setLogin }) => {
   //import handleLogin function using useContext from Authentication.jsx
   const { handleLogin } = useUserContext();
 
   const onFinish = (values) => {
-    const JsonValues = JSON.stringify(values);
     //Check if the inserted values are in the DB
     fetch("http://localhost:4000/users/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JsonValues,
-    });
+      body: JSON.stringify(values),
+    }) //Use the response to display a message
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success:", data);
+        if (data.message === "Access granted") {
+          alert(data.message);
+        } else if (data.message === "Wrong password") {
+          alert(data.message);
+        } else {
+          alert(`User ${values.email} does not exist. Please sign up.`);
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -113,7 +128,7 @@ export const LoginForm = ({ handleCancel }) => {
 };
 
 // SIGN UP FORM
-export function SignUpForm({ handleCancel, setLogin }) {
+export function SignUpForm({ setLogin }) {
   const onFinish = (values) => {
     //Send the inserted values to the backend to be saved into the DB
     fetch("http://localhost:4000/users/signup", {
@@ -122,26 +137,23 @@ export function SignUpForm({ handleCancel, setLogin }) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(values),
-    })
-      //Use the response to display a message
-      .then((response) => response.json())
+    }) //Use the response to display a message
+      .then((response) => {
+        return response.json();
+      })
       .then((data) => {
-        if (data) {
-          alert(`New user ${data.email} created.`);
-        } else {
+        console.log("Success:", data.email);
+        if (data.email === values.email) {
           alert(
-            `User with email: ${data.email} already exist. Please login or recover password.`
+            `New user ${data.email} created. You can go ahead and login now`
           );
+        } else {
+          alert(`User ${values.email} already exists. Please login.`);
         }
-        //Switch to login form
-        setLogin(true);
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-
-    //Switch to login form
-    setLogin(true);
   };
 
   const onFinishFailed = (errorInfo) => {
