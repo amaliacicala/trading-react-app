@@ -11,9 +11,6 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 
   //set navigation path to dashboard
   const navigate = useNavigate();
-  function navigateToDashboard() {
-    navigate("/dashboard");
-  }
 
   //Make a POST request to backend with the login values
   const onFinish = (values) => {
@@ -32,9 +29,11 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
         console.log("Success:", data);
         if(data.message === "Access granted") {
           handleCancel()
+          //Allow to log in
           setLog(true)
           setUser(data.dataValues.name)
-          navigateToDashboard()
+          //Navigate to the private dashboard
+          navigate(`/dashboard/${data.dataValues.id}`);
         } else if (data.message === "Invalid password") {
           alert(data.message);
         } else {

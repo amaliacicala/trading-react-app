@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Homepage/>} />
           <Route path="*" element={<NotFound />} />
           <Route element={<Protected/>}>
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard/:id" element={<Dashboard />} />
           </Route>
         </Routes>
         <Footer />
