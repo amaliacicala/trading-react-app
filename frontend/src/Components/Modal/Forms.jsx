@@ -132,7 +132,7 @@ export function SignUpForm({ setLogin }) {
           alert(`User ${values.email} already exists. Please login.`);
         }
         //Open login form
-        //setLogin(true)
+        setLogin(true)
       })
       .catch((error) => {
         console.error("Error:", error);

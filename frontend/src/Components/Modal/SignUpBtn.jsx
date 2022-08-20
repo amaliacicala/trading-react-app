@@ -6,7 +6,7 @@ export function SignupBtnActivate({ setLogin }) {
         backgroundColor: "transparent",
       }}
       onClick={() => {
-        setLogin(true);
+        setLogin(false);
       }}
     >
       Sign Up

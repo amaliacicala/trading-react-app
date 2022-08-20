@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 })
 
 //Import user routes
-const userRoutes = require("../routes/users")
+const userRoutes = require("../routes/users.routes")
 
 app.use("/users", userRoutes);
 

@@ -16,7 +16,7 @@ export function Header() {
             <div>
                 {log === true ?
                     <div className='header-login-nav'>
-                        <Link to="/dashboard" className="header-anchor">Dashboard</Link>
+                        <Link to="/dashboard/:id" className="header-anchor">Dashboard</Link>
                         <a className="header-anchor" href="#">Profile</a>
                         <a className="header-anchor" href="#">Account Settings</a>
                         <Logout />
