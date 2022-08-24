@@ -48,35 +48,66 @@ export function Dashboard() {
       {/* <h1 className="dashboard-welcome-message">WELCOME BACK, <span className="user-name">{name}</span></h1>
         <button className="button-style" onClick={handleNavigate}>Back to Homepage</button> */}
       <section className="dashboard-legend">
-        <h6 className="dashboard-legend-items">Ticker</h6>
-        <h6 className="dashboard-legend-items">Market Sentiment</h6>
-        <h6 className="dashboard-legend-items">Grade</h6>
-        <h6 className="dashboard-legend-items">Analyst EPS</h6>
-        <h6 className="dashboard-legend-items">Chance Earning Beat</h6>
-        <h6 className="dashboard-legend-items">Momentum Score</h6>
-        <h6 className="dashboard-legend-items">Financial Increase</h6>
-        <h6 className="dashboard-legend-items">Suggestion</h6>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Ticker</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Market Sentiment</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Grade</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Analyst EPS</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Chance Earning Beat</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Momentum Score</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Financial Increase</h6>
+        </div>
+        <div className="dashboard-legend-items">
+          <h6 className="dashboard-legend-text">Suggestion</h6>
+        </div>
       </section>
 
-      <div class="tabs">
-        <div class="tab">
+      <div class="accordions">       
           <input type="checkbox" id="chck1" className="accordion-input" />
-          <label class="tab-label" for="chck1">
-            Item 1
-          </label>
-          <div class="tab-content">
+          <div className="accordion-header">
+            <div className="accordion-header-items">
+              <label for="chck1">
+                <h2 className="accordion-button">+</h2>
+              </label>
+              <h6 className="accordion-header-text">Ticker</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Market Sentiment</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Grade</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Analyst EPS</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Chance Earning Beat</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Momentum Score</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Financial Increase</h6>
+            </div>
+            <div className="accordion-header-items">
+              <h6 className="accordion-header-text">Suggestion</h6>
+            </div>
+          </div>
+          <div class="accordion-content">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
-            reiciendis!
-          </div>
-        </div>
-        <div class="tab">
-          <input type="checkbox" id="chck2" className="accordion-input" />
-          <label class="tab-label" for="chck2">
-            Item 2
-          </label>
-          <div class="tab-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, in!
-          </div>
+            reiciendis!          
         </div>
       </div>
     </main>
