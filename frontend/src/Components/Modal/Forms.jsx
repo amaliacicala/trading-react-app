@@ -1,15 +1,15 @@
 import React from "react";
 import { Form, Input, Checkbox, Select } from "antd";
 import { useNavigate } from "react-router";
-import {useUserContext} from "../../services/Authentication";
-import {LoginWithGoogle, LogoutWithGoogle} from "./GoogleLogin";
-import {gapi} from 'gapi-script'
-import {useEffect} from "react";
+import { useUserContext } from "../../services/Authentication";
+import { LoginWithGoogle, LogoutWithGoogle } from "./GoogleLogin";
+import { gapi } from "gapi-script";
+import { useEffect } from "react";
 
 const clientId =
   "153124458187-5nif67kd7aupognsmu3k4vek9qc9n93l.apps.googleusercontent.com";
 
-const {Option} = Select;
+const { Option } = Select;
 
 // LOG IN FORM
 export const LoginForm = ({ handleCancel, setLogin }) => {
@@ -62,12 +62,12 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
     function start() {
       gapi.client.init({
         clientId: clientId,
-        scope: ""
-      })
+        scope: "",
+      });
     }
 
-    gapi.load('client:auth2', start)
-  })
+    gapi.load("client:auth2", start);
+  });
 
   return (
     <Form
@@ -80,12 +80,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
       autoComplete="off"
       className="login-form"
     >
-      <button
-        className="modal-btn-login button-style"
-      >
-        Log in with Google
-      </button>
-      {/* <LoginWithGoogle /> */}
+      <LoginWithGoogle />
 
       <div className="separation-line">
         <div className="line"></div>

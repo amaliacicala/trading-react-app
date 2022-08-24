@@ -14,10 +14,10 @@ export function LoginWithGoogle() {
     }
 
     return (
-        <div id="signInButton">
+        <div id="signInButton" style={{display: 'flex', justifyContent: 'center'}}>
             <GoogleLogin
                 clientId={clientId}
-                buttonText={'Login'}
+                buttonText={'Login with Google'}
                 onSuccess={onSuccess}
                 onFailure={onFailure}
                 cookiePolicy={'single_host_origin'}
