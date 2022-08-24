@@ -8,7 +8,6 @@ import { useUserContext } from '../../services/Authentication';
 
 export function Header() {
     const {log} = useUserContext()
-    const pathname = window.location.pathname
 
     return (
         <header className='header-header'>
@@ -17,7 +16,7 @@ export function Header() {
                 {log === true ?
                     <div className='header-login-nav'>
                         <Link to="/dashboard/:id" className="header-anchor">Dashboard</Link>
-                        <a className="header-anchor" href="#">Profile</a>
+                        <a className="header-anchor" href="#">Your recommendations</a>
                         <a className="header-anchor" href="#">Account Settings</a>
                         <Logout />
                     </div>

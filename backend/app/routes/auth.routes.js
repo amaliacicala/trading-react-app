@@ -1,14 +1,11 @@
 require("dotenv").config();
 
 //Import controllers
-const controller = require("../controllers/users.controller")
+const controller = require("../controllers/auth.controller")
 
 //Import Router
 const { Router } = require("express");
 const router = Router();
-
-//Import middleware
-const { authenticateToken } = require("../middleware/authJwt");
 
 //ROUTES
 

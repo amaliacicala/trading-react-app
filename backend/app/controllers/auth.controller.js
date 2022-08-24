@@ -2,13 +2,9 @@
 const db = require("../models");
 const User = db.user;
 
-//Import Bcrypt
-const bcrypt = require("bcryptjs");
-
-
-//Import JWT
+//Import JWT and Bcrypt
 const jwt = require("jsonwebtoken");
-const { user } = require("../models");
+const bcrypt = require("bcryptjs");
 
 //Sign up 
 exports.signup = async (req, res) => {

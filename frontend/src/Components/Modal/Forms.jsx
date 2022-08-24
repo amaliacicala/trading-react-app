@@ -1,8 +1,15 @@
 import React from "react";
 import { Form, Input, Checkbox, Select } from "antd";
 import { useNavigate } from "react-router";
-import { useUserContext } from "../../services/Authentication";
-const { Option } = Select;
+import {useUserContext} from "../../services/Authentication";
+import {LoginWithGoogle, LogoutWithGoogle} from "./GoogleLogin";
+import {gapi} from 'gapi-script'
+import {useEffect} from "react";
+
+const clientId =
+  "153124458187-5nif67kd7aupognsmu3k4vek9qc9n93l.apps.googleusercontent.com";
+
+const {Option} = Select;
 
 // LOG IN FORM
 export const LoginForm = ({ handleCancel, setLogin }) => {
@@ -15,7 +22,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
   //Make a POST request to backend with the login values
   const onFinish = (values) => {
     //Check if the inserted values are in the DB
-    fetch("http://localhost:4000/users/signin", {
+    fetch("http://localhost:4000/auth/signin", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,11 +34,11 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
       })
       .then((data) => {
         console.log("Success:", data);
-        if(data.message === "Access granted") {
-          handleCancel()
+        if (data.message === "Access granted") {
+          handleCancel();
           //Allow to log in
-          setLog(true)
-          setUser(data.dataValues.name)
+          setLog(true);
+          setUser(data.dataValues.name);
           //Navigate to the private dashboard
           navigate(`/dashboard/${data.dataValues.id}`);
         } else if (data.message === "Invalid password") {
@@ -39,7 +46,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
         } else {
           alert(data.message);
           //Open sign up form if the user does not exist
-          setLogin(false)
+          setLogin(false);
         }
       })
       .catch((error) => {
@@ -50,6 +57,17 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
+
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: clientId,
+        scope: ""
+      })
+    }
+
+    gapi.load('client:auth2', start)
+  })
 
   return (
     <Form
@@ -62,9 +80,12 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
       autoComplete="off"
       className="login-form"
     >
-      <button className="modal-btn-login button-style">
+      <button
+        className="modal-btn-login button-style"
+      >
         Log in with Google
       </button>
+      {/* <LoginWithGoogle /> */}
 
       <div className="separation-line">
         <div className="line"></div>
@@ -95,9 +116,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
           },
         ]}
       >
-        <Input.Password
-          placeholder="Password"
-        />
+        <Input.Password placeholder="Password" />
       </Form.Item>
 
       <button className="modal-btn-login button-style">Login</button>
@@ -113,7 +132,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 export function SignUpForm({ setLogin }) {
   const onFinish = (values) => {
     //Send the inserted values to the backend to be saved into the DB
-    fetch("http://localhost:4000/users/signup", {
+    fetch("http://localhost:4000/auth/signup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -132,7 +151,7 @@ export function SignUpForm({ setLogin }) {
           alert(`User ${values.email} already exists. Please login.`);
         }
         //Open login form
-        setLogin(true)
+        setLogin(true);
       })
       .catch((error) => {
         console.error("Error:", error);
