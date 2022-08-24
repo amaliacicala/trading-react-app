@@ -10,8 +10,8 @@ const text = `
 `;
 
 export function Dashboard() {
-  const { user } = useUserContext();
-  const name = user.toUpperCase();
+  // const { user } = useUserContext();
+  // const name = user.toUpperCase();
   const navigate = useNavigate();
   const [result, setResult] = useState({});
   const [toggle, setToggle] = useState(true)
