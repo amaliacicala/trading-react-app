@@ -83,6 +83,10 @@
   justify-content: flex-start;
 }
 
+.accordion-header-text {
+  font-size: 18px;
+}
+
 .accordion-button {
   margin-right: 4rem;
   cursor: pointer;

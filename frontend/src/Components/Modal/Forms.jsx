@@ -2,12 +2,7 @@ import React from "react";
 import { Form, Input, Checkbox, Select } from "antd";
 import { useNavigate } from "react-router";
 import { useUserContext } from "../../services/Authentication";
-import { LoginWithGoogle, LogoutWithGoogle } from "./GoogleLogin";
-import { gapi } from "gapi-script";
-import { useEffect } from "react";
-
-const clientId =
-  "153124458187-5nif67kd7aupognsmu3k4vek9qc9n93l.apps.googleusercontent.com";
+import { LoginWithGoogle } from "../../services/Firebase";
 
 const { Option } = Select;
 
@@ -57,17 +52,6 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
-
-  useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-    }
-
-    gapi.load("client:auth2", start);
-  });
 
   return (
     <Form

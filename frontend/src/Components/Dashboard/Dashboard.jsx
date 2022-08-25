@@ -13,29 +13,29 @@ export function Dashboard() {
   // const { user } = useUserContext();
   // const name = user.toUpperCase();
   const navigate = useNavigate();
-  const [result, setResult] = useState({});
+  const [result, setResult] = useState('');
   const [toggle, setToggle] = useState(true)
 
   function handleNavigate() {
     navigate("/");
   }
 
-    useEffect(() => {
-      fetch(
-        "https://alpha-vantage.p.rapidapi.com/query?interval=5min&function=TIME_SERIES_INTRADAY&symbol=GOOGL&datatype=json&output_size=compact",
-        {
-          method: "GET",
-          headers: {
-            "X-RapidAPI-Key":
-              "597269576emsh2a1ffbdbc22aca5p1c45cajsnb3b4658bb5c7",
-            "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
-          },
-        }
-      )
-        .then((response) => response.json())
-        .then((data) => setResult(data))
-        .catch((err) => console.error(err));
-    }, []);
+    // useEffect(() => {
+    //   fetch(
+    //     "https://alpha-vantage.p.rapidapi.com/query?interval=5min&function=TIME_SERIES_INTRADAY&symbol=GOOGL&datatype=json&output_size=compact",
+    //     {
+    //       method: "GET",
+    //       headers: {
+    //         "X-RapidAPI-Key":
+    //           "597269576emsh2a1ffbdbc22aca5p1c45cajsnb3b4658bb5c7",
+    //         "X-RapidAPI-Host": "alpha-vantage.p.rapidapi.com",
+    //       },
+    //     }
+    //   )
+    //     .then((response) => response.json())
+    //     .then((data) => setResult(data))
+    //     .catch((err) => console.error(err));
+    // }, []);
 
   console.log(result);
 
@@ -71,14 +71,21 @@ export function Dashboard() {
         </div>
       </section>
 
-      <div class="accordions">
-        <input type="checkbox" id="chck1" className="accordion-input" onClick={() => setToggle(!toggle)}/>
+      {/* {result !== '' ? <div class="accordions">
+        <input
+          type="checkbox"
+          id="chck1"
+          className="accordion-input"
+          onClick={() => setToggle(!toggle)}
+        />
         <div className="accordion-header">
           <div className="accordion-header-items">
             <label for="chck1">
-              <h2 className="accordion-button">{toggle ? '+' : '-'}</h2>
+              <h2 className="accordion-button">{toggle ? "+" : "-"}</h2>
             </label>
-            <h6 className="accordion-header-text">{result.Meta}</h6>
+            <h6 className="accordion-header-text">
+              {result["Meta Data"]["2. Symbol"]}
+            </h6>
           </div>
           <div className="accordion-header-items">
             <h6 className="accordion-header-text">Market Sentiment</h6>
@@ -106,7 +113,9 @@ export function Dashboard() {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum,
           reiciendis!
         </div>
-      </div>
+      </div> : <h1>loading...</h1>} */}
+
+      
     </main>
   );
 }
