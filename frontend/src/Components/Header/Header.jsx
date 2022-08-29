@@ -20,12 +20,6 @@ export function Header() {
 						<Link to='/dashboard/:id' className='header-anchor'>
 							Dashboard
 						</Link>
-						<a className='header-anchor hide' href='/'>
-							Your recommendations
-						</a>
-						<a className='header-anchor hide' href='/'>
-							Account Settings
-						</a>
 						<Logout />
 					</div>
 				) : (
