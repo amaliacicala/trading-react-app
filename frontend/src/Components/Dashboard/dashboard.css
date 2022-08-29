@@ -147,4 +147,8 @@ input:checked ~ .accordion-content {
 	.accordions {
 		width: 90%;
 	}
+
+	.dashboard-welcome-message {
+		font-size: 1.4rem;
+	}
 }

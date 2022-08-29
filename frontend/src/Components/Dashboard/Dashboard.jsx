@@ -90,7 +90,7 @@ export function Dashboard() {
 						<div class='accordion-content'>
 							<TradingViewWidget
 								symbol={item.symbol}
-								theme={Themes.LIGHT}
+								theme={Themes.DARK}
 								locale='uk'
 								// autosize
 								width='autosize'
