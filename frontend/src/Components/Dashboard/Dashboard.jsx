@@ -14,7 +14,7 @@ export function Dashboard() {
 	return (
 		<main className='dashboard-main'>
 			<h1 className='dashboard-welcome-message'>
-				Welcome back, <span className='user-name'>{name}</span>
+				Welcome back, <span className='user-name'>{name}</span> 👋🏻
 			</h1>
 			{/* <section className='dashboard-legend'>
 				<div className='dashboard-legend-items'>
@@ -45,7 +45,7 @@ export function Dashboard() {
 
 			{json.map((item) => {
 				return (
-					<div class='accordions'>
+					<div className='accordions'>
 						<input
 							type='checkbox'
 							id={item.id}
@@ -57,9 +57,9 @@ export function Dashboard() {
 								<label for={item.id}>
 									<h2 className='accordion-button'>
 										{toggle ? (
-											<i className='fa fa-minus'></i>
+											<i className='fa fa-plus'></i>
 										) : (
-											<i class='fa fa-plus'></i>
+											<i class='fa fa-minus'></i>
 										)}
 									</h2>
 								</label>
@@ -87,7 +87,7 @@ export function Dashboard() {
 								<h6 className='accordion-header-text'>Suggestion</h6>
 							</div>
 						</div>
-						<div class='accordion-content'>
+						<div className='accordion-content'>
 							<TradingViewWidget
 								symbol={item.symbol}
 								theme={Themes.DARK}
