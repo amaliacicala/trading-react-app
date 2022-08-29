@@ -6,7 +6,7 @@ module.exports = (sequelize, Sequelize) => {
     password: {
       type: Sequelize.STRING,
     },
-    prefix: { type: Sequelize.NUMBER },
-    phone: { type: Sequelize.NUMBER },
+    prefix: { type: Sequelize.INTEGER },
+    phone: { type: Sequelize.INTEGER },
   });
 };

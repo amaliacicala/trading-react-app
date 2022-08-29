@@ -1,10 +1,10 @@
 //Database configuration
 
 module.exports = {
-  HOST: "localhost",
+  HOST: "127.0.0.1",
   USER: "root",
   PASSWORD: "Ventivigor1!",
-  DB: "optionsfyDB",
+  DB: "OptionsfyDB",
   dialect: "mysql",
   pool: {
     max: 5,
