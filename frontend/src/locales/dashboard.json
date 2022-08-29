@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "symbol": "GOOGL"
+  },
+  {
+    "id": 2,
+    "symbol": "MSFT"
+  },
+  {
+    "id": 3,
+    "symbol": "AAPL"
+  },
+  {
+    "id": 4,
+    "symbol": "PSX"
+  },
+  {
+    "id": 5,
+    "symbol": "WM"
+  }
+]
+
