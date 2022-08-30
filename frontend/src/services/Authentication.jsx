@@ -14,6 +14,7 @@ export function Authentication({children}) {
     const navigate = useNavigate()
 
     function handleLogout() {
+      localStorage.clear()
       setLog(false)
       navigate('/')
     }

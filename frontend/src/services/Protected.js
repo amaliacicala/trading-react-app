@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {Navigate, Outlet} from 'react-router-dom';
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 import { useUserContext } from './Authentication';
 import { useNavigate } from "react-router-dom";
 
@@ -9,15 +9,16 @@ const Protected = ({children}) => {
 
      const navigate = useNavigate();
 
+      const location = useLocation();
+
     useEffect(() => {
       const accessToken = localStorage.getItem("accessToken");
       const userName = localStorage.getItem("name");
-      const userId = localStorage.getItem("id");
 
       if (accessToken) {
         setLog(true);
         setUser(userName)
-        navigate(`dashboard/${userId}`);
+        navigate(location.pathname);
       }
     }, []);
     
