@@ -54,6 +54,7 @@
 .accordions {
 	width: 100%;
 	overflow: hidden;
+	/* border-radius: 1.2rem; */
 }
 
 .accordion-input {
@@ -78,12 +79,15 @@
 }
 
 .accordion-header {
-	display: flex;
-	justify-content: space-between;
+	
 	padding: 1rem 0 1rem 0;
 	background: #062929;
 	font-weight: bold;
-	margin-bottom: 1rem;
+	margin-bottom: 1rem; 
+	border-radius: 1.2rem;
+}
+
+.ant-collapse-item.accordion-header{
 	border-radius: 1.2rem;
 }
 
