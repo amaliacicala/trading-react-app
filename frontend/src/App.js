@@ -7,7 +7,7 @@ import { Dashboard } from "./Components/Dashboard/Dashboard";
 import Footer from "./Components/Footer/Footer";
 import ContactUs from "./Components/ContactUs/ContactUs";
 import {Authentication} from "./services/Authentication";
-import React from "react";
+
 
 function App() {
   return (

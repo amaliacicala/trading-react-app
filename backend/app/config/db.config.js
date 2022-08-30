@@ -3,7 +3,7 @@
 module.exports = {
   HOST: "127.0.0.1",
   USER: "root",
-  PASSWORD: "baudelaire",
+  PASSWORD: "Ventivigor1!",
   DB: "OptionsfyDB",
   dialect: "mysql",
   pool: {

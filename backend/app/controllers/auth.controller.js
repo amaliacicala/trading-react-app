@@ -36,14 +36,14 @@ exports.signin = async (req, res) => {
 		);
 		if (passwordIsValid) {
 			//Create a new access token
-			// const accessToken = jwt.sign(
-			// 	{ id: loggedUser.id },
-			// 	process.env.ACCESS_TOKEN_SECRET
-			// );
+			const accessToken = jwt.sign(
+				{ id: loggedUser.id },
+				process.env.ACCESS_TOKEN_SECRET
+			);
 			res.send({
 				...loggedUser,
 				message: 'Access granted',
-				// accessToken: accessToken,
+				accessToken: accessToken,
 			});
 		} else {
 			res.status(401).send({ message: 'Invalid password' });
