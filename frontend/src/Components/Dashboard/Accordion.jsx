@@ -1,7 +1,7 @@
 import { Collapse } from 'antd';
 import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import json from '../../locales/dashboard.json';
+import json from '../../locales/dashboard/dashboard.json'
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 const { Panel } = Collapse;
@@ -28,7 +28,6 @@ export default function Accordion() {
 						symbol={item.symbol}
 						theme={Themes.DARK}
 						locale='uk'
-						// width='autosize'
 						autosize
 					/>
 				</Panel>

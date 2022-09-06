@@ -17,18 +17,18 @@ export function Hero() {
             <div className='hero-txt'>
               <h1>
                 <strong className='hero-title'>
-                  {item.hero.title.title1}     
-                  </strong></h1>
+                  {item.hero.title.title1}
+                </strong></h1>
               <p className='hero-sub'>{item.hero.subtitle}</p>
               <div className='hero-l-content'>
                 <label><p>{item.hero.label}</p></label>
-              <div className='hero-input'><input className='hero-email' type="email" name="email" id="email" placeholder='Email' />
-                <ModaleLogin/>
-              </div></div>
+                <div className='hero-input'><input className='hero-email' type="email" name="email" id="email" placeholder='Email' />
+                  <ModaleLogin />
+                </div></div>
             </div>
           </Col>
           <Col xs={{ span: 24, order: 1 }} sm={{ span: 24, order: 1 }} md={{ span: 24, order: 1 }} lg={{ span: 12, order: 2 }} xl={{ span: 12, order: 2 }} xxl={{ span: 12, order: 2 }} >
-              <img className="hero-img" alt='' src={img}/>
+            <img className="hero-img" alt='' src={img} />
           </Col>
         </Row>
       )

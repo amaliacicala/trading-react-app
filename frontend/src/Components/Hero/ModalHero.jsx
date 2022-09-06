@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import {LoginForm, SignUpForm} from '../Modal/Forms';
-import {LoginBtnActivate, LoginBtnDeactivate} from '../Modal/LoginBtn';
-import {SignupBtnActivate, SignupBtnDeactivate } from '../Modal/SignUpBtn'
-import {Modal, Button} from 'antd';
+import { LoginForm, SignUpForm } from '../Modal/Forms';
+import { LoginBtnActivate, LoginBtnDeactivate } from '../Modal/LoginBtn';
+import { SignupBtnActivate, SignupBtnDeactivate } from '../Modal/SignUpBtn'
+import { Modal, Button } from 'antd';
 import './hero.css'
 
 
@@ -22,7 +22,7 @@ export const ModaleLogin = () => {
       setVisible(false);
     }, 3000);
   };
-  
+
   //closes the modal
   const handleCancel = () => {
     setVisible(false);

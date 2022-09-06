@@ -6,18 +6,18 @@ import Protected from "./services/Protected";
 import { Dashboard } from "./Components/Dashboard/Dashboard";
 import Footer from "./Components/Footer/Footer";
 import ContactUs from "./Components/ContactUs/ContactUs";
-import {Authentication} from "./services/Authentication";
+import { Authentication } from "./services/Authentication";
 
 
 function App() {
   return (
     <>
       <Authentication>
-        <Header/>
+        <Header />
         <Routes>
-          <Route path="/" element={<Homepage/>} />
+          <Route path="/" element={<Homepage />} />
           <Route path="*" element={<NotFound />} />
-          <Route element={<Protected/>}>
+          <Route element={<Protected />}>
             <Route path="/dashboard/:id" element={<Dashboard />} />
           </Route>
         </Routes>

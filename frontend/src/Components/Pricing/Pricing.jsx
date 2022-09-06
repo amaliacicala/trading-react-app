@@ -41,7 +41,7 @@ export function Pricing() {
                                 <strong> {item.pricing.title.priceDx} </strong>
                                 {item.pricing.title.year}
                             </Title>
-                            <Title level={4} underline="true" style={{marginTop: '1rem'}}>{item.pricing.subtitle}</Title>
+                            <Title level={4} underline="true" style={{ marginTop: '1rem' }}>{item.pricing.subtitle}</Title>
                         </div>
                         <ul className="fa-ul">
                             <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l1}</li>
@@ -50,7 +50,7 @@ export function Pricing() {
                             <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l4}</li>
                             <li><span className="fa-li"><i className="fa fa-check"></i></span>{item.pricing.l5}</li>
                         </ul>
-                        <ModaleLogin  />
+                        <ModaleLogin />
                     </div>
 
                 </section>

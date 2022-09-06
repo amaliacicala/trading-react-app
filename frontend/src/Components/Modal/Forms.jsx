@@ -34,7 +34,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
           //Set info in local storage
           localStorage.setItem("accessToken", data.accessToken);
           localStorage.setItem("id", data.dataValues.id);
-		  localStorage.setItem("name", data.dataValues.name)
+          localStorage.setItem("name", data.dataValues.name)
           //Allow to log in
           setLog(true);
           setUser(data.dataValues.name);

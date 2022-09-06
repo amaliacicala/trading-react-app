@@ -4,7 +4,7 @@ import App from './App'
 export default function Root() {
     return (
         <BrowserRouter>
-           <App />
+            <App />
         </BrowserRouter>
     )
 }

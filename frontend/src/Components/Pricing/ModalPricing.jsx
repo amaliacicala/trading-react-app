@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {LoginForm, SignUpForm} from '../Modal/Forms';
+import { LoginForm, SignUpForm } from '../Modal/Forms';
 import { SignupBtnActivate, SignupBtnDeactivate } from "../Modal/SignUpBtn";
 import { LoginBtnActivate, LoginBtnDeactivate } from "../Modal/LoginBtn";
 import { Modal, Button } from 'antd';
@@ -20,12 +20,12 @@ export const ModaleLogin = () => {
       setVisible(false);
     }, 3000);
   };
-  
+
   //closes the modal
   const handleCancel = () => {
     setVisible(false);
   };
-  
+
   return (
     <>
       <button className="button-style btn-price" onClick={showModal}>

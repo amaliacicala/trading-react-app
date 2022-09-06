@@ -25,13 +25,6 @@ export const auth = getAuth(app);
 
 const provider = new GoogleAuthProvider();
 
-// export function logOut() {
-//   signOut().then(() => {
-//     console.log("Log out");
-//     sessionStorage.clear();
-//   });
-// }
-
 export function LoginWithGoogle() {
   const { setLog } = useUserContext();
   const navigate = useNavigate();

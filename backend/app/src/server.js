@@ -16,7 +16,7 @@ app.use(express.json())
 //ROUTES
 //Home route
 app.get("/", (req, res) => {
-    res.json({msg: 'Everything ok'})
+  res.json({ msg: 'Everything ok' })
 })
 
 //Import user routes

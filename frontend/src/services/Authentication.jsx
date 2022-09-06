@@ -7,21 +7,21 @@ export function useUserContext() {
   return useContext(UserContext)
 }
 
-export function Authentication({children}) {
-    const [log, setLog] = useState(false)
-    const [user, setUser] = useState(null);
-      
-    const navigate = useNavigate()
+export function Authentication({ children }) {
+  const [log, setLog] = useState(false)
+  const [user, setUser] = useState(null);
 
-    function handleLogout() {
-      localStorage.clear()
-      setLog(false)
-      navigate('/')
-    }
+  const navigate = useNavigate()
 
-    return (
-      <UserContext.Provider value={{user, setUser, log, setLog, handleLogout}}>
-        {children}
-      </UserContext.Provider>
-    )
+  function handleLogout() {
+    localStorage.clear()
+    setLog(false)
+    navigate('/')
+  }
+
+  return (
+    <UserContext.Provider value={{ user, setUser, log, setLog, handleLogout }}>
+      {children}
+    </UserContext.Provider>
+  )
 }

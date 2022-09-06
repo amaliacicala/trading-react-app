@@ -18,7 +18,7 @@ export default function NotFound() {
                 <h2>Sorry, we were unable to find that page.</h2>
                 <button className="button-style" onClick={handleNavigate}>Back to Homepage</button>
             </section>
-            <img className="not-found-img" alt='404 Not Found' src={img}/>
+            <img className="not-found-img" alt='404 Not Found' src={img} />
         </div>
     )
 }

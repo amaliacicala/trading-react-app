@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Modal} from "antd";
+import { Modal } from "antd";
 import { LoginForm, SignUpForm } from "./Forms";
-import {SignupBtnActivate, SignupBtnDeactivate} from "./SignUpBtn";
+import { SignupBtnActivate, SignupBtnDeactivate } from "./SignUpBtn";
 import { LoginBtnActivate, LoginBtnDeactivate } from "./LoginBtn";
 import "./modal.css";
 
@@ -22,7 +22,7 @@ export const ModaleLogin = () => {
       setVisible(false);
     }, 3000);
   };
-  
+
   //closes the modal
   const handleCancel = () => {
     setVisible(false);
