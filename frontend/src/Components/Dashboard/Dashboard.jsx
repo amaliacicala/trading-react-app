@@ -10,7 +10,7 @@ export function Dashboard() {
 	return (
 		<main className='dashboard-main'>
 			<h1 className='dashboard-welcome-message'>
-				Welcome back, <span className='user-name'>{name}</span> 👋🏻
+				Welcome back<span className='user-name'>{`, ${name}`}</span> 👋🏻
 			</h1>
 
 			<Accordion />

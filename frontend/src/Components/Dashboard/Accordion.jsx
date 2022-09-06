@@ -11,6 +11,7 @@ export default function Accordion() {
 		return (
 			<Collapse
 				className='accordions'
+				key={item.id}
 				ghost={true}
 				bordered={false}
 				defaultActiveKey={['1']}
