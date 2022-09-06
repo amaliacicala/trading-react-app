@@ -1,9 +1,10 @@
 //Database configuration
+const dotenv = require('dotenv/config');
 
 module.exports = {
   HOST: "127.0.0.1",
   USER: "root",
-  PASSWORD: "Ventivigor1!",
+  PASSWORD: process.env.MYSQLPASSWORD,
   DB: "OptionsfyDB",
   dialect: "mysql",
   pool: {
