@@ -1,16 +1,15 @@
-//Database configuration
-const dotenv = require('dotenv/config');
+require('dotenv/config');
 
 module.exports = {
-  HOST: "127.0.0.1",
-  USER: "root",
-  PASSWORD: process.env.MYSQLPASSWORD,
-  DB: "OptionsfyDB",
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    acquire: 30000,
-    idle: 10000,
-  },
+	HOST: 'localhost',
+	USER: 'root',
+	PASSWORD: process.env.MYSQL_PASSWORD,
+	DB: 'optionsfyDB-2',
+	dialect: 'mysql',
+	pool: {
+		min: 0,
+		max: 3,
+		acquire: 30000,
+		idle: 10000,
+	},
 };
