@@ -1,10 +1,14 @@
 const express = require('express');
 const cors = require('cors');
 
+const corsOptions = {
+	origin: 'http://localhost:3000',
+};
+
 const app = express();
 
 // prevent cors errors
-app.use(cors());
+app.use(cors(corsOptions));
 
 // parse all requests of content-type (e.g., application/json)
 app.use(express.json());
@@ -14,7 +18,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // init first generic route
 app.get('/', (req, res) => {
-	res.json({ message: 'everything ok' });
+	res.json({ message: 'Everything ok 👌🏻' });
 });
 
 // import routes
@@ -31,5 +35,5 @@ app.listen(PORT, () => {
 const db = require('./config/seq.config');
 
 db.sequelize.sync().then(() => {
-	console.log('[db] Database up');
+	console.log('[database] Database up');
 });
