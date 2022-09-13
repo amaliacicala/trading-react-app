@@ -5,7 +5,7 @@ import { SignupBtnActivate, SignupBtnDeactivate } from './SignUpBtn';
 import { LoginBtnActivate, LoginBtnDeactivate } from './LoginBtn';
 import './modal.css';
 
-//MODAL LOG IN
+// MODAL LOG IN
 export const ModaleLogin = () => {
 	const [, setLoading] = useState(false);
 	const [visible, setVisible] = useState(false);
@@ -23,7 +23,7 @@ export const ModaleLogin = () => {
 		}, 3000);
 	};
 
-	//closes the modal
+	// closes the modal
 	const handleCancel = () => {
 		setVisible(false);
 	};

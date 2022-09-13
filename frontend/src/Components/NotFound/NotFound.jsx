@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './notfound.css';
+import { useUserContext } from '../../services/Authentication';
 import img from '../../assets/not-found.svg';
 
 export default function NotFound() {
+	const { setLog } = useUserContext();
+
+	useEffect(() => {
+		const accessToken = localStorage.getItem('accessToken');
+
+		if (accessToken) {
+			setLog(true);
+		}
+	}, [setLog]);
+
 	const navigate = useNavigate();
 
 	function handleNavigate() {

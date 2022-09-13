@@ -1,7 +1,7 @@
 import { Collapse } from 'antd';
 import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import json from '../../locales/dashboard/dashboard.json'
+import json from '../../locales/dashboard/dashboard.json';
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 const { Panel } = Collapse;
