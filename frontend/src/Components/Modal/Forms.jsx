@@ -85,7 +85,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 				rules={[
 					{
 						required: false,
-						message: 'Please input your email!',
+						message: 'Please insert your email.',
 						type: 'email',
 					},
 				]}
@@ -98,7 +98,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 				rules={[
 					{
 						required: false,
-						message: 'Please input your password!',
+						message: 'Please set up a password.',
 					},
 				]}
 			>
