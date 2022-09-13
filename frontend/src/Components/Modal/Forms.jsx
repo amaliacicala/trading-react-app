@@ -28,7 +28,7 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 				return response.json();
 			})
 			.then((data) => {
-				console.log('Success:', data);
+				console.log('Status:', data);
 				if (data.message === 'Access granted') {
 					handleCancel();
 					//Set info in local storage
@@ -129,6 +129,8 @@ export function SignUpForm({ setLogin }) {
 				} else {
 					alert(`User ${values.email} already exists. Please login.`);
 				}
+				//Open login form
+				setLogin(true);
 			})
 			.catch((error) => {
 				console.error('Error:', error);
@@ -153,7 +155,7 @@ export function SignUpForm({ setLogin }) {
 
 	return (
 		<Form
-			name='basic'
+			name='basic2'
 			initialValues={{
 				remember: true,
 			}}
