@@ -20,7 +20,7 @@ const Protected = ({ children }) => {
 			setUser(userName);
 			navigate(location.pathname);
 		}
-	});
+	}, [location.pathname, navigate, setLog, setUser]);
 
 	if (!log) {
 		return <Navigate to='/' replace />;
