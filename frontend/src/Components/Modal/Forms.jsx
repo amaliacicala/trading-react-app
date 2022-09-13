@@ -14,16 +14,16 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 	//set navigation path to dashboard
 	const navigate = useNavigate();
 
-	//Make a POST request to backend with the login values
+	// make a POST request to the backend with the login values
 	const onFinish = (values) => {
-		//Check if the inserted values are in the DB
+		// check if the inserted values are in the DB
 		fetch('http://localhost:4000/auth/signin', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(values),
-		}) //Use the response to display a message
+		}) // use the response to display a message
 			.then((response) => {
 				return response.json();
 			})
@@ -31,21 +31,24 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 				console.log('Status:', data);
 				if (data.message === 'Access granted') {
 					handleCancel();
-					//Set info in local storage
+					// save user info in local storage
 					localStorage.setItem('accessToken', data.accessToken);
 					localStorage.setItem('id', data.dataValues.id);
 					localStorage.setItem('name', data.dataValues.name);
-					//Allow to log in
+
+					// allow user to log in
 					setLog(true);
 					setUser(data.dataValues.name);
-					//Navigate to the private dashboard
+
+					// navigate to the private dashboard
 					navigate(`/dashboard/${data.dataValues.id}`);
-				} else if (data.message === 'Invalid password') {
+				} else if (data.message === 'User not found.') {
 					alert(data.message);
+					// open sign up form if the user does not exist
+
+					setLogin(false);
 				} else {
 					alert(data.message);
-					//Open sign up form if the user does not exist
-					setLogin(false);
 				}
 			})
 			.catch((error) => {
@@ -110,14 +113,14 @@ export const LoginForm = ({ handleCancel, setLogin }) => {
 // SIGN UP FORM
 export function SignUpForm({ setLogin }) {
 	const onFinish = (values) => {
-		//Send the inserted values to the backend to be saved into the DB
+		// send the inserted values to the backend to be saved into the DB
 		fetch('http://localhost:4000/auth/signup', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(values),
-		}) //Use the response to display a message
+		}) // use the response to display a message
 			.then((response) => {
 				return response.json();
 			})
@@ -129,7 +132,7 @@ export function SignUpForm({ setLogin }) {
 				} else {
 					alert(`User ${values.email} already exists. Please login.`);
 				}
-				//Open login form
+				// open login form
 				setLogin(true);
 			})
 			.catch((error) => {
